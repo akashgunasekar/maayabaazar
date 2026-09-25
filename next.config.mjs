@@ -1,6 +1,5 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   // Production-grade performance & security optimizations
   reactStrictMode: true,
   poweredByHeader: false,
@@ -63,4 +62,3 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
-
