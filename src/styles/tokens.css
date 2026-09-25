@@ -1,0 +1,32 @@
+:root {
+  /* Brand Palette */
+  --color-midnight: #08050D;
+  --color-deep-purple: #16091F;
+  --color-royal-purple: #4B0A78;
+  --color-brand-gold: #D4A72C;
+  --color-highlight-gold: #F4D76A;
+  --color-warm-gold: #B77A12;
+  --color-warm-white: #FAF8F2;
+  --color-secondary-text: #B9B0BE;
+
+  /* Atmospheric & Structural Tokens */
+  --bg-canvas: #08050D;
+  --bg-surface: #16091F;
+  --border-subtle: rgba(250, 248, 242, 0.08);
+  --border-gold-subtle: rgba(212, 167, 44, 0.2);
+  --border-gold-hover: rgba(244, 215, 106, 0.5);
+  --purple-glow: rgba(75, 10, 120, 0.25);
+  --purple-glow-hover: rgba(75, 10, 120, 0.45);
+  --gold-glow: rgba(212, 167, 44, 0.2);
+  --gold-glow-hover: rgba(244, 215, 106, 0.35);
+
+  /* Cinematic Motion Tokens (Hardware Accelerated: transform & opacity) */
+  --ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --duration-fast: 200ms;
+  --duration-normal: 350ms;
+  --duration-deliberate: 650ms;
+  --duration-cinematic: 900ms;
+}
+

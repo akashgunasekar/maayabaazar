@@ -1,0 +1,293 @@
+@import "tailwindcss";
+@import "../styles/tokens.css";
+
+@theme {
+  --color-midnight: #08050D;
+  --color-deep-purple: #16091F;
+  --color-royal-purple: #4B0A78;
+  --color-brand-gold: #D4A72C;
+  --color-highlight-gold: #F4D76A;
+  --color-warm-gold: #B77A12;
+  --color-warm-white: #FAF8F2;
+  --color-secondary-text: #B9B0BE;
+
+  --color-background: #08050D;
+  --color-surface: #16091F;
+
+  --font-heading: var(--font-manrope), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #08050D;
+  color: #FAF8F2;
+}
+
+body {
+  background-color: #08050D;
+  color: #FAF8F2;
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #D4A72C;
+  color: #08050D;
+}
+
+/* Atmospheric Gradients & Vignettes (50% SaaS, 30% Cinematic, 20% Luxury Entertainment) */
+.atmosphere-purple {
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(75, 10, 120, 0.28) 0%,
+    rgba(22, 9, 31, 0.4) 40%,
+    rgba(8, 5, 13, 0.95) 80%,
+    #08050D 100%
+  );
+}
+
+.atmosphere-hero {
+  background: radial-gradient(
+    ellipse at 50% -10%,
+    rgba(75, 10, 120, 0.35) 0%,
+    rgba(22, 9, 31, 0.6) 35%,
+    rgba(8, 5, 13, 0.98) 75%,
+    #08050D 100%
+  );
+}
+
+.atmosphere-gold-subtle {
+  background: radial-gradient(
+    circle at 80% 20%,
+    rgba(212, 167, 44, 0.08) 0%,
+    transparent 60%
+  );
+}
+
+/* Subtle card hover lift & purple glow transition */
+.hover-lift {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, box-shadow;
+}
+
+.hover-lift:hover {
+  transform: translate3d(0, -4px, 0);
+  border-color: rgba(212, 167, 44, 0.35);
+  box-shadow: 0 20px 40px -15px rgba(8, 5, 13, 0.85),
+              0 0 30px -5px rgba(75, 10, 120, 0.3),
+              0 0 15px -3px rgba(212, 167, 44, 0.12);
+}
+
+/* Subtle Purple Glow & Transitions */
+.glow-purple {
+  box-shadow: 0 0 35px -5px rgba(75, 10, 120, 0.4);
+}
+
+.glow-purple-hover {
+  transition: box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glow-purple-hover:hover {
+  box-shadow: 0 0 35px 2px rgba(75, 10, 120, 0.35),
+              0 0 15px -2px rgba(212, 167, 44, 0.15);
+  border-color: rgba(212, 167, 44, 0.35);
+}
+
+.glow-gold {
+  box-shadow: 0 0 25px -5px rgba(212, 167, 44, 0.3);
+}
+
+/* Hover Image Scale with GPU Acceleration */
+.hover-image-scale {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.hover-image-scale:hover,
+.group:hover .hover-image-scale {
+  transform: scale3d(1.045, 1.045, 1);
+}
+
+/* Button Micro-interactions: Shimmer sweep */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shimmer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.18) 50%,
+    transparent 100%
+  );
+  transform: translate3d(-100%, 0, 0);
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.btn-shimmer:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+
+/* Gold Line Expansion & Shimmer */
+@keyframes goldLineExpandKeyframe {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+@keyframes goldShimmerKeyframe {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.gold-line-expand {
+  transform-origin: left center;
+  animation: goldLineExpandKeyframe 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.gold-line-center-expand {
+  transform-origin: center;
+  animation: goldLineExpandKeyframe 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.gold-shimmer-sweep {
+  background: linear-gradient(
+    90deg,
+    rgba(212, 167, 44, 0.2) 0%,
+    rgba(244, 215, 106, 0.8) 50%,
+    rgba(212, 167, 44, 0.2) 100%
+  );
+  background-size: 200% 100%;
+  animation: goldShimmerKeyframe 4s ease-in-out infinite;
+}
+
+/* Custom delicate scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #08050D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #16091F;
+  border-radius: 9999px;
+  border: 1px solid rgba(212, 167, 44, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4A72C;
+}
+
+/* Cinematic Keyframe Animations */
+@keyframes fadeInKeyframe {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes heroTextRevealKeyframe {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes revealClipKeyframe {
+  from {
+    opacity: 0;
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes pageTransitionFade {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 6px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInKeyframe 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-hero-text {
+  animation: heroTextRevealKeyframe 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-reveal {
+  animation: revealClipKeyframe 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.page-enter {
+  animation: pageTransitionFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Accessibility: Strict Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transform: none !important;
+  }
+
+  .gold-shimmer-sweep {
+    animation: none !important;
+  }
+
+  .btn-shimmer::before {
+    display: none !important;
+  }
+}
+

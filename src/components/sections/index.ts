@@ -1,0 +1,12 @@
+export { HeroSection } from "./HeroSection";
+export { AboutSection } from "./AboutSection";
+export { WhatWeDoSection } from "./WhatWeDoSection";
+export { FeaturedServicesSection } from "./FeaturedServicesSection";
+export { EventsSection } from "./EventsSection";
+export { CreativeProcessSection } from "./CreativeProcessSection";
+export { WhyMaayaaBazaarSection } from "./WhyMaayaaBazaarSection";
+export { ProjectsSection } from "./ProjectsSection";
+export { GalleryPreviewSection } from "./GalleryPreviewSection";
+export { PartnersSection } from "./PartnersSection";
+export { MediaNewsSection } from "./MediaNewsSection";
+export { ContactCtaSection } from "./ContactCtaSection";
