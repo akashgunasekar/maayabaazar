@@ -144,6 +144,15 @@ export interface Project {
   }>;
   status?: "Completed" | "In Production" | "Coming Soon";
   isFeatured?: boolean;
+  sectionGroup?: "key-projects" | "feature-film-credentials";
+  roleTitle?: string;
+  director?: string;
+  producer?: string;
+  starring?: string;
+  music?: string;
+  presentedBy?: string;
+  accolades?: string[];
+  highlightBadges?: string[];
 }
 
 // ==========================================

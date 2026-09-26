@@ -6,14 +6,15 @@ import { notFound } from "next/navigation";
 import {
   Film,
   Music,
-  Building2,
-  Calendar,
-  Clock,
+  Award,
+  Tv,
   ArrowRight,
   ArrowLeft,
   CheckCircle2,
   ShieldCheck,
   Sparkles,
+  UserCheck,
+  Star,
 } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
@@ -59,13 +60,13 @@ export async function generateMetadata({
     : `${SITE_URL}${project.image.src}`;
 
   return {
-    title: `${project.title} | Maayaa Bazaar Hub`,
+    title: `${project.title} | Maayaa Bazaar Hub Projects`,
     description: project.overview,
     alternates: {
       canonical: canonicalUrl,
     },
     openGraph: {
-      title: `${project.title} | Maayaa Bazaar Hub`,
+      title: `${project.title} | Maayaa Bazaar Hub Projects`,
       description: project.overview,
       url: canonicalUrl,
       siteName: "Maayaa Bazaar Hub",
@@ -82,7 +83,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `${project.title} | Maayaa Bazaar Hub`,
+      title: `${project.title} | Maayaa Bazaar Hub Projects`,
       description: project.overview,
       images: [imageUrl],
     },
@@ -117,15 +118,17 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
       {/* 1. Page Hero */}
       <PageHero
         badge={
-          <div className="flex items-center gap-2">
-            <Badge
-              variant={project.status === "In Production" ? "gold" : "purple"}
-              size="sm"
-            >
-              {project.status}
+          <div className="flex flex-wrap items-center gap-2">
+            <Badge variant="gold" size="sm">
+              {project.sectionGroup === "key-projects"
+                ? "Key Projects"
+                : "Feature Film Credentials"}
             </Badge>
-            <span className="text-[11px] font-mono text-[#FFF8E8]/70 bg-[#06152F] px-2.5 py-0.5 rounded-full border border-[#FFF8E8]/10">
+            <span className="text-[11px] font-mono text-[#FFF8E8]/90 bg-[#06152F] px-2.5 py-0.5 rounded-full border border-[#C99A32]/30">
               {project.categoryLabel}
+            </span>
+            <span className="text-[11px] font-mono text-[#C99A32] bg-[#020817] px-2.5 py-0.5 rounded-full border border-[#C99A32]/20">
+              {project.status}
             </span>
           </div>
         }
@@ -152,94 +155,163 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
               size="md"
               icon={<ArrowRight className="w-4 h-4" />}
             >
-              Inquire About Similar Slate
+              Inquire About This Title
             </Button>
             <Button href="/projects" variant="secondary" size="md" icon={<ArrowLeft className="w-4 h-4" />}>
-              All Projects
+              All Projects ({allProjects.length})
             </Button>
           </div>
         }
       />
 
-      {/* 2. Visual & Production Scope */}
+      {/* 2. Visual Artwork & Production Scope */}
       <Section background="deepPurple" spacing="lg" borderBottom>
         <FadeIn direction="up">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            {/* Visual Image */}
-            <div className="lg:col-span-7 relative">
-              <div className="relative aspect-[16/10] w-full rounded-3xl overflow-hidden bg-[#020817] border border-[#FFF8E8]/10 shadow-[0_20px_50px_rgba(2,8,23,0.9)] group">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            {/* Visual Image / Poster */}
+            <div className="lg:col-span-6 relative">
+              <div className="relative aspect-[4/3] sm:aspect-[16/11] w-full rounded-3xl overflow-hidden bg-[#020817] border border-[#C99A32]/40 shadow-[0_20px_50px_rgba(2,8,23,0.95)] group">
                 <Image
                   src={project.image.src}
                   alt={project.image.alt}
                   fill
-                  sizes="(max-width: 1024px) 100vw, 60vw"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   priority
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-contain sm:object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#020817] via-transparent to-transparent opacity-60" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#020817]/80 via-transparent to-transparent pointer-events-none" />
 
                 {project.image.caption && (
-                  <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-[#020817]/80 backdrop-blur-md border border-[#FFF8E8]/10 text-xs text-[#FFF8E8]/90 flex items-center gap-2">
+                  <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-[#020817]/90 backdrop-blur-md border border-[#C99A32]/30 text-xs text-[#FFF8E8] flex items-center gap-2">
                     <ShieldCheck className="w-4 h-4 text-[#C99A32] shrink-0" />
                     <span>{project.image.caption}</span>
                   </div>
                 )}
               </div>
+
+              {/* Accolades Callout (For Jal & Others) */}
+              {project.accolades && project.accolades.length > 0 && (
+                <div className="mt-6 p-6 rounded-2xl bg-[#06152F]/90 border border-[#C99A32]/40 shadow-[0_10px_25px_rgba(201,154,50,0.1)] space-y-3">
+                  <div className="flex items-center gap-2 text-[#F2D477] font-semibold text-sm">
+                    <Award className="w-5 h-5 text-[#C99A32]" />
+                    <span className="font-[var(--font-cinzel)] uppercase tracking-wider">
+                      Official Honors &amp; Accolades
+                    </span>
+                  </div>
+                  <ul className="space-y-2">
+                    {project.accolades.map((acc, i) => (
+                      <li key={i} className="flex items-start gap-2 text-xs text-[#FFF8E8] leading-relaxed">
+                        <Sparkles className="w-3.5 h-3.5 text-[#C99A32] shrink-0 mt-0.5" />
+                        <span>{acc}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
 
-            {/* Scope Box */}
-            <div className="lg:col-span-5 space-y-6">
-              <div className="p-6 rounded-2xl bg-[#020817] border border-[#FFF8E8]/[0.08] space-y-4">
-                <h3 className="font-[var(--font-heading)] text-lg font-bold text-[#FFF8E8] border-b border-[#FFF8E8]/[0.08] pb-3">
-                  Production Overview
-                </h3>
+            {/* Production Credentials Box */}
+            <div className="lg:col-span-6 space-y-6">
+              <div className="p-6 sm:p-7 rounded-2xl bg-[#020817] border border-[#C99A32]/35 space-y-5 shadow-[0_10px_30px_rgba(2,8,23,0.9)]">
+                <div className="flex items-center justify-between border-b border-[#FFF8E8]/[0.08] pb-4">
+                  <h3 className="font-[var(--font-heading)] text-lg font-bold text-[#FFF8E8]">
+                    Production Credentials
+                  </h3>
+                  <span className="text-[11px] font-mono text-[#C99A32] uppercase tracking-wider font-semibold">
+                    {project.sectionGroup === "key-projects" ? "Key Projects" : "Feature Film"}
+                  </span>
+                </div>
 
-                <div className="space-y-3 text-xs">
-                  <div className="flex items-center justify-between">
-                    <span className="text-[#C9C4B8]">Production Category</span>
-                    <span className="font-semibold text-[#FFF8E8]">{project.categoryLabel}</span>
+                <div className="space-y-3 text-xs sm:text-sm">
+                  <div className="flex items-start justify-between py-1.5 border-b border-[#FFF8E8]/[0.05]">
+                    <span className="text-[#C9C4B8]">Title</span>
+                    <span className="font-bold text-[#FFF8E8] text-right">{project.title}</span>
                   </div>
 
-                  <div className="flex items-center justify-between">
-                    <span className="text-[#C9C4B8]">Project Status</span>
+                  {project.roleTitle && (
+                    <div className="flex items-start justify-between py-1.5 border-b border-[#FFF8E8]/[0.05]">
+                      <span className="text-[#C9C4B8]">Executive Role</span>
+                      <span className="font-semibold text-[#F2D477] text-right">{project.roleTitle}</span>
+                    </div>
+                  )}
+
+                  {project.director && project.director !== project.roleTitle && (
+                    <div className="flex items-start justify-between py-1.5 border-b border-[#FFF8E8]/[0.05]">
+                      <span className="text-[#C9C4B8]">Directed By</span>
+                      <span className="font-semibold text-[#FFF8E8] text-right">{project.director}</span>
+                    </div>
+                  )}
+
+                  {project.producer && (
+                    <div className="flex items-start justify-between py-1.5 border-b border-[#FFF8E8]/[0.05]">
+                      <span className="text-[#C9C4B8]">Production House</span>
+                      <span className="font-semibold text-[#FFF8E8] text-right">{project.producer}</span>
+                    </div>
+                  )}
+
+                  {project.starring && (
+                    <div className="flex items-start justify-between py-1.5 border-b border-[#FFF8E8]/[0.05]">
+                      <span className="text-[#C9C4B8]">Star Cast</span>
+                      <span className="font-semibold text-[#F2D477] text-right max-w-[65%]">
+                        {project.starring}
+                      </span>
+                    </div>
+                  )}
+
+                  {project.music && (
+                    <div className="flex items-start justify-between py-1.5 border-b border-[#FFF8E8]/[0.05]">
+                      <span className="text-[#C9C4B8]">Music Score</span>
+                      <span className="font-semibold text-[#F2D477] text-right">{project.music}</span>
+                    </div>
+                  )}
+
+                  {project.presentedBy && (
+                    <div className="flex items-start justify-between py-1.5 border-b border-[#FFF8E8]/[0.05]">
+                      <span className="text-[#C9C4B8]">Presented By</span>
+                      <span className="font-semibold text-[#FFF8E8] text-right">{project.presentedBy}</span>
+                    </div>
+                  )}
+
+                  <div className="flex items-center justify-between py-1.5 border-b border-[#FFF8E8]/[0.05]">
+                    <span className="text-[#C9C4B8]">Status</span>
                     <span className="font-semibold text-[#C99A32]">{project.status}</span>
                   </div>
 
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between py-1.5">
                     <span className="text-[#C9C4B8]">Executive Supervision</span>
                     <span className="font-semibold text-[#FFF8E8]">Maayaa Bazaar Hub</span>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <span className="text-[#C9C4B8]">Confidentiality</span>
-                    <span className="font-semibold text-[#FFF8E8]">Active Industry NDA</span>
                   </div>
                 </div>
 
                 <div className="pt-2">
                   <Button
-                    href="/contact"
+                    href={`/contact?project=${project.slug}`}
                     variant="primary"
                     size="md"
                     className="w-full justify-center"
                     icon={<ArrowRight className="w-4 h-4" />}
                   >
-                    Inquire For Collaboration
+                    Discuss Co-Production &amp; Distribution
                   </Button>
                 </div>
               </div>
 
-              <div className="space-y-3">
-                <h4 className="font-[var(--font-heading)] text-base font-bold text-[#FFF8E8]">
-                  Production Scope &amp; Rigor
-                </h4>
-                <p className="text-xs sm:text-sm text-[#C9C4B8] leading-relaxed">
-                  {project.overview}
-                </p>
-                <p className="text-xs sm:text-sm text-[#C9C4B8] leading-relaxed">
-                  Detailed technical breakdowns, press releases, cast attachments, and behind-the-scenes footage will be unveiled across official media partner channels upon authorized schedule milestones.
-                </p>
-              </div>
+              {/* Scope & Responsibilities */}
+              {project.roleOrScope && project.roleOrScope.length > 0 && (
+                <div className="p-6 rounded-2xl bg-[#06152F]/60 border border-[#C99A32]/25 space-y-3">
+                  <h4 className="font-[var(--font-heading)] text-base font-bold text-[#FFF8E8]">
+                    Production Scope &amp; Deliverables
+                  </h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#C9C4B8]">
+                    {project.roleOrScope.map((scope, idx) => (
+                      <div key={idx} className="flex items-center gap-2">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#C99A32] shrink-0" />
+                        <span>{scope}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </FadeIn>
@@ -250,34 +322,43 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
         <Section background="midnight" spacing="lg" borderTop>
           <FadeIn direction="up">
             <SectionHeading
-              eyebrow="More Highlights"
-              title="Other Productions"
-              description="Explore additional projects across our cinema and event verticals."
+              eyebrow="Portfolio Archive"
+              title="More Verified Projects"
+              description="Explore additional landmark titles and credentials in our production slate."
               size="lg"
               className="mb-10"
             />
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {otherProjects.map((p) => (
                 <Link
                   key={p.id}
                   href={`/projects/${p.slug}`}
-                  className="rounded-2xl bg-[#06152F]/40 border border-[#FFF8E8]/[0.08] hover:border-[#C99A32]/40 p-5 flex flex-col justify-between group transition-all"
+                  className="rounded-2xl bg-[#06152F]/40 border border-[#C99A32]/25 hover:border-[#C99A32]/70 p-5 flex flex-col justify-between group transition-all duration-300 hover-lift glow-gold-hover"
                 >
-                  <div className="space-y-2">
-                    <div className="flex items-center justify-between text-xs text-[#C9C4B8]">
-                      <span className="text-[#C99A32]">{p.categoryLabel}</span>
-                      <span>{p.status}</span>
+                  <div className="space-y-2.5">
+                    <div className="relative aspect-[16/10] w-full rounded-xl overflow-hidden bg-[#020817] mb-3">
+                      <Image
+                        src={p.image.src}
+                        alt={p.image.alt}
+                        fill
+                        sizes="(max-width: 640px) 100vw, 25vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
                     </div>
-                    <h4 className="font-[var(--font-heading)] text-base font-bold text-[#FFF8E8] group-hover:text-[#F2D477] transition-colors">
+                    <div className="flex items-center justify-between text-[11px] font-mono">
+                      <span className="text-[#C99A32] font-semibold">{p.categoryLabel}</span>
+                      <span className="text-[#FFF8E8]/60">{p.status}</span>
+                    </div>
+                    <h4 className="font-[var(--font-heading)] text-base font-bold text-[#FFF8E8] group-hover:text-[#F2D477] transition-colors line-clamp-1">
                       {p.title}
                     </h4>
-                    <p className="text-xs text-[#C9C4B8] line-clamp-2">
+                    <p className="text-xs text-[#C9C4B8] line-clamp-2 leading-relaxed">
                       {p.overview}
                     </p>
                   </div>
-                  <div className="pt-3 mt-3 border-t border-[#FFF8E8]/[0.06] flex items-center justify-between text-xs font-semibold text-[#C99A32]">
-                    <span>View Project Dossier</span>
+                  <div className="pt-3 mt-3 border-t border-[#FFF8E8]/[0.08] flex items-center justify-between text-xs font-semibold text-[#C99A32]">
+                    <span>View Dossier</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </Link>

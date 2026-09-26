@@ -10,7 +10,7 @@ export const projectCategoriesList: ProjectCategoryMeta[] = [
   {
     key: "films",
     label: "Films",
-    description: "Theatrical feature films, cinematic storytelling, and commercial releases.",
+    description: "Theatrical feature films, cinematic storytelling, and acclaimed credentials.",
   },
   {
     key: "ott-projects",
@@ -54,58 +54,180 @@ export const projectCategoriesList: ProjectCategoryMeta[] = [
   },
 ];
 
-// All verified project content or Coming Soon states
+// Verified Exclusive Project Portfolio: Key Projects & Feature Film Credentials
 export const projectsData: Project[] = [
+  // ----------------------------------------------------
+  // SECTION: KEY PROJECTS
+  // ----------------------------------------------------
   {
-    id: "cinema-feature-slate",
-    slug: "cinema-feature-slate",
-    title: "Feature Film Production Slate",
+    id: "muthiah-muralidaran-biopic",
+    slug: "muthiah-muralidaran-biopic",
+    title: "Muthiya Murlidharan Bio Pic",
     categoryKey: "films",
     categoryLabel: "Films",
-    tagline: "Theatrical Feature Production",
+    sectionGroup: "key-projects",
+    tagline: "Cinematic Sports Biopic",
     overview:
-      "Active feature film productions under development and principal photography. Official titles, trailers, and cast announcements will be unveiled in upcoming press releases.",
+      "The monumental cinematic biographical feature film chronicling the extraordinary life, struggles, and international cricket legacy of bowling icon Muthiah Muralidaran — portraying his journey from humble beginnings to claiming a world-record 800 international Test wickets.",
     image: {
-      src: "/images/film-production.jpg",
-      alt: "Feature Film Production Stage",
-      caption: "Cinema Production Lot & Soundstages",
+      src: "/images/projects/muthiah-muralidaran.png",
+      alt: "Muthiya Murlidharan Bio Pic Poster",
+      caption: "Key Projects — Muthiya Murlidharan Bio Pic",
     },
     status: "In Production",
     isFeatured: true,
+    highlightBadges: ["Key Projects", "Bio Pic", "Cricket Legend"],
+    roleOrScope: [
+      "Feature Film Production",
+      "Biopic Screenplay & Creative Development",
+      "Stadium & International Shoot Logistics",
+      "Worldwide Theatrical Release",
+    ],
   },
   {
-    id: "mega-music-concert-series",
-    slug: "mega-music-concert-series",
-    title: "Live Stadium Concert Tour",
-    categoryKey: "concerts",
-    categoryLabel: "Concerts",
-    tagline: "Stadium Music Production",
+    id: "jal",
+    slug: "jal",
+    title: "JAL",
+    categoryKey: "films",
+    categoryLabel: "Films",
+    sectionGroup: "key-projects",
+    tagline: "Nominated in 2 Categories for Oscar • Screenplay Inducted in the Oscar's Library",
     overview:
-      "Monumental stadium concert production uniting celebrated musical artists with spatial audio engineering and dynamic stage architecture.",
+      "High-concept, visually poetic drama set against the stark expanse of the Rann of Kutch focusing on water scarcity and human survival. Critically acclaimed worldwide, JAL was shortlisted in contention across 2 categories at the Academy Awards (Oscars) and its screenplay was permanently inducted into the Margaret Herrick Library of the Academy.",
     image: {
-      src: "/images/live-concerts.jpg",
-      alt: "Live Stadium Concert Production",
-      caption: "Live Stadium Concert Arena",
+      src: "/images/projects/jal-oscar.png",
+      alt: "JAL — Nominated in 2 Categories for Oscar",
+      caption: "Key Projects — JAL (Oscar Contender)",
     },
     status: "Completed",
     isFeatured: true,
+    highlightBadges: [
+      "Key Projects",
+      "Nominated in 2 Categories for Oscar",
+      "Screenplay Inducted in the Oscar's Library",
+    ],
+    accolades: [
+      "Nominated in 2 Categories for Oscar (Academy Awards — Best Picture & Best Original Score contention)",
+      "Screenplay permanently inducted into the Margaret Herrick Library of the Academy of Motion Picture Arts and Sciences (Oscars)",
+      "Official Selection across premier global international film festivals",
+      "National Film Award Winner for Best Visual Effects",
+    ],
+    roleOrScope: [
+      "Theatrical Feature Production",
+      "Academy Awards Oscar Campaign",
+      "Global Film Festival Circuit",
+      "Cinematic Sound & Score Production",
+    ],
   },
   {
-    id: "global-entertainment-conclave",
-    slug: "global-entertainment-conclave",
-    title: "Entertainment & Media Summit",
-    categoryKey: "corporate-events",
-    categoryLabel: "Corporate Events",
-    tagline: "Industry Convention & Conclave",
+    id: "alt-balaji",
+    slug: "alt-balaji",
+    title: "ALT Balaji",
+    categoryKey: "ott-projects",
+    categoryLabel: "OTT Projects",
+    sectionGroup: "key-projects",
+    tagline: "12+ Webshows & Films Produced",
     overview:
-      "Comprehensive convention and corporate conclave gathering international delegates, media buyers, and industry creators across modular exhibition halls.",
+      "A landmark high-velocity digital production collaboration delivering over 12+ original web series, episodic dramas, and digital feature films across the ALT Balaji OTT platform, reaching tens of millions of viewers across India and overseas diaspora.",
     image: {
-      src: "/images/events-expo.jpg",
-      alt: "Convention and Summit Expo Hall",
-      caption: "Corporate Conclave & Exhibition Pavilion",
+      src: "/images/projects/alt-balaji.png",
+      alt: "ALT Balaji — 12+ Webshows & Films Produced",
+      caption: "Key Projects — ALT Balaji Digital Streaming Slate",
     },
     status: "Completed",
     isFeatured: true,
+    highlightBadges: [
+      "Key Projects",
+      "12+ Webshows & Films Produced",
+      "Leading OTT Streaming Partner",
+    ],
+    accolades: [
+      "Over 12+ original episodic web series and feature films produced for digital streaming",
+      "Multi-genre digital entertainment spanning thriller, urban drama, romance, and youth fiction",
+      "High-tempo episodic production pipelines achieving multi-million streaming hours",
+    ],
+    roleOrScope: [
+      "OTT Series & Digital Film Production",
+      "End-to-End Executive Production & Showrunning",
+      "Star Casting & Talent Direction",
+      "High-Tempo Post-Production Mastering",
+    ],
+  },
+
+  // ----------------------------------------------------
+  // SECTION: FEATURE FILM CREDENTIALS
+  // ----------------------------------------------------
+  {
+    id: "meri-bhi-suno",
+    slug: "meri-bhi-suno",
+    title: "Meri Bhi Suno",
+    categoryKey: "films",
+    categoryLabel: "Films",
+    sectionGroup: "feature-film-credentials",
+    tagline: "Producer & Director • Music by Maestro Ilaiyaraaja • Presented by Mr. Pahlaj Nihalani",
+    roleTitle: "Producer & Director",
+    director: "Producer & Director",
+    producer: "Producer & Director",
+    starring: "Jackie Shroff, Mandira Bedi, Sonu Sood, Reema Lagoo",
+    music: "Maestro Ilaiyaraaja",
+    presentedBy: "Mr. Pahlaj Nihalani",
+    overview:
+      "An inspiring, emotionally resonant theatrical feature film produced and directed under consummate artistic leadership. Presented by veteran industry leader Mr. Pahlaj Nihalani, featuring an extraordinary musical score composed by Maestro Ilaiyaraaja, and an illustrious ensemble cast starring Jackie Shroff, Mandira Bedi, Sonu Sood, and the late Reema Lagoo.",
+    image: {
+      src: "/images/projects/meri-bhi-suno.png",
+      alt: "Meri Bhi Suno Feature Film Poster",
+      caption: "Feature Film Credentials — Meri Bhi Suno",
+    },
+    status: "In Production",
+    isFeatured: true,
+    highlightBadges: [
+      "Feature Film Credentials",
+      "Producer & Director",
+      "Music: Maestro Ilaiyaraaja",
+      "Releasing Soon",
+    ],
+    roleOrScope: [
+      "Producer & Director",
+      "Original Screenplay & Directorial Execution",
+      "Ensemble Star Cast Direction",
+      "Original Score Collaboration with Maestro Ilaiyaraaja",
+      "Presented by Mr. Pahlaj Nihalani",
+    ],
+  },
+  {
+    id: "sss-7",
+    slug: "sss-7",
+    title: "SSS-7",
+    categoryKey: "films",
+    categoryLabel: "Films",
+    sectionGroup: "feature-film-credentials",
+    tagline: "Executive Producer • Starring Abhishek Bachchan • Directed by R. Parthiban",
+    roleTitle: "Executive Producer",
+    producer: "Produced by Saraswati Entertainment Pvt. Ltd.",
+    director: "Directed by R. Parthiban",
+    starring: "Abhishek Bachchan & other leading actors",
+    overview:
+      "An audacious, critically heralded solo-character psychological thriller feature film executive produced in association with Saraswati Entertainment Pvt. Ltd. Directed by National Award-winning visionary R. Parthiban, SSS-7 features Abhishek Bachchan delivering a powerhouse, tour-de-force leading performance carrying the entire narrative single-handedly.",
+    image: {
+      src: "/images/projects/sss-7.png",
+      alt: "SSS-7 Feature Film Poster Starring Abhishek Bachchan",
+      caption: "Feature Film Credentials — SSS-7",
+    },
+    status: "Completed",
+    isFeatured: true,
+    highlightBadges: [
+      "Feature Film Credentials",
+      "Executive Producer",
+      "Starring Abhishek Bachchan",
+      "Directed by R. Parthiban",
+    ],
+    roleOrScope: [
+      "Executive Producer",
+      "Production Supervision & Co-Production Logistics",
+      "Produced by Saraswati Entertainment Pvt. Ltd.",
+      "Directorial Collaboration with R. Parthiban",
+      "Pan-India Theatrical Distribution Strategy",
+    ],
   },
 ];
 
@@ -115,6 +237,10 @@ export async function getAllProjects(): Promise<Project[]> {
 
 export async function getProjectsByCategory(categoryKey: ProjectCategoryKey): Promise<Project[]> {
   return projectsData.filter((p) => p.categoryKey === categoryKey);
+}
+
+export async function getProjectsByGroup(group: "key-projects" | "feature-film-credentials"): Promise<Project[]> {
+  return projectsData.filter((p) => p.sectionGroup === group);
 }
 
 export async function getProjectBySlug(slug: string): Promise<Project | undefined> {
