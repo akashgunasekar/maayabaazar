@@ -13,6 +13,7 @@ import {
   Building2,
   Globe,
   Award,
+  ShieldCheck,
 } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
@@ -22,6 +23,7 @@ import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { CreativeProcessSection } from "@/components/sections/CreativeProcessSection";
 import { WhyMaayaaBazaarSection } from "@/components/sections/WhyMaayaaBazaarSection";
+import { teamData } from "@/data/team";
 
 import { SITE_URL, generateBreadcrumbSchema } from "@/lib/seo";
 
@@ -61,6 +63,10 @@ export const metadata: Metadata = {
 export const dynamic = "force-static";
 
 export default function AboutPage() {
+  const founder = teamData[0];
+  const founderImageSrc = founder.image?.src || "/images/founder.jpg";
+  const founderImageAlt = founder.image?.alt || "M. J. Ramanan — Founder & Managing Director, Maayaa Bazaar Hub";
+
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
@@ -176,7 +182,127 @@ export default function AboutPage() {
         </FadeIn>
       </Section>
 
-      {/* 3. VISION & 4. MISSION */}
+      {/* 3. EXECUTIVE LEADERSHIP & FOUNDER */}
+      <Section background="midnight" spacing="lg" borderBottom id="leadership" className="relative overflow-hidden">
+        <FadeIn direction="up">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+              <span className="text-xs font-mono uppercase tracking-widest text-[#C99A32] block mb-3 font-semibold">
+                Executive Leadership
+              </span>
+              <h2 className="font-[var(--font-heading)] text-3xl sm:text-4xl lg:text-5xl font-black text-[#FFF8E8] tracking-tight">
+                Guided by Cinematic Vision &amp; Strategic Leadership
+              </h2>
+              <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-[#C99A32] to-transparent mx-auto mt-4" />
+            </div>
+
+            <div className="rounded-3xl bg-gradient-to-br from-[#06152F] via-[#020817] to-[#06152F] border border-[#C99A32]/35 p-6 sm:p-10 lg:p-12 shadow-[0_24px_64px_rgba(2,8,23,0.95)] relative overflow-hidden">
+              {/* Subtle Royal Blue & Gold Ambient Lighting */}
+              <div className="absolute -top-24 -right-24 w-96 h-96 bg-[radial-gradient(ellipse_at_center,rgba(201,154,50,0.12),transparent_70%)] pointer-events-none" />
+              <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[radial-gradient(ellipse_at_center,rgba(11,33,69,0.4),transparent_70%)] pointer-events-none" />
+
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
+                {/* Founder Portrait with Royal Metallic Gold Frame */}
+                <div className="lg:col-span-5 flex justify-center">
+                  <div className="relative w-full max-w-[340px] aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden bg-[#020817] border-2 border-[#C99A32]/60 shadow-[0_0_35px_rgba(201,154,50,0.25),0_20px_50px_rgba(2,8,23,0.95)] group">
+                    <Image
+                      src={founderImageSrc}
+                      alt={founderImageAlt}
+                      fill
+                      priority
+                      sizes="(max-width: 640px) 300px, (max-width: 1024px) 340px, 400px"
+                      className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#020817] via-[#020817]/20 to-transparent opacity-70" />
+
+                    {/* Verified Status Pill */}
+                    <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between p-3 rounded-xl bg-[#020817]/95 backdrop-blur-md border border-[#C99A32]/40 shadow-lg">
+                      <div>
+                        <p className="text-xs font-bold text-[#FFF8E8]">{founder.name}</p>
+                        <p className="text-[10px] font-mono text-[#C99A32] uppercase tracking-wider">
+                          {founder.role}
+                        </p>
+                      </div>
+                      <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#06152F] border border-[#C99A32]/40 text-[#C99A32] text-[10px] font-mono font-medium">
+                        <ShieldCheck className="w-3.5 h-3.5 text-[#C99A32]" />
+                        <span>Confirmed</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Narrative & Leadership Details */}
+                <div className="lg:col-span-7 space-y-6">
+                  <div>
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0B2145]/70 border border-[#C99A32]/30 text-[#C99A32] text-xs font-mono mb-4">
+                      <Award className="w-3.5 h-3.5" />
+                      <span>{founder.department}</span>
+                    </div>
+
+                    <h3 className="font-[var(--font-heading)] text-2xl sm:text-3xl lg:text-4xl font-black text-[#FFF8E8] tracking-tight">
+                      {founder.name}
+                    </h3>
+                    <p className="text-sm sm:text-base font-mono text-[#C99A32] font-semibold mt-1">
+                      {founder.role}
+                    </p>
+                  </div>
+
+                  <blockquote className="p-4 sm:p-5 rounded-2xl bg-[#020817]/85 border-l-2 border-[#C99A32] text-[#FFF8E8] font-medium italic text-sm sm:text-base leading-relaxed">
+                    &ldquo;At Maayaa Bazaar Hub, our vision is to transform cinematic ambition into timeless reality, and elevate live events into indelible cultural experiences.&rdquo;
+                  </blockquote>
+
+                  <p className="text-xs sm:text-sm text-[#C9C4B8] leading-relaxed">
+                    {founder.bio}
+                  </p>
+
+                  <p className="text-xs sm:text-sm text-[#C9C4B8] leading-relaxed">
+                    With an unwavering dedication to world-class production standards, M. J. Ramanan leads a multidisciplinary enterprise spanning theatrical film production, stadium concert tours, movie promotional galas, and international creative collaborations.
+                  </p>
+
+                  {/* Highlights Grid */}
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                    <div className="p-3.5 rounded-xl bg-[#020817]/70 border border-[#FFF8E8]/[0.08]">
+                      <span className="text-xs font-mono uppercase tracking-wider text-[#C99A32] block font-semibold mb-1">
+                        Cinema
+                      </span>
+                      <p className="text-xs text-[#C9C4B8]">
+                        Theatrical Features &amp; Studio Production
+                      </p>
+                    </div>
+                    <div className="p-3.5 rounded-xl bg-[#020817]/70 border border-[#FFF8E8]/[0.08]">
+                      <span className="text-xs font-mono uppercase tracking-wider text-[#C99A32] block font-semibold mb-1">
+                        Spectacles
+                      </span>
+                      <p className="text-xs text-[#C9C4B8]">
+                        Stadium Concerts &amp; Live Tours
+                      </p>
+                    </div>
+                    <div className="p-3.5 rounded-xl bg-[#020817]/70 border border-[#FFF8E8]/[0.08]">
+                      <span className="text-xs font-mono uppercase tracking-wider text-[#C99A32] block font-semibold mb-1">
+                        Global
+                      </span>
+                      <p className="text-xs text-[#C9C4B8]">
+                        Cross-Border Creative Alliances
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="pt-2 flex flex-wrap items-center gap-4">
+                    <Button href="/contact" variant="primary" size="sm" icon={<ArrowRight className="w-3.5 h-3.5" />}>
+                      Connect with Leadership
+                    </Button>
+                    <Button href="/services" variant="outline" size="sm">
+                      Explore All Verticals
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </FadeIn>
+      </Section>
+
+      {/* 4. VISION & 5. MISSION */}
       <Section background="midnight" spacing="lg" borderBottom id="vision-mission">
         <FadeIn direction="up">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">

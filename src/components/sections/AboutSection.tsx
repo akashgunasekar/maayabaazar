@@ -1,6 +1,7 @@
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Film, Music, Sparkles, Globe } from "lucide-react";
+import { ArrowRight, Film, Music, Sparkles, Globe, ShieldCheck } from "lucide-react";
 import { Section } from "@/components/layout/Section";
 import { SectionHeading } from "@/components/ui/typography/SectionHeading";
 import { Button } from "@/components/ui/Button";
@@ -38,6 +39,38 @@ export const AboutSection: React.FC = () => {
               <Button href="/services" variant="outline" size="md">
                 Our Services
               </Button>
+            </div>
+
+            {/* Founder Leadership Signature Spotlight */}
+            <div className="pt-5 border-t border-[#FFF8E8]/10 flex items-center justify-between">
+              <div className="flex items-center gap-3.5">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-[#C99A32] shadow-[0_0_15px_rgba(201,154,50,0.35)] shrink-0 bg-[#06152F]">
+                  <Image
+                    src="/images/founder.jpg"
+                    alt="M. J. Ramanan — Founder & Managing Director"
+                    fill
+                    className="object-cover object-top"
+                    sizes="48px"
+                  />
+                </div>
+                <div>
+                  <div className="flex items-center gap-1.5">
+                    <p className="text-sm font-bold text-[#FFF8E8]">M. J. Ramanan</p>
+                    <span className="inline-flex items-center text-[10px] text-[#C99A32] font-mono">
+                      <ShieldCheck className="w-3.5 h-3.5 inline mr-0.5" /> Verified
+                    </span>
+                  </div>
+                  <p className="text-[11px] font-mono text-[#C99A32] uppercase tracking-wider font-semibold">
+                    Founder &amp; Managing Director
+                  </p>
+                </div>
+              </div>
+              <Link
+                href="/about#leadership"
+                className="text-xs font-mono text-[#C99A32] hover:text-[#FFF8E8] transition-colors inline-flex items-center gap-1"
+              >
+                Meet Leadership &rarr;
+              </Link>
             </div>
           </div>
 
