@@ -23,25 +23,25 @@ export const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const baseStyles =
-    "group inline-flex items-center justify-center font-semibold transition-all duration-300 select-none cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4A72C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#08050D] disabled:opacity-50 disabled:pointer-events-none rounded-xl relative overflow-hidden active:scale-[0.98]";
+    "group inline-flex items-center justify-center font-bold tracking-wide uppercase transition-all duration-300 select-none cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C99A32] focus-visible:ring-offset-2 focus-visible:ring-offset-[#020817] disabled:opacity-50 disabled:pointer-events-none rounded-lg relative overflow-hidden active:scale-[0.98]";
 
   const sizeStyles = {
-    sm: "px-3.5 py-1.5 text-xs gap-1.5",
-    md: "px-5 py-2.5 text-sm gap-2",
-    lg: "px-7 py-3.5 text-base gap-2.5",
+    sm: "px-4 py-2 text-xs gap-1.5",
+    md: "px-6 py-2.5 text-xs sm:text-sm gap-2",
+    lg: "px-8 py-3.5 text-sm sm:text-base gap-2.5",
   };
 
   const variantStyles = {
     primary:
-      "btn-shimmer bg-[#D4A72C] text-[#08050D] hover:bg-[#F4D76A] shadow-[0_2px_16px_rgba(212,167,44,0.3)] hover:shadow-[0_4px_24px_rgba(244,215,106,0.45)] border border-[#F4D76A]/40",
+      "btn-shimmer bg-gradient-to-r from-[#C99A32] via-[#F2D477] to-[#C99A32] text-[#020817] hover:brightness-105 shadow-[0_2px_18px_rgba(201,154,50,0.35)] hover:shadow-[0_4px_28px_rgba(242,212,119,0.5)] border border-[#F2D477]/60",
     secondary:
-      "btn-shimmer bg-[#16091F] text-[#FAF8F2] hover:bg-[#230F30] border border-[#FAF8F2]/10 hover:border-[#D4A72C]/40 shadow-sm",
+      "btn-shimmer bg-[#06152F]/80 backdrop-blur-sm text-[#FFF8E8] hover:text-[#FFF8E8] border border-[#C99A32]/40 hover:border-[#F2D477] hover:bg-[#0B2145] hover:shadow-[0_0_20px_rgba(201,154,50,0.25)] shadow-sm",
     outline:
-      "btn-shimmer bg-transparent text-[#FAF8F2] hover:text-[#FAF8F2] border border-[#D4A72C]/40 hover:border-[#D4A72C] hover:bg-[#D4A72C]/10",
+      "btn-shimmer bg-transparent text-[#FFF8E8] hover:text-[#F2D477] border border-[#C99A32]/40 hover:border-[#F2D477] hover:bg-[#0B2145]/30 hover:shadow-[0_0_15px_rgba(201,154,50,0.2)]",
     "outline-gold":
-      "btn-shimmer bg-transparent text-[#D4A72C] hover:text-[#FAF8F2] border border-[#D4A72C]/50 hover:border-[#D4A72C] hover:bg-[#D4A72C]/10",
+      "btn-shimmer bg-transparent text-[#C99A32] hover:text-[#F2D477] border border-[#C99A32]/50 hover:border-[#F2D477] hover:bg-[#0B2145]/30 hover:shadow-[0_0_15px_rgba(201,154,50,0.2)]",
     text:
-      "bg-transparent text-[#D4A72C] hover:text-[#F4D76A] p-0 hover:translate-x-0.5 shadow-none rounded-none active:scale-100",
+      "bg-transparent text-[#C99A32] hover:text-[#F2D477] p-0 hover:translate-x-0.5 shadow-none rounded-none active:scale-100 font-semibold tracking-wider",
   };
 
   const content = (

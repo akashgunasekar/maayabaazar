@@ -1,36 +1,46 @@
 /**
- * MAAYAA BAZAAR HUB — Design Tokens
+ * MAAYAA BAZAAR HUB — Final Brand Design Tokens
  * 
  * Palette:
- * - Midnight: #08050D (Deepest dark canvas)
- * - Deep Purple: #16091F (Card & elevated section surfaces)
- * - Royal Purple: #4B0A78 (Atmospheric accents, glows, gradients)
- * - Brand Gold: #D4A72C (Primary gold for CTAs, active states, borders)
- * - Highlight Gold: #F4D76A (Hover states, light accents)
- * - Warm Gold: #B77A12 (Secondary warm borders, small badges)
- * - Warm White: #FAF8F2 (Primary display and reading text)
- * - Secondary Text: #B9B0BE (Muted body copy, meta labels)
+ * - Primary Background (Midnight Navy): #020817
+ * - Secondary Background (Deep Navy): #06152F
+ * - Primary Blue (Royal Navy): #0B2145
+ * - Secondary Blue (Cinematic Blue): #102F5C
+ * - Primary Gold (Metallic Gold): #C99A32
+ * - Highlight Gold (Bright Gold): #F2D477
+ * - Light Accent (Champagne): #F7E7B0
+ * - Primary Text (Warm Ivory): #FFF8E8
+ * - Secondary Text: #C9C4B8
+ * - Muted Gold: #A9822A
  */
 
 export const colors = {
-  midnight: "#08050D",
-  deepPurple: "#16091F",
-  royalPurple: "#4B0A78",
-  brandGold: "#D4A72C",
-  highlightGold: "#F4D76A",
-  warmGold: "#B77A12",
-  warmWhite: "#FAF8F2",
-  secondaryText: "#B9B0BE",
+  midnight: "#020817",
+  deepNavy: "#06152F",
+  royalNavy: "#0B2145",
+  cinematicBlue: "#102F5C",
+  brandGold: "#C99A32",
+  highlightGold: "#F2D477",
+  champagne: "#F7E7B0",
+  warmIvory: "#FFF8E8",
+  secondaryText: "#C9C4B8",
+  mutedGold: "#A9822A",
   
+  // Legacy aliases mapped to navy
+  deepPurple: "#06152F",
+  royalPurple: "#0B2145",
+  warmWhite: "#FFF8E8",
+
   // Translucent variations for luxury UI layering
-  surfaceBorder: "rgba(212, 167, 44, 0.15)",
-  surfaceBorderHover: "rgba(212, 167, 44, 0.4)",
-  goldGlow: "rgba(212, 167, 44, 0.25)",
-  purpleAtmosphere: "rgba(75, 10, 120, 0.35)",
+  surfaceBorder: "rgba(201, 154, 50, 0.2)",
+  surfaceBorderHover: "rgba(242, 212, 119, 0.5)",
+  goldGlow: "rgba(201, 154, 50, 0.25)",
+  blueAtmosphere: "rgba(11, 33, 69, 0.4)",
 } as const;
 
 export const typography = {
-  fontHeading: "var(--font-manrope), sans-serif",
+  fontHeading: "var(--font-cinzel), var(--font-manrope), serif",
+  fontDisplay: "var(--font-cinzel), serif",
   fontBody: "var(--font-inter), sans-serif",
 } as const;
 

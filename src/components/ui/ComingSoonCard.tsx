@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Sparkles, ArrowRight, Clock } from "lucide-react";
+import { ArrowRight, Clock } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export interface ComingSoonCardProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -23,45 +23,45 @@ export const ComingSoonCard: React.FC<ComingSoonCardProps> = ({
   return (
     <div
       className={cn(
-        "rounded-3xl p-8 sm:p-10 bg-[#16091F]/80 border border-dashed border-[#D4A72C]/30 relative overflow-hidden flex flex-col justify-between group",
+        "rounded-xl p-8 sm:p-10 bg-[#06152F]/80 backdrop-blur-md border border-dashed border-[#C99A32]/35 relative overflow-hidden flex flex-col justify-between group hover:border-[#C99A32]/60 transition-all duration-300",
         className
       )}
       {...props}
     >
-      {/* Subtle radial ambient highlight */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-[radial-gradient(circle_at_top_right,rgba(75,10,120,0.2),transparent_70%)] pointer-events-none" />
+      {/* Subtle royal blue ambient highlight */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-[radial-gradient(circle_at_top_right,rgba(11,33,69,0.35),transparent_70%)] pointer-events-none" />
 
       <div>
         <div className="flex items-center justify-between gap-2 mb-6">
-          <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#D4A72C] px-2.5 py-1 rounded bg-[#08050D] border border-[#D4A72C]/30">
+          <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#C99A32] px-2.5 py-1 rounded bg-[#020817] border border-[#C99A32]/30">
             {category}
           </span>
-          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#FAF8F2]/5 border border-[#FAF8F2]/10 text-[10px] text-[#B9B0BE]">
-            <Clock className="w-3 h-3 text-[#D4A72C]" />
+          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-[#020817]/60 border border-[#C99A32]/20 text-[10px] text-[#C9C4B8]">
+            <Clock className="w-3 h-3 text-[#C99A32]" />
             <span>Coming Soon</span>
           </div>
         </div>
 
-        <h3 className="font-[var(--font-heading)] text-xl font-bold text-[#FAF8F2] tracking-tight mb-3">
+        <h3 className="font-[var(--font-cinzel)] font-bold text-xl text-[#FFF8E8] tracking-tight mb-3">
           {title}
         </h3>
 
-        <p className="text-xs sm:text-sm text-[#B9B0BE] leading-relaxed">
+        <p className="text-xs sm:text-sm text-[#C9C4B8] leading-relaxed">
           {description}
         </p>
       </div>
 
-      <div className="mt-8 pt-4 border-t border-[#FAF8F2]/[0.08] flex items-center justify-between">
-        <span className="text-[11px] text-[#807687]">
+      <div className="mt-8 pt-4 border-t border-[#C99A32]/15 flex items-center justify-between">
+        <span className="text-[11px] font-mono text-[#C9C4B8]/60">
           Maayaa Bazaar Hub
         </span>
 
         <Link
           href={actionHref}
-          className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#D4A72C] hover:text-[#F4D76A] transition-colors group-hover:translate-x-0.5"
+          className="inline-flex items-center gap-1 text-xs font-semibold text-[#C99A32] group-hover:text-[#F2D477] transition-colors"
         >
           <span>{actionText}</span>
-          <ArrowRight className="w-3.5 h-3.5" />
+          <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
         </Link>
       </div>
     </div>

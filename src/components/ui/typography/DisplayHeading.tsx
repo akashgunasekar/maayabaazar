@@ -15,16 +15,16 @@ export const DisplayHeading: React.FC<DisplayHeadingProps> = ({
   ...props
 }) => {
   const sizeClasses = {
-    xl: "text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.12]",
-    "2xl": "text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1]",
-    "3xl": "text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.08]",
+    xl: "text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-[1.15]",
+    "2xl": "text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-[1.12]",
+    "3xl": "text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.08]",
     "4xl": "text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[1.04]",
   };
 
   return (
     <Component
       className={cn(
-        "font-[var(--font-heading)] text-[#FAF8F2] antialiased",
+        "font-[var(--font-cinzel)] font-[var(--font-heading)] text-[#FFF8E8] antialiased",
         sizeClasses[size],
         className
       )}

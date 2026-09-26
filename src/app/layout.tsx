@@ -1,8 +1,16 @@
 import type { Metadata } from "next";
-import { Manrope, Inter } from "next/font/google";
+import { Cinzel, Manrope, Inter } from "next/font/google";
 import "./globals.css";
 import { Header, Footer } from "@/components/layout";
 import { defaultMetadata, generateOrganizationSchema } from "@/lib/seo";
+
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  variable: "--font-cinzel",
+  display: "swap",
+  preload: true,
+  adjustFontFallback: true,
+});
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -34,7 +42,7 @@ export default function RootLayout({
       lang="en"
       suppressHydrationWarning
       data-scroll-behavior="smooth"
-      className={`${manrope.variable} ${inter.variable} dark scroll-smooth`}
+      className={`${cinzel.variable} ${manrope.variable} ${inter.variable} dark scroll-smooth`}
     >
       <head>
         <script
@@ -44,7 +52,7 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning
-        className="min-h-screen flex flex-col bg-[#08050D] text-[#FAF8F2] font-[var(--font-inter)] selection:bg-[#D4A72C] selection:text-[#08050D] antialiased"
+        className="min-h-screen flex flex-col bg-[#020817] text-[#FFF8E8] font-[var(--font-inter)] selection:bg-[#C99A32] selection:text-[#020817] antialiased"
       >
         <Header />
         <main id="main-content" tabIndex={-1} className="flex-1 w-full focus:outline-none">

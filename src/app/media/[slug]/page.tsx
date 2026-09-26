@@ -130,11 +130,11 @@ export default async function MediaDetailPage({ params }: MediaDetailPageProps) 
       <PageHero
         badge={
           <div className="flex items-center gap-2">
-            <span className="px-3 py-1 rounded-full bg-[#16091F] text-xs font-mono text-[#D4A72C] border border-[#D4A72C]/30">
+            <span className="px-3 py-1 rounded-full bg-[#06152F] text-xs font-mono text-[#C99A32] border border-[#C99A32]/30">
               {article.categoryLabel}
             </span>
-            <span className="text-xs font-mono text-[#B9B0BE] flex items-center gap-1.5">
-              <Calendar className="w-3.5 h-3.5 text-[#D4A72C]" />
+            <span className="text-xs font-mono text-[#C9C4B8] flex items-center gap-1.5">
+              <Calendar className="w-3.5 h-3.5 text-[#C99A32]" />
               <time dateTime={article.isoDate}>{article.publishDate}</time>
             </span>
           </div>
@@ -142,16 +142,16 @@ export default async function MediaDetailPage({ params }: MediaDetailPageProps) 
         title={article.title}
         description={article.summary}
         breadcrumbs={
-          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-[#B9B0BE]">
-            <Link href="/" className="hover:text-[#FAF8F2] transition-colors">
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-[#C9C4B8]">
+            <Link href="/" className="hover:text-[#FFF8E8] transition-colors">
               Home
             </Link>
-            <span className="text-[#FAF8F2]/30">/</span>
-            <Link href="/media" className="hover:text-[#FAF8F2] transition-colors">
+            <span className="text-[#FFF8E8]/30">/</span>
+            <Link href="/media" className="hover:text-[#FFF8E8] transition-colors">
               Media
             </Link>
-            <span className="text-[#FAF8F2]/30">/</span>
-            <span className="text-[#D4A72C] line-clamp-1">{article.title}</span>
+            <span className="text-[#FFF8E8]/30">/</span>
+            <span className="text-[#C99A32] line-clamp-1">{article.title}</span>
           </nav>
         }
         actions={
@@ -161,9 +161,9 @@ export default async function MediaDetailPage({ params }: MediaDetailPageProps) 
             </Button>
             <a
               href="mailto:filmmakerram@gmail.com"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#16091F] border border-[#FAF8F2]/10 text-xs font-mono text-[#FAF8F2] hover:border-[#D4A72C]/40 transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#06152F] border border-[#FFF8E8]/10 text-xs font-mono text-[#FFF8E8] hover:border-[#C99A32]/40 transition-colors"
             >
-              <Mail className="w-3.5 h-3.5 text-[#D4A72C]" />
+              <Mail className="w-3.5 h-3.5 text-[#C99A32]" />
               <span>Contact Press Desk</span>
             </a>
           </div>
@@ -176,7 +176,7 @@ export default async function MediaDetailPage({ params }: MediaDetailPageProps) 
           <div className="max-w-4xl mx-auto space-y-10">
             {/* Visual Image */}
             {article.image && (
-              <div className="relative aspect-[16/9] w-full rounded-3xl overflow-hidden bg-[#08050D] border border-[#FAF8F2]/10 shadow-[0_20px_50px_rgba(8,5,13,0.9)]">
+              <div className="relative aspect-[16/9] w-full rounded-3xl overflow-hidden bg-[#020817] border border-[#FFF8E8]/10 shadow-[0_20px_50px_rgba(2,8,23,0.9)]">
                 <Image
                   src={article.image.src}
                   alt={article.image.alt}
@@ -185,11 +185,11 @@ export default async function MediaDetailPage({ params }: MediaDetailPageProps) 
                   priority
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#08050D] via-transparent to-transparent opacity-60" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#020817] via-transparent to-transparent opacity-60" />
 
                 {article.image.caption && (
-                  <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-[#08050D]/85 backdrop-blur-md border border-[#FAF8F2]/10 text-xs text-[#FAF8F2]/90 flex items-center gap-2">
-                    <ShieldCheck className="w-4 h-4 text-[#D4A72C] shrink-0" />
+                  <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-[#020817]/85 backdrop-blur-md border border-[#FFF8E8]/10 text-xs text-[#FFF8E8]/90 flex items-center gap-2">
+                    <ShieldCheck className="w-4 h-4 text-[#C99A32] shrink-0" />
                     <span>{article.image.caption}</span>
                   </div>
                 )}
@@ -197,21 +197,21 @@ export default async function MediaDetailPage({ params }: MediaDetailPageProps) 
             )}
 
             {/* Article Content Paragraphs */}
-            <div className="p-8 sm:p-12 rounded-3xl bg-[#08050D] border border-[#FAF8F2]/[0.08] space-y-6">
-              <span className="text-xs font-mono uppercase tracking-widest text-[#D4A72C] block">
+            <div className="p-8 sm:p-12 rounded-3xl bg-[#020817] border border-[#FFF8E8]/[0.08] space-y-6">
+              <span className="text-xs font-mono uppercase tracking-widest text-[#C99A32] block">
                 Official Statement Text
               </span>
 
               {article.content.map((paragraph, idx) => (
-                <p key={idx} className="text-sm sm:text-base text-[#B9B0BE] leading-relaxed">
+                <p key={idx} className="text-sm sm:text-base text-[#C9C4B8] leading-relaxed">
                   {paragraph}
                 </p>
               ))}
 
               {/* Attribution Signature */}
-              <div className="pt-6 border-t border-[#FAF8F2]/[0.08] flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs font-mono text-[#FAF8F2]/60">
+              <div className="pt-6 border-t border-[#FFF8E8]/[0.08] flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs font-mono text-[#FFF8E8]/60">
                 <div>
-                  <span className="block text-[#FAF8F2] font-bold">Maayaa Bazaar Hub</span>
+                  <span className="block text-[#FFF8E8] font-bold">Maayaa Bazaar Hub</span>
                   <span>Corporate Communications &amp; Press Bureau</span>
                 </div>
                 <span>Chennai, Tamil Nadu, India</span>
@@ -237,18 +237,18 @@ export default async function MediaDetailPage({ params }: MediaDetailPageProps) 
                   <Link
                     key={rel.id}
                     href={`/media/${rel.slug}`}
-                    className="p-6 rounded-2xl bg-[#16091F]/40 border border-[#FAF8F2]/[0.08] hover:border-[#D4A72C]/40 space-y-3 group transition-all"
+                    className="p-6 rounded-2xl bg-[#06152F]/40 border border-[#FFF8E8]/[0.08] hover:border-[#C99A32]/40 space-y-3 group transition-all"
                   >
-                    <div className="flex items-center justify-between text-xs text-[#B9B0BE]">
-                      <span className="text-[#D4A72C] font-mono">{rel.categoryLabel}</span>
+                    <div className="flex items-center justify-between text-xs text-[#C9C4B8]">
+                      <span className="text-[#C99A32] font-mono">{rel.categoryLabel}</span>
                       <time dateTime={rel.isoDate}>{rel.publishDate}</time>
                     </div>
 
-                    <h4 className="font-[var(--font-heading)] text-base font-bold text-[#FAF8F2] group-hover:text-[#F4D76A] transition-colors leading-snug">
+                    <h4 className="font-[var(--font-heading)] text-base font-bold text-[#FFF8E8] group-hover:text-[#F2D477] transition-colors leading-snug">
                       {rel.title}
                     </h4>
 
-                    <p className="text-xs text-[#B9B0BE] line-clamp-2">
+                    <p className="text-xs text-[#C9C4B8] line-clamp-2">
                       {rel.summary}
                     </p>
                   </Link>

@@ -22,9 +22,9 @@ export const BodyText: React.FC<BodyTextProps> = ({
   };
 
   const variantStyles = {
-    primary: "text-[#FAF8F2]",
-    secondary: "text-[#B9B0BE]",
-    gold: "text-[#D4A72C]",
+    primary: "text-[#FFF8E8]",
+    secondary: "text-[#C9C4B8]",
+    gold: "text-[#C99A32]",
     muted: "text-[#807687]",
   };
 

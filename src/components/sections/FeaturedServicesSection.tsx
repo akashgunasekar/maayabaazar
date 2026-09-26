@@ -226,7 +226,7 @@ export const FeaturedServicesSection: React.FC = () => {
         />
 
         {/* 9 Services Pill Selector */}
-        <div className="flex flex-wrap items-center gap-2 mb-10 pb-4 border-b border-[#FAF8F2]/[0.08] overflow-x-auto">
+        <div className="flex flex-wrap items-center gap-2 mb-10 pb-4 border-b border-[#FFF8E8]/[0.08] overflow-x-auto">
           {featuredServicesList.map((svc) => {
             const isSelected = svc.id === currentService.id;
             return (
@@ -236,11 +236,11 @@ export const FeaturedServicesSection: React.FC = () => {
                 onClick={() => setSelectedId(svc.id)}
                 className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-mono transition-all shrink-0 ${
                   isSelected
-                    ? "bg-[#D4A72C] text-[#08050D] font-bold shadow-[0_0_16px_rgba(212,167,44,0.35)] scale-105"
-                    : "bg-[#08050D] text-[#B9B0BE] hover:text-[#FAF8F2] hover:bg-[#16091F] border border-[#FAF8F2]/[0.08]"
+                    ? "bg-[#C99A32] text-[#020817] font-bold shadow-[0_0_16px_rgba(201,154,50,0.35)] scale-105"
+                    : "bg-[#020817] text-[#C9C4B8] hover:text-[#FFF8E8] hover:bg-[#06152F] border border-[#FFF8E8]/[0.08]"
                 }`}
               >
-                <span className={isSelected ? "text-[#08050D]" : "text-[#D4A72C]"}>
+                <span className={isSelected ? "text-[#020817]" : "text-[#C99A32]"}>
                   {svc.icon}
                 </span>
                 <span>{svc.title}</span>
@@ -250,11 +250,11 @@ export const FeaturedServicesSection: React.FC = () => {
         </div>
 
         {/* Selected Service Detailed Showcase Card */}
-        <div className="p-8 sm:p-12 rounded-3xl bg-[#08050D] border border-[#FAF8F2]/[0.08] relative overflow-hidden transition-all duration-500 shadow-[0_20px_50px_rgba(8,5,13,0.95)]">
+        <div className="p-8 sm:p-12 rounded-3xl bg-[#020817] border border-[#FFF8E8]/[0.08] relative overflow-hidden transition-all duration-500 shadow-[0_20px_50px_rgba(2,8,23,0.95)]">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Visual Image */}
             <div className="lg:col-span-6 relative">
-              <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-[#16091F] border border-[#FAF8F2]/10 shadow-[0_16px_40px_rgba(8,5,13,0.8)] group">
+              <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-[#06152F] border border-[#FFF8E8]/10 shadow-[0_16px_40px_rgba(2,8,23,0.8)] group">
                 <Image
                   src={currentService.image}
                   alt={currentService.alt}
@@ -262,54 +262,54 @@ export const FeaturedServicesSection: React.FC = () => {
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#08050D] via-transparent to-transparent opacity-60" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#020817] via-transparent to-transparent opacity-60" />
               </div>
             </div>
 
             {/* Content Dossier */}
             <div className="lg:col-span-6 space-y-6">
               <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-lg bg-[#16091F] border border-[#D4A72C]/30 flex items-center justify-center text-[#D4A72C]">
+                <div className="w-8 h-8 rounded-lg bg-[#06152F] border border-[#C99A32]/30 flex items-center justify-center text-[#C99A32]">
                   {currentService.icon}
                 </div>
-                <span className="text-xs font-mono tracking-widest text-[#D4A72C] uppercase font-semibold">
+                <span className="text-xs font-mono tracking-widest text-[#C99A32] uppercase font-semibold">
                   {currentService.eyebrow}
                 </span>
               </div>
 
               <div>
-                <h3 className="font-[var(--font-heading)] text-2xl sm:text-3xl font-bold text-[#FAF8F2] mb-2 tracking-tight">
+                <h3 className="font-[var(--font-heading)] text-2xl sm:text-3xl font-bold text-[#FFF8E8] mb-2 tracking-tight">
                   {currentService.title}
                 </h3>
-                <p className="text-sm font-medium text-[#F4D76A]">
+                <p className="text-sm font-medium text-[#F2D477]">
                   {currentService.tagline}
                 </p>
               </div>
 
-              <p className="text-xs sm:text-sm text-[#B9B0BE] leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#C9C4B8] leading-relaxed">
                 {currentService.description}
               </p>
 
               {/* Capabilities Checklist */}
               <div className="space-y-2 pt-2">
-                <span className="text-[10px] font-mono uppercase tracking-wider text-[#FAF8F2]/60 block mb-1">
+                <span className="text-[10px] font-mono uppercase tracking-wider text-[#FFF8E8]/60 block mb-1">
                   Key Technical Capabilities
                 </span>
                 {currentService.capabilities.map((cap, cIdx) => (
-                  <div key={cIdx} className="flex items-start gap-2.5 text-xs text-[#FAF8F2]/90">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#D4A72C] shrink-0 mt-0.5" />
+                  <div key={cIdx} className="flex items-start gap-2.5 text-xs text-[#FFF8E8]/90">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#C99A32] shrink-0 mt-0.5" />
                     <span>{cap}</span>
                   </div>
                 ))}
               </div>
 
               {/* Deliverables Badges & CTA */}
-              <div className="pt-4 border-t border-[#FAF8F2]/[0.08] flex flex-wrap items-center justify-between gap-4">
+              <div className="pt-4 border-t border-[#FFF8E8]/[0.08] flex flex-wrap items-center justify-between gap-4">
                 <div className="flex flex-wrap items-center gap-2">
                   {currentService.deliverables.map((deliv, dIdx) => (
                     <span
                       key={dIdx}
-                      className="px-2.5 py-1 rounded-md bg-[#16091F] text-[11px] font-mono text-[#D4A72C] border border-[#D4A72C]/20"
+                      className="px-2.5 py-1 rounded-md bg-[#06152F] text-[11px] font-mono text-[#C99A32] border border-[#C99A32]/20"
                     >
                       {deliv}
                     </span>

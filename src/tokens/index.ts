@@ -1,36 +1,36 @@
 // Design Tokens for Maayabaazar Hub
-// Strict adherence to Brand Identity:
-// 50% Modern SaaS clarity | 30% Cinematic Entertainment | 20% Luxury Destination
+// Final Brand Direction: Midnight Navy, Royal Blue, Metallic Gold, Champagne & Warm Ivory
 
 export const colors = {
   background: {
-    DEFAULT: "#09090B",
-    secondary: "#15171C",
-    tertiary: "#1A1D24",
-    deep: "#050507",
+    DEFAULT: "#020817", // Midnight Navy
+    secondary: "#06152F", // Deep Navy
+    tertiary: "#0B2145", // Royal Navy
+    deep: "#020817",
   },
   surface: {
-    DEFAULT: "#1C1F26",
-    elevated: "#242831",
-    subtle: "#14171D",
-    muted: "#101217",
-    border: "rgba(255, 255, 255, 0.08)",
-    borderSubtle: "rgba(255, 255, 255, 0.04)",
-    borderAccent: "rgba(214, 179, 106, 0.28)",
+    DEFAULT: "#06152F",
+    elevated: "#0B2145",
+    subtle: "#040F22",
+    muted: "#020817",
+    border: "rgba(201, 154, 50, 0.2)",
+    borderSubtle: "rgba(201, 154, 50, 0.12)",
+    borderAccent: "rgba(201, 154, 50, 0.35)",
   },
   text: {
-    primary: "#F5F5F2",
-    secondary: "#A7A9B0",
-    muted: "#6B7280",
-    dimmed: "#4B5563",
-    inverse: "#09090B",
+    primary: "#FFF8E8", // Warm Ivory
+    secondary: "#C9C4B8",
+    muted: "#8F8980",
+    dimmed: "#6A645B",
+    inverse: "#020817",
   },
   accent: {
-    DEFAULT: "#D6B36A", // Warm Champagne Gold
-    highlight: "#F0D99A", // Radiant Gold Highlight
-    muted: "rgba(214, 179, 106, 0.15)",
-    glow: "rgba(214, 179, 106, 0.2)",
-    dark: "#9E7B35",
+    DEFAULT: "#C99A32", // Metallic Gold
+    highlight: "#F2D477", // Bright Gold
+    champagne: "#F7E7B0", // Champagne
+    muted: "rgba(201, 154, 50, 0.15)",
+    glow: "rgba(201, 154, 50, 0.25)",
+    dark: "#A9822A", // Muted Gold
   },
   status: {
     active: {
@@ -40,17 +40,17 @@ export const colors = {
       glow: "rgba(82, 200, 120, 0.25)",
     },
     upcoming: {
-      DEFAULT: "#E7B85B", // Amber Gold
-      bg: "rgba(231, 184, 91, 0.12)",
-      border: "rgba(231, 184, 91, 0.32)",
-      glow: "rgba(231, 184, 91, 0.25)",
+      DEFAULT: "#F2D477", // Amber Gold
+      bg: "rgba(242, 212, 119, 0.12)",
+      border: "rgba(242, 212, 119, 0.32)",
+      glow: "rgba(242, 212, 119, 0.25)",
     },
   },
 } as const;
 
 export const typography = {
   fonts: {
-    heading: "var(--font-manrope)",
+    heading: "var(--font-cinzel), var(--font-manrope)",
     body: "var(--font-inter)",
   },
   tracking: {
@@ -87,10 +87,10 @@ export const radii = {
 
 export const shadows = {
   none: "none",
-  subtle: "0 2px 8px rgba(0, 0, 0, 0.35)",
-  surface: "0 8px 24px rgba(0, 0, 0, 0.45)",
-  elevated: "0 16px 40px rgba(0, 0, 0, 0.65)",
-  accentGlow: "0 0 32px rgba(214, 179, 106, 0.14)",
+  subtle: "0 2px 8px rgba(0, 0, 0, 0.5)",
+  surface: "0 8px 24px rgba(2, 8, 23, 0.65)",
+  elevated: "0 16px 40px rgba(2, 8, 23, 0.85)",
+  accentGlow: "0 0 32px rgba(201, 154, 50, 0.2)",
   activeGlow: "0 0 20px rgba(82, 200, 120, 0.2)",
 } as const;
 
@@ -98,27 +98,4 @@ export const containerWidths = {
   narrow: "max-w-4xl", // 896px
   default: "max-w-6xl", // 1152px
   wide: "max-w-7xl", // 1280px
-  fullEditorial: "max-w-[1440px]", // 1440px
-} as const;
-
-export const animation = {
-  durations: {
-    fast: "150ms",
-    base: "250ms",
-    slow: "450ms",
-    cinematic: "700ms",
-  },
-  easings: {
-    cinematic: "cubic-bezier(0.22, 1, 0.36, 1)",
-    standard: "cubic-bezier(0.16, 1, 0.3, 1)",
-    soft: "cubic-bezier(0.4, 0, 0.2, 1)",
-  },
-} as const;
-
-export const breakpoints = {
-  sm: "640px",
-  md: "768px",
-  lg: "1024px",
-  xl: "1280px",
-  "2xl": "1536px",
 } as const;

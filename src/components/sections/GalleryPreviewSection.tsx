@@ -55,14 +55,14 @@ export const GalleryPreviewSection: React.FC = () => {
         </div>
 
         {/* Filter Tabs - Only Categories with Available Images */}
-        <div className="flex flex-wrap items-center gap-2 mb-10 pb-2 border-b border-[#FAF8F2]/[0.08]">
+        <div className="flex flex-wrap items-center gap-2 mb-10 pb-2 border-b border-[#FFF8E8]/[0.08]">
           <button
             type="button"
             onClick={() => setActiveTab("all")}
             className={`px-4 py-2 rounded-full text-xs font-mono transition-all ${
               activeTab === "all"
-                ? "bg-[#D4A72C] text-[#08050D] font-bold shadow-[0_0_16px_rgba(212,167,44,0.3)]"
-                : "bg-[#16091F] text-[#B9B0BE] hover:text-[#FAF8F2] hover:bg-[#16091F]/80 border border-[#FAF8F2]/[0.06]"
+                ? "bg-[#C99A32] text-[#020817] font-bold shadow-[0_0_16px_rgba(201,154,50,0.3)]"
+                : "bg-[#06152F] text-[#C9C4B8] hover:text-[#FFF8E8] hover:bg-[#06152F]/80 border border-[#FFF8E8]/[0.06]"
             }`}
           >
             All Works ({galleryData.length})
@@ -78,8 +78,8 @@ export const GalleryPreviewSection: React.FC = () => {
                 onClick={() => setActiveTab(key)}
                 className={`px-4 py-2 rounded-full text-xs font-mono transition-all ${
                   activeTab === key
-                    ? "bg-[#D4A72C] text-[#08050D] font-bold shadow-[0_0_16px_rgba(212,167,44,0.3)]"
-                    : "bg-[#16091F] text-[#B9B0BE] hover:text-[#FAF8F2] hover:bg-[#16091F]/80 border border-[#FAF8F2]/[0.06]"
+                    ? "bg-[#C99A32] text-[#020817] font-bold shadow-[0_0_16px_rgba(201,154,50,0.3)]"
+                    : "bg-[#06152F] text-[#C9C4B8] hover:text-[#FFF8E8] hover:bg-[#06152F]/80 border border-[#FFF8E8]/[0.06]"
                 }`}
               >
                 {label} ({count})
@@ -93,7 +93,7 @@ export const GalleryPreviewSection: React.FC = () => {
           {filteredItems.map((item, idx) => (
             <div
               key={item.id}
-              className={`group relative rounded-2xl overflow-hidden bg-[#16091F] border border-[#FAF8F2]/[0.08] hover:border-[#D4A72C]/50 transition-all duration-500 shadow-[0_8px_24px_rgba(8,5,13,0.6)] ${
+              className={`group relative rounded-2xl overflow-hidden bg-[#06152F] border border-[#FFF8E8]/[0.08] hover:border-[#C99A32]/50 transition-all duration-500 shadow-[0_8px_24px_rgba(2,8,23,0.6)] ${
                 idx === 0 ? "sm:col-span-2 lg:col-span-2 aspect-[16/9]" : "aspect-[4/3]"
               }`}
             >
@@ -106,22 +106,22 @@ export const GalleryPreviewSection: React.FC = () => {
               />
 
               {/* Gradient Scrim */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#08050D] via-[#08050D]/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#020817] via-[#020817]/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
 
               {/* Category Pill */}
               <div className="absolute top-4 left-4">
-                <span className="px-2.5 py-1 rounded-md bg-[#08050D]/80 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-[#D4A72C] border border-[#D4A72C]/30">
+                <span className="px-2.5 py-1 rounded-md bg-[#020817]/80 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-[#C99A32] border border-[#C99A32]/30">
                   {item.categoryLabel}
                 </span>
               </div>
 
               {/* Content Overlay */}
               <div className="absolute inset-x-0 bottom-0 p-6 space-y-1.5 transform translate-y-1 group-hover:translate-y-0 transition-transform">
-                <h4 className="font-[var(--font-heading)] text-lg sm:text-xl font-bold text-[#FAF8F2] group-hover:text-[#F4D76A] transition-colors">
+                <h4 className="font-[var(--font-heading)] text-lg sm:text-xl font-bold text-[#FFF8E8] group-hover:text-[#F2D477] transition-colors">
                   {item.title}
                 </h4>
                 {item.image.caption && (
-                  <p className="text-xs text-[#B9B0BE] line-clamp-1">
+                  <p className="text-xs text-[#C9C4B8] line-clamp-1">
                     {item.image.caption}
                   </p>
                 )}

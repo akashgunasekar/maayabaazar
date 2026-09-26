@@ -1,24 +1,40 @@
 :root {
-  /* Brand Palette */
-  --color-midnight: #08050D;
-  --color-deep-purple: #16091F;
-  --color-royal-purple: #4B0A78;
-  --color-brand-gold: #D4A72C;
-  --color-highlight-gold: #F4D76A;
-  --color-warm-gold: #B77A12;
-  --color-warm-white: #FAF8F2;
-  --color-secondary-text: #B9B0BE;
+  /* Brand Palette — Final Brand Visual Direction */
+  /* Primary background: Midnight Navy */
+  --color-midnight: #020817;
+  /* Secondary background: Deep Navy */
+  --color-deep-navy: #06152F;
+  /* Primary blue: Royal Navy */
+  --color-royal-navy: #0B2145;
+  /* Secondary blue: Cinematic Blue */
+  --color-cinematic-blue: #102F5C;
+  /* Primary gold: Metallic Gold */
+  --color-brand-gold: #C99A32;
+  /* Highlight gold: Bright Gold */
+  --color-highlight-gold: #F2D477;
+  /* Light accent: Champagne */
+  --color-champagne: #F7E7B0;
+  /* Primary text: Warm Ivory */
+  --color-warm-ivory: #FFF8E8;
+  /* Secondary text */
+  --color-secondary-text: #C9C4B8;
+  /* Muted gold */
+  --color-muted-gold: #A9822A;
+
+  /* Aliases for legacy component compatibility */
+  --color-deep-purple: #06152F;
+  --color-royal-purple: #0B2145;
+  --color-warm-white: #FFF8E8;
 
   /* Atmospheric & Structural Tokens */
-  --bg-canvas: #08050D;
-  --bg-surface: #16091F;
-  --border-subtle: rgba(250, 248, 242, 0.08);
-  --border-gold-subtle: rgba(212, 167, 44, 0.2);
-  --border-gold-hover: rgba(244, 215, 106, 0.5);
-  --purple-glow: rgba(75, 10, 120, 0.25);
-  --purple-glow-hover: rgba(75, 10, 120, 0.45);
-  --gold-glow: rgba(212, 167, 44, 0.2);
-  --gold-glow-hover: rgba(244, 215, 106, 0.35);
+  --bg-canvas: #020817;
+  --bg-surface: #06152F;
+  --border-subtle: rgba(201, 154, 50, 0.15);
+  --border-gold-subtle: rgba(201, 154, 50, 0.25);
+  --border-gold-hover: rgba(242, 212, 119, 0.6);
+  --blue-glow: rgba(11, 33, 69, 0.4);
+  --gold-glow: rgba(201, 154, 50, 0.2);
+  --gold-glow-hover: rgba(242, 212, 119, 0.4);
 
   /* Cinematic Motion Tokens (Hardware Accelerated: transform & opacity) */
   --ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
@@ -29,4 +45,3 @@
   --duration-deliberate: 650ms;
   --duration-cinematic: 900ms;
 }
-

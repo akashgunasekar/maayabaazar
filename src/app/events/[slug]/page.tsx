@@ -134,7 +134,7 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
               {event.status}
             </Badge>
             {event.capacity && (
-              <span className="text-[11px] font-mono text-[#F4D76A] bg-[#16091F] px-2.5 py-0.5 rounded-full border border-[#D4A72C]/30">
+              <span className="text-[11px] font-mono text-[#F2D477] bg-[#06152F] px-2.5 py-0.5 rounded-full border border-[#C99A32]/30">
                 {event.capacity}
               </span>
             )}
@@ -143,16 +143,16 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
         title={event.title}
         description={event.shortDescription}
         breadcrumbs={
-          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-[#B9B0BE]">
-            <Link href="/" className="hover:text-[#FAF8F2] transition-colors">
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-[#C9C4B8]">
+            <Link href="/" className="hover:text-[#FFF8E8] transition-colors">
               Home
             </Link>
-            <span className="text-[#FAF8F2]/30">/</span>
-            <Link href="/events" className="hover:text-[#FAF8F2] transition-colors">
+            <span className="text-[#FFF8E8]/30">/</span>
+            <Link href="/events" className="hover:text-[#FFF8E8] transition-colors">
               Events
             </Link>
-            <span className="text-[#FAF8F2]/30">/</span>
-            <span className="text-[#D4A72C]">{event.title}</span>
+            <span className="text-[#FFF8E8]/30">/</span>
+            <span className="text-[#C99A32]">{event.title}</span>
           </nav>
         }
         actions={
@@ -178,7 +178,7 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             {/* Event Image */}
             <div className="lg:col-span-7 relative">
-              <div className="relative aspect-[16/10] w-full rounded-3xl overflow-hidden bg-[#08050D] border border-[#FAF8F2]/10 shadow-[0_20px_50px_rgba(8,5,13,0.9)] group">
+              <div className="relative aspect-[16/10] w-full rounded-3xl overflow-hidden bg-[#020817] border border-[#FFF8E8]/10 shadow-[0_20px_50px_rgba(2,8,23,0.9)] group">
                 <Image
                   src={event.image.src}
                   alt={event.image.alt}
@@ -187,11 +187,11 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
                   priority
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#08050D] via-transparent to-transparent opacity-60" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#020817] via-transparent to-transparent opacity-60" />
 
                 {event.image.caption && (
-                  <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-[#08050D]/80 backdrop-blur-md border border-[#FAF8F2]/10 text-xs text-[#FAF8F2]/90 flex items-center gap-2">
-                    <ShieldCheck className="w-4 h-4 text-[#D4A72C] shrink-0" />
+                  <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-[#020817]/80 backdrop-blur-md border border-[#FFF8E8]/10 text-xs text-[#FFF8E8]/90 flex items-center gap-2">
+                    <ShieldCheck className="w-4 h-4 text-[#C99A32] shrink-0" />
                     <span>{event.image.caption}</span>
                   </div>
                 )}
@@ -200,44 +200,44 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
 
             {/* Event Meta Box */}
             <div className="lg:col-span-5 space-y-6">
-              <div className="p-6 rounded-2xl bg-[#08050D] border border-[#FAF8F2]/[0.08] space-y-4">
-                <h3 className="font-[var(--font-heading)] text-lg font-bold text-[#FAF8F2] border-b border-[#FAF8F2]/[0.08] pb-3">
+              <div className="p-6 rounded-2xl bg-[#020817] border border-[#FFF8E8]/[0.08] space-y-4">
+                <h3 className="font-[var(--font-heading)] text-lg font-bold text-[#FFF8E8] border-b border-[#FFF8E8]/[0.08] pb-3">
                   Event Brief &amp; Logistics
                 </h3>
 
                 <div className="space-y-3 text-xs">
                   <div className="flex items-center justify-between">
-                    <span className="text-[#B9B0BE] flex items-center gap-2">
-                      <Calendar className="w-3.5 h-3.5 text-[#D4A72C]" />
+                    <span className="text-[#C9C4B8] flex items-center gap-2">
+                      <Calendar className="w-3.5 h-3.5 text-[#C99A32]" />
                       Date
                     </span>
-                    <span className="font-semibold text-[#FAF8F2]">{event.date}</span>
+                    <span className="font-semibold text-[#FFF8E8]">{event.date}</span>
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <span className="text-[#B9B0BE] flex items-center gap-2">
-                      <MapPin className="w-3.5 h-3.5 text-[#D4A72C]" />
+                    <span className="text-[#C9C4B8] flex items-center gap-2">
+                      <MapPin className="w-3.5 h-3.5 text-[#C99A32]" />
                       Venue Location
                     </span>
-                    <span className="font-semibold text-[#FAF8F2]">{event.location}</span>
+                    <span className="font-semibold text-[#FFF8E8]">{event.location}</span>
                   </div>
 
                   {event.capacity && (
                     <div className="flex items-center justify-between">
-                      <span className="text-[#B9B0BE] flex items-center gap-2">
-                        <Users className="w-3.5 h-3.5 text-[#D4A72C]" />
+                      <span className="text-[#C9C4B8] flex items-center gap-2">
+                        <Users className="w-3.5 h-3.5 text-[#C99A32]" />
                         Audience Capacity
                       </span>
-                      <span className="font-semibold text-[#FAF8F2]">{event.capacity}</span>
+                      <span className="font-semibold text-[#FFF8E8]">{event.capacity}</span>
                     </div>
                   )}
 
                   <div className="flex items-center justify-between">
-                    <span className="text-[#B9B0BE] flex items-center gap-2">
-                      <ShieldCheck className="w-3.5 h-3.5 text-[#D4A72C]" />
+                    <span className="text-[#C9C4B8] flex items-center gap-2">
+                      <ShieldCheck className="w-3.5 h-3.5 text-[#C99A32]" />
                       Production Tier
                     </span>
-                    <span className="font-semibold text-[#D4A72C]">Turnkey Staging</span>
+                    <span className="font-semibold text-[#C99A32]">Turnkey Staging</span>
                   </div>
                 </div>
 
@@ -256,11 +256,11 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
 
               {event.fullDescription && (
                 <div className="space-y-3">
-                  <h4 className="font-[var(--font-heading)] text-base font-bold text-[#FAF8F2]">
+                  <h4 className="font-[var(--font-heading)] text-base font-bold text-[#FFF8E8]">
                     Production Narrative
                   </h4>
                   {event.fullDescription.map((p, idx) => (
-                    <p key={idx} className="text-xs sm:text-sm text-[#B9B0BE] leading-relaxed">
+                    <p key={idx} className="text-xs sm:text-sm text-[#C9C4B8] leading-relaxed">
                       {p}
                     </p>
                   ))}
@@ -288,21 +288,21 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
                 <Link
                   key={evt.id}
                   href={`/events/${evt.slug}`}
-                  className="rounded-2xl bg-[#16091F]/40 border border-[#FAF8F2]/[0.08] hover:border-[#D4A72C]/40 p-5 flex flex-col justify-between group transition-all"
+                  className="rounded-2xl bg-[#06152F]/40 border border-[#FFF8E8]/[0.08] hover:border-[#C99A32]/40 p-5 flex flex-col justify-between group transition-all"
                 >
                   <div className="space-y-2">
-                    <div className="flex items-center justify-between text-xs text-[#B9B0BE]">
+                    <div className="flex items-center justify-between text-xs text-[#C9C4B8]">
                       <span>{evt.date}</span>
-                      <span className="text-[#D4A72C]">{evt.location}</span>
+                      <span className="text-[#C99A32]">{evt.location}</span>
                     </div>
-                    <h4 className="font-[var(--font-heading)] text-base font-bold text-[#FAF8F2] group-hover:text-[#F4D76A] transition-colors">
+                    <h4 className="font-[var(--font-heading)] text-base font-bold text-[#FFF8E8] group-hover:text-[#F2D477] transition-colors">
                       {evt.title}
                     </h4>
-                    <p className="text-xs text-[#B9B0BE] line-clamp-2">
+                    <p className="text-xs text-[#C9C4B8] line-clamp-2">
                       {evt.shortDescription}
                     </p>
                   </div>
-                  <div className="pt-3 mt-3 border-t border-[#FAF8F2]/[0.06] flex items-center justify-between text-xs font-semibold text-[#D4A72C]">
+                  <div className="pt-3 mt-3 border-t border-[#FFF8E8]/[0.06] flex items-center justify-between text-xs font-semibold text-[#C99A32]">
                     <span>View Event Details</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </div>

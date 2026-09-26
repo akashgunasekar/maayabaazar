@@ -25,9 +25,9 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
   };
 
   const titleSizes = {
-    lg: "text-2xl sm:text-3xl lg:text-4xl tracking-tight font-extrabold",
-    xl: "text-3xl sm:text-4xl lg:text-5xl tracking-[-0.03em] font-extrabold",
-    editorial: "text-3xl sm:text-5xl lg:text-6xl tracking-[-0.035em] font-extrabold leading-[1.08]",
+    lg: "text-2xl sm:text-3xl lg:text-4xl tracking-tight font-bold",
+    xl: "text-3xl sm:text-4xl lg:text-5xl tracking-tight font-bold",
+    editorial: "text-3xl sm:text-5xl lg:text-6xl tracking-tight font-bold leading-[1.1]",
   };
 
   return (
@@ -37,22 +37,22 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
     >
       {kicker && (
         <div className="flex items-center gap-2">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#D6B36A]" />
-          <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.18em] text-[#D6B36A]">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#C99A32] shadow-[0_0_8px_rgba(201,154,50,0.5)]" />
+          <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.22em] text-[#C99A32] font-mono">
             {kicker}
           </span>
         </div>
       )}
       <h2
         className={cn(
-          "font-[var(--font-manrope)] text-[#F5F5F2]",
+          "font-[var(--font-cinzel)] font-[var(--font-heading)] text-[#FFF8E8]",
           titleSizes[size]
         )}
       >
         {title}
       </h2>
       {description && (
-        <p className="text-sm sm:text-base lg:text-lg text-[#A7A9B0] leading-relaxed font-normal">
+        <p className="text-sm sm:text-base lg:text-lg text-[#C9C4B8] leading-relaxed font-normal">
           {description}
         </p>
       )}

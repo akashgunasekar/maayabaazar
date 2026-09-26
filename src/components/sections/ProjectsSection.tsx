@@ -42,10 +42,10 @@ export const ProjectsSection: React.FC = () => {
           {activeProjects.map((project, idx) => (
             <FadeIn key={project.id} direction="up" delay={idx * 120} duration={650}>
               <div
-                className="rounded-2xl bg-[#08050D] border border-[#FAF8F2]/[0.08] hover:border-[#D4A72C]/40 overflow-hidden flex flex-col group transition-all duration-400 hover-lift glow-purple-hover h-full"
+                className="rounded-2xl bg-[#020817] border border-[#FFF8E8]/[0.08] hover:border-[#C99A32]/40 overflow-hidden flex flex-col group transition-all duration-400 hover-lift glow-gold-hover h-full"
               >
                 {/* Project Image */}
-                <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#16091F]">
+                <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#06152F]">
                   <Image
                     src={project.image.src}
                     alt={project.image.alt}
@@ -53,7 +53,7 @@ export const ProjectsSection: React.FC = () => {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover transition-transform duration-700 cubic-bezier(0.16, 1, 0.3, 1) will-change-transform group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#08050D] via-transparent to-transparent opacity-80" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#020817] via-transparent to-transparent opacity-80" />
 
                   <div className="absolute top-4 left-4">
                     <Badge
@@ -65,7 +65,7 @@ export const ProjectsSection: React.FC = () => {
                   </div>
 
                   <div className="absolute top-4 right-4">
-                    <span className="text-[10px] font-mono tracking-wider text-[#FAF8F2]/80 bg-[#08050D]/80 backdrop-blur-md px-2.5 py-1 rounded-md border border-[#FAF8F2]/10">
+                    <span className="text-[10px] font-mono tracking-wider text-[#FFF8E8]/80 bg-[#020817]/80 backdrop-blur-md px-2.5 py-1 rounded-md border border-[#FFF8E8]/10">
                       {project.categoryLabel}
                     </span>
                   </div>
@@ -74,23 +74,23 @@ export const ProjectsSection: React.FC = () => {
                 {/* Project Content */}
                 <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
                   <div className="space-y-2">
-                    <span className="text-[11px] font-mono text-[#D4A72C] uppercase tracking-wider block">
+                    <span className="text-[11px] font-mono text-[#C99A32] uppercase tracking-wider block">
                       {project.tagline}
                     </span>
 
-                    <h3 className="font-[var(--font-heading)] text-xl font-bold text-[#FAF8F2] group-hover:text-[#F4D76A] transition-colors">
+                    <h3 className="font-[var(--font-heading)] text-xl font-bold text-[#FFF8E8] group-hover:text-[#F2D477] transition-colors">
                       {project.title}
                     </h3>
 
-                    <p className="text-xs sm:text-sm text-[#B9B0BE] leading-relaxed line-clamp-3">
+                    <p className="text-xs sm:text-sm text-[#C9C4B8] leading-relaxed line-clamp-3">
                       {project.overview}
                     </p>
                   </div>
 
-                  <div className="pt-4 border-t border-[#FAF8F2]/[0.06] flex items-center justify-between">
+                  <div className="pt-4 border-t border-[#FFF8E8]/[0.06] flex items-center justify-between">
                     <Link
                       href={`/projects/${project.slug}`}
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#D4A72C] hover:text-[#F4D76A] transition-colors"
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#C99A32] hover:text-[#F2D477] transition-colors"
                     >
                       <span>View Project Dossier</span>
                       <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -107,19 +107,19 @@ export const ProjectsSection: React.FC = () => {
         </div>
 
         {/* Elegant Coming Soon State for Unrevealed Portfolios */}
-        <div className="p-8 sm:p-10 rounded-2xl bg-[#08050D]/60 border border-dashed border-[#D4A72C]/30 relative overflow-hidden">
+        <div className="p-8 sm:p-10 rounded-2xl bg-[#020817]/60 border border-dashed border-[#C99A32]/30 relative overflow-hidden">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
             <div className="max-w-2xl space-y-3">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#16091F] border border-[#D4A72C]/30 text-xs font-mono text-[#F4D76A]">
-                <Clock className="w-3.5 h-3.5 text-[#D4A72C]" />
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#06152F] border border-[#C99A32]/30 text-xs font-mono text-[#F2D477]">
+                <Clock className="w-3.5 h-3.5 text-[#C99A32]" />
                 <span>NDA &amp; Confidential Production Slates</span>
               </div>
 
-              <h4 className="font-[var(--font-heading)] text-xl sm:text-2xl font-bold text-[#FAF8F2]">
+              <h4 className="font-[var(--font-heading)] text-xl sm:text-2xl font-bold text-[#FFF8E8]">
                 Upcoming Entertainment &amp; OTT Slates Coming Soon
               </h4>
 
-              <p className="text-xs sm:text-sm text-[#B9B0BE] leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#C9C4B8] leading-relaxed">
                 Additional theatrical feature films, streaming series, overseas concert tours, and celebrity promotional campaigns are currently in active pre-production and filming. Official titles, trailers, cast lists, and dates will be unveiled across upcoming media announcements.
               </p>
             </div>

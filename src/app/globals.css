@@ -2,19 +2,28 @@
 @import "../styles/tokens.css";
 
 @theme {
-  --color-midnight: #08050D;
-  --color-deep-purple: #16091F;
-  --color-royal-purple: #4B0A78;
-  --color-brand-gold: #D4A72C;
-  --color-highlight-gold: #F4D76A;
-  --color-warm-gold: #B77A12;
-  --color-warm-white: #FAF8F2;
-  --color-secondary-text: #B9B0BE;
+  --color-midnight: #020817;
+  --color-deep-navy: #06152F;
+  --color-royal-navy: #0B2145;
+  --color-cinematic-blue: #102F5C;
+  --color-brand-gold: #C99A32;
+  --color-highlight-gold: #F2D477;
+  --color-champagne: #F7E7B0;
+  --color-warm-ivory: #FFF8E8;
+  --color-secondary-text: #C9C4B8;
+  --color-muted-gold: #A9822A;
 
-  --color-background: #08050D;
-  --color-surface: #16091F;
+  /* Legacy aliases mapped to Royal Navy & Deep Navy */
+  --color-deep-purple: #06152F;
+  --color-royal-purple: #0B2145;
+  --color-warm-white: #FFF8E8;
 
-  --font-heading: var(--font-manrope), sans-serif;
+  --color-background: #020817;
+  --color-surface: #06152F;
+
+  --font-heading: var(--font-cinzel), var(--font-manrope), serif;
+  --font-display: var(--font-cinzel), serif;
+  --font-sans: var(--font-manrope), sans-serif;
   --font-body: var(--font-inter), sans-serif;
 }
 
@@ -24,13 +33,13 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: #08050D;
-  color: #FAF8F2;
+  background-color: #020817;
+  color: #FFF8E8;
 }
 
 body {
-  background-color: #08050D;
-  color: #FAF8F2;
+  background-color: #020817;
+  color: #FFF8E8;
   font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -38,40 +47,60 @@ body {
 }
 
 ::selection {
-  background-color: #D4A72C;
-  color: #08050D;
+  background-color: #C99A32;
+  color: #020817;
 }
 
-/* Atmospheric Gradients & Vignettes (50% SaaS, 30% Cinematic, 20% Luxury Entertainment) */
-.atmosphere-purple {
+/* Atmospheric Gradients: Midnight Navy (70%) + Royal Blue (15%) + Gold (10%) */
+.atmosphere-royal {
   background: radial-gradient(
     circle at 50% 0%,
-    rgba(75, 10, 120, 0.28) 0%,
-    rgba(22, 9, 31, 0.4) 40%,
-    rgba(8, 5, 13, 0.95) 80%,
-    #08050D 100%
+    rgba(16, 47, 92, 0.45) 0%,
+    rgba(11, 33, 69, 0.35) 30%,
+    rgba(6, 21, 47, 0.75) 65%,
+    #020817 100%
   );
 }
 
 .atmosphere-hero {
   background: radial-gradient(
     ellipse at 50% -10%,
-    rgba(75, 10, 120, 0.35) 0%,
-    rgba(22, 9, 31, 0.6) 35%,
-    rgba(8, 5, 13, 0.98) 75%,
-    #08050D 100%
+    rgba(16, 47, 92, 0.55) 0%,
+    rgba(11, 33, 69, 0.45) 35%,
+    rgba(6, 21, 47, 0.9) 70%,
+    #020817 100%
+  );
+}
+
+.atmosphere-navy {
+  background: linear-gradient(
+    180deg,
+    #020817 0%,
+    #06152F 50%,
+    #020817 100%
   );
 }
 
 .atmosphere-gold-subtle {
   background: radial-gradient(
     circle at 80% 20%,
-    rgba(212, 167, 44, 0.08) 0%,
+    rgba(201, 154, 50, 0.08) 0%,
     transparent 60%
   );
 }
 
-/* Subtle card hover lift & purple glow transition */
+/* Backwards-compatible alias for existing markup */
+.atmosphere-purple {
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(16, 47, 92, 0.4) 0%,
+    rgba(11, 33, 69, 0.3) 30%,
+    rgba(6, 21, 47, 0.75) 65%,
+    #020817 100%
+  );
+}
+
+/* Subtle card hover lift & metallic gold lighting transition */
 .hover-lift {
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
               border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
@@ -82,30 +111,71 @@ body {
 
 .hover-lift:hover {
   transform: translate3d(0, -4px, 0);
-  border-color: rgba(212, 167, 44, 0.35);
-  box-shadow: 0 20px 40px -15px rgba(8, 5, 13, 0.85),
-              0 0 30px -5px rgba(75, 10, 120, 0.3),
-              0 0 15px -3px rgba(212, 167, 44, 0.12);
+  border-color: rgba(201, 154, 50, 0.45);
+  box-shadow: 0 20px 40px -15px rgba(2, 8, 23, 0.95),
+              0 0 30px -5px rgba(11, 33, 69, 0.5),
+              0 0 15px -3px rgba(201, 154, 50, 0.2);
 }
 
-/* Subtle Purple Glow & Transitions */
-.glow-purple {
-  box-shadow: 0 0 35px -5px rgba(75, 10, 120, 0.4);
+/* Royal Blue & Gold Glows */
+.glow-royal {
+  box-shadow: 0 0 35px -5px rgba(11, 33, 69, 0.6);
 }
 
-.glow-purple-hover {
-  transition: box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+.glow-royal {
+  box-shadow: 0 0 35px -5px rgba(11, 33, 69, 0.6);
 }
 
-.glow-purple-hover:hover {
-  box-shadow: 0 0 35px 2px rgba(75, 10, 120, 0.35),
-              0 0 15px -2px rgba(212, 167, 44, 0.15);
-  border-color: rgba(212, 167, 44, 0.35);
+.glow-gold-hover:hover {
+  box-shadow: 0 0 35px 2px rgba(11, 33, 69, 0.5),
+              0 0 15px -2px rgba(201, 154, 50, 0.25);
+  border-color: rgba(201, 154, 50, 0.45);
 }
 
 .glow-gold {
-  box-shadow: 0 0 25px -5px rgba(212, 167, 44, 0.3);
+  box-shadow: 0 0 25px -5px rgba(201, 154, 50, 0.35);
+}
+
+.glow-gold-hover:hover {
+  box-shadow: 0 0 35px 2px rgba(201, 154, 50, 0.35),
+              0 0 15px -2px rgba(242, 212, 119, 0.3);
+  border-color: rgba(201, 154, 50, 0.5);
+}
+
+/* Luxury Gold Architectural Framing Corners */
+.gold-frame {
+  position: relative;
+  border: 1px solid rgba(201, 154, 50, 0.25);
+}
+
+.gold-frame::before,
+.gold-frame::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+}
+
+.gold-frame::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid #C99A32;
+  border-left: 2px solid #C99A32;
+}
+
+.gold-frame::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid #C99A32;
+  border-right: 2px solid #C99A32;
+}
+
+/* Metallic Gold Gradient Text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #F2D477 0%, #C99A32 50%, #F7E7B0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Hover Image Scale with GPU Acceleration */
@@ -135,7 +205,7 @@ body {
   background: linear-gradient(
     105deg,
     transparent 0%,
-    rgba(255, 255, 255, 0.18) 50%,
+    rgba(255, 255, 255, 0.22) 50%,
     transparent 100%
   );
   transform: translate3d(-100%, 0, 0);
@@ -181,9 +251,9 @@ body {
 .gold-shimmer-sweep {
   background: linear-gradient(
     90deg,
-    rgba(212, 167, 44, 0.2) 0%,
-    rgba(244, 215, 106, 0.8) 50%,
-    rgba(212, 167, 44, 0.2) 100%
+    rgba(201, 154, 50, 0.2) 0%,
+    rgba(242, 212, 119, 0.85) 50%,
+    rgba(201, 154, 50, 0.2) 100%
   );
   background-size: 200% 100%;
   animation: goldShimmerKeyframe 4s ease-in-out infinite;
@@ -196,17 +266,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #08050D;
+  background: #020817;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #16091F;
+  background: #06152F;
   border-radius: 9999px;
-  border: 1px solid rgba(212, 167, 44, 0.2);
+  border: 1px solid rgba(201, 154, 50, 0.25);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #D4A72C;
+  background: #C99A32;
 }
 
 /* Cinematic Keyframe Animations */
@@ -290,4 +360,3 @@ body {
     display: none !important;
   }
 }
-

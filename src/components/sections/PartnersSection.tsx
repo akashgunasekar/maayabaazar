@@ -30,10 +30,10 @@ export const PartnersSection: React.FC = () => {
               {partnerCategoriesList.map((cat, idx) => (
                 <FadeIn key={idx} direction="up" delay={idx * 60} duration={550}>
                   <div
-                    className="p-6 sm:p-7 rounded-2xl bg-[#08050D] border border-[#FAF8F2]/[0.08] hover:border-[#D4A72C]/40 transition-all duration-300 flex flex-col justify-between group hover-lift glow-purple-hover h-full"
+                    className="p-6 sm:p-7 rounded-2xl bg-[#020817] border border-[#FFF8E8]/[0.08] hover:border-[#C99A32]/40 transition-all duration-300 flex flex-col justify-between group hover-lift glow-gold-hover h-full"
                   >
                     <div className="space-y-3">
-                      <div className="w-10 h-10 rounded-xl bg-[#16091F] border border-[#D4A72C]/30 flex items-center justify-center text-[#D4A72C] group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-10 h-10 rounded-xl bg-[#06152F] border border-[#C99A32]/30 flex items-center justify-center text-[#C99A32] group-hover:scale-110 transition-transform duration-300">
                         {cat.category === "Production" && <Film className="w-5 h-5" />}
                         {cat.category === "Technology" && <Radio className="w-5 h-5" />}
                         {cat.category === "Media" && <Tv className="w-5 h-5" />}
@@ -41,21 +41,21 @@ export const PartnersSection: React.FC = () => {
                         {cat.category === "International" && <Globe className="w-5 h-5" />}
                       </div>
 
-                      <span className="text-[10px] font-mono uppercase tracking-widest text-[#D4A72C] block">
+                      <span className="text-[10px] font-mono uppercase tracking-widest text-[#C99A32] block">
                         {cat.category} Alliances
                       </span>
 
-                      <h4 className="font-[var(--font-heading)] text-base font-bold text-[#FAF8F2] group-hover:text-[#F4D76A] transition-colors">
+                      <h4 className="font-[var(--font-heading)] text-base font-bold text-[#FFF8E8] group-hover:text-[#F2D477] transition-colors">
                         {cat.title}
                       </h4>
 
-                      <p className="text-xs text-[#B9B0BE] leading-relaxed">
+                      <p className="text-xs text-[#C9C4B8] leading-relaxed">
                         {cat.description}
                       </p>
                     </div>
 
-                    <div className="pt-4 mt-4 border-t border-[#FAF8F2]/[0.05] flex items-center gap-2 text-[11px] font-mono text-[#FAF8F2]/60">
-                      <ShieldCheck className="w-3.5 h-3.5 text-[#D4A72C]" />
+                    <div className="pt-4 mt-4 border-t border-[#FFF8E8]/[0.05] flex items-center gap-2 text-[11px] font-mono text-[#FFF8E8]/60">
+                      <ShieldCheck className="w-3.5 h-3.5 text-[#C99A32]" />
                       <span>Accredited Operational Standard</span>
                     </div>
                   </div>
@@ -64,29 +64,29 @@ export const PartnersSection: React.FC = () => {
 
               {/* Partnership Invitation Card */}
               <FadeIn direction="up" delay={partnerCategoriesList.length * 60} duration={550}>
-                <div className="p-6 sm:p-7 rounded-2xl bg-gradient-to-br from-[#16091F] to-[#08050D] border border-[#D4A72C]/40 flex flex-col justify-between hover-lift glow-purple-hover h-full">
+                <div className="p-6 sm:p-7 rounded-2xl bg-gradient-to-br from-[#06152F] to-[#020817] border border-[#C99A32]/40 flex flex-col justify-between hover-lift glow-gold-hover h-full">
                   <div className="space-y-3">
-                    <div className="w-10 h-10 rounded-xl bg-[#08050D] border border-[#D4A72C]/40 flex items-center justify-center text-[#D4A72C]">
+                    <div className="w-10 h-10 rounded-xl bg-[#020817] border border-[#C99A32]/40 flex items-center justify-center text-[#C99A32]">
                       <Handshake className="w-5 h-5" />
                     </div>
 
-                    <span className="text-[10px] font-mono uppercase tracking-widest text-[#F4D76A] block">
+                    <span className="text-[10px] font-mono uppercase tracking-widest text-[#F2D477] block">
                       Join The Ecosystem
                     </span>
 
-                    <h4 className="font-[var(--font-heading)] text-base font-bold text-[#FAF8F2]">
+                    <h4 className="font-[var(--font-heading)] text-base font-bold text-[#FFF8E8]">
                       Become an Alliance Partner
                     </h4>
 
-                    <p className="text-xs text-[#B9B0BE] leading-relaxed">
+                    <p className="text-xs text-[#C9C4B8] leading-relaxed">
                       We collaborate with certified camera houses, staging vendors, lighting contractors, and distribution networks.
                     </p>
                   </div>
 
-                  <div className="pt-4 mt-4 border-t border-[#FAF8F2]/[0.05]">
+                  <div className="pt-4 mt-4 border-t border-[#FFF8E8]/[0.05]">
                     <Link
                       href="/contact"
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#D4A72C] hover:text-[#F4D76A] transition-colors group"
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#C99A32] hover:text-[#F2D477] transition-colors group"
                     >
                       <span>Register Partnership Interest</span>
                       <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -97,8 +97,8 @@ export const PartnersSection: React.FC = () => {
             </div>
 
             {/* Official Announcement Note */}
-            <div className="p-4 rounded-xl bg-[#08050D]/40 border border-[#FAF8F2]/[0.05] text-center max-w-2xl mx-auto">
-              <p className="text-[11px] font-mono text-[#FAF8F2]/50">
+            <div className="p-4 rounded-xl bg-[#020817]/40 border border-[#FFF8E8]/[0.05] text-center max-w-2xl mx-auto">
+              <p className="text-[11px] font-mono text-[#FFF8E8]/50">
                 Official partner logos and joint venture co-credits are published alongside formalized film slates and licensed event schedules.
               </p>
             </div>

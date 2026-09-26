@@ -69,7 +69,7 @@ export const Header: React.FC = () => {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
           isScrolled
-            ? "bg-[#08050D]/95 border-b border-[#D4A72C]/20 py-3 shadow-[0_4px_24px_rgba(8,5,13,0.8)]"
+            ? "bg-[#020817]/95 backdrop-blur-md border-b border-[#C99A32]/25 py-3 shadow-[0_4px_24px_rgba(2,8,23,0.95)]"
             : "bg-transparent py-4 sm:py-5 border-b border-transparent"
         )}
       >
@@ -77,9 +77,9 @@ export const Header: React.FC = () => {
           {/* Logo using supplied Maayaa Bazaar Hub logo asset */}
           <Link
             href="/"
-            className="flex items-center gap-3 group select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4A72C] rounded-lg"
+            className="flex items-center gap-3 group select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C99A32] rounded-lg"
           >
-            <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-lg overflow-hidden shrink-0 transition-transform duration-300 group-hover:scale-105">
+            <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-lg overflow-hidden shrink-0 transition-transform duration-300 group-hover:scale-105 border border-[#C99A32]/30 shadow-[0_0_12px_rgba(201,154,50,0.2)]">
               <Image
                 src="/images/maayaa-logo.png"
                 alt="Maayaa Bazaar Hub Logo"
@@ -90,19 +90,19 @@ export const Header: React.FC = () => {
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-[var(--font-heading)] font-black text-sm sm:text-base tracking-[0.12em] text-[#FAF8F2] group-hover:text-white transition-colors">
+              <span className="font-[var(--font-cinzel)] font-bold text-sm sm:text-base tracking-[0.14em] text-[#FFF8E8] group-hover:text-white transition-colors">
                 MAAYAA BAZAAR
               </span>
-              <span className="text-[9px] font-mono tracking-[0.22em] text-[#D4A72C] uppercase -mt-1 font-semibold">
+              <span className="text-[9px] font-mono tracking-[0.24em] text-[#C99A32] uppercase -mt-1 font-semibold">
                 HUB
               </span>
             </div>
           </Link>
 
-          {/* Desktop Navigation: Minimal, premium navigation */}
+          {/* Desktop Navigation: Royal Navy Pill with Metallic Gold Highlights */}
           <nav
             aria-label="Primary Navigation"
-            className="hidden md:flex items-center gap-1 lg:gap-2 px-3 py-1.5 rounded-full bg-[#16091F]/70 border border-[#FAF8F2]/[0.08]"
+            className="hidden md:flex items-center gap-1 lg:gap-2 px-3 py-1.5 rounded-full bg-[#06152F]/85 border border-[#C99A32]/20 backdrop-blur-md shadow-[0_4px_20px_rgba(2,8,23,0.6)]"
           >
             {NAV_LINKS.map((link) => {
               const isActive =
@@ -117,13 +117,13 @@ export const Header: React.FC = () => {
                   className={cn(
                     "relative px-3.5 py-1.5 text-xs lg:text-sm font-medium tracking-wide transition-all duration-200 rounded-full select-none",
                     isActive
-                      ? "text-[#FAF8F2] font-semibold bg-[#4B0A78]/30 shadow-[0_0_12px_rgba(75,10,120,0.35)]"
-                      : "text-[#B9B0BE] hover:text-[#FAF8F2] hover:bg-[#FAF8F2]/[0.04]"
+                      ? "text-[#FFF8E8] font-semibold bg-[#0B2145]/80 border border-[#C99A32]/30 shadow-[0_0_12px_rgba(201,154,50,0.25)]"
+                      : "text-[#C9C4B8] hover:text-[#FFF8E8] hover:bg-[#0B2145]/40"
                   )}
                 >
                   <span>{link.label}</span>
                   {isActive && (
-                    <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#D4A72C]" />
+                    <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#C99A32]" />
                   )}
                 </Link>
               );
@@ -146,7 +146,7 @@ export const Header: React.FC = () => {
           <div className="flex md:hidden items-center gap-3">
             <Link
               href="/contact"
-              className="text-xs font-semibold px-3 py-1.5 rounded-lg bg-[#D4A72C] text-[#08050D] shadow-sm active:scale-95 transition-transform"
+              className="text-xs font-bold px-3 py-1.5 rounded-md bg-gradient-to-r from-[#C99A32] to-[#F2D477] text-[#020817] shadow-[0_2px_12px_rgba(201,154,50,0.3)] active:scale-95 transition-transform uppercase tracking-wider"
             >
               Let&apos;s Create
             </Link>
@@ -154,12 +154,12 @@ export const Header: React.FC = () => {
             <button
               suppressHydrationWarning
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="w-10 h-10 rounded-xl bg-[#16091F] border border-[#FAF8F2]/10 flex items-center justify-center text-[#FAF8F2] focus:outline-none focus:ring-2 focus:ring-[#D4A72C]"
+              className="w-10 h-10 rounded-lg bg-[#06152F] border border-[#C99A32]/25 flex items-center justify-center text-[#FFF8E8] focus:outline-none focus:ring-2 focus:ring-[#C99A32]"
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-navigation-menu"
             >
-              {mobileMenuOpen ? <X className="w-5 h-5 text-[#D4A72C]" /> : <Menu className="w-5 h-5" />}
+              {mobileMenuOpen ? <X className="w-5 h-5 text-[#C99A32]" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
         </div>
@@ -174,18 +174,18 @@ export const Header: React.FC = () => {
         aria-label="Mobile Navigation Menu"
         suppressHydrationWarning
         className={cn(
-          "fixed inset-0 z-40 bg-[#08050D]/98 transition-all duration-300 md:hidden flex flex-col justify-between pt-24 pb-8 px-6",
+          "fixed inset-0 z-40 bg-[#020817]/98 transition-all duration-300 md:hidden flex flex-col justify-between pt-24 pb-8 px-6",
           mobileMenuOpen
             ? "opacity-100 pointer-events-auto translate-y-0"
             : "opacity-0 pointer-events-none -translate-y-4"
         )}
       >
         <div className="space-y-4">
-          <div className="flex items-center justify-between pb-3 border-b border-[#FAF8F2]/10">
-            <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-[#D4A72C]">
+          <div className="flex items-center justify-between pb-3 border-b border-[#C99A32]/15">
+            <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-[#C99A32]">
               Navigation
             </span>
-            <span className="text-[10px] font-mono uppercase tracking-wider text-[#B9B0BE]">
+            <span className="text-[10px] font-mono uppercase tracking-wider text-[#C9C4B8]">
               Maayaa Bazaar Hub
             </span>
           </div>
@@ -208,17 +208,17 @@ export const Header: React.FC = () => {
                     opacity: mobileMenuOpen ? 1 : 0,
                   }}
                   className={cn(
-                    "flex items-center justify-between py-3.5 px-4 rounded-xl text-lg font-bold tracking-tight transition-all duration-300",
+                    "flex items-center justify-between py-3.5 px-4 rounded-lg text-lg font-bold tracking-tight transition-all duration-300",
                     isActive
-                      ? "bg-[#16091F] text-[#D4A72C] border border-[#D4A72C]/30 shadow-[0_0_15px_rgba(75,10,120,0.25)]"
-                      : "text-[#FAF8F2] hover:bg-[#16091F]/50"
+                      ? "bg-[#06152F] text-[#F2D477] border border-[#C99A32]/40 shadow-[0_0_15px_rgba(201,154,50,0.2)]"
+                      : "text-[#FFF8E8] hover:bg-[#06152F]/50"
                   )}
                 >
-                  <span>{link.label}</span>
+                  <span className="font-[var(--font-cinzel)]">{link.label}</span>
                   <ArrowRight
                     className={cn(
                       "w-4 h-4 transition-transform",
-                      isActive ? "text-[#D4A72C] translate-x-1" : "text-[#B9B0BE]"
+                      isActive ? "text-[#C99A32] translate-x-1" : "text-[#C9C4B8]"
                     )}
                   />
                 </Link>
@@ -228,8 +228,8 @@ export const Header: React.FC = () => {
         </div>
 
         {/* Mobile Drawer Footer with Brand Tagline & CTA */}
-        <div className="pt-6 border-t border-[#FAF8F2]/10 space-y-4">
-          <p className="text-xs text-[#B9B0BE] leading-relaxed">
+        <div className="pt-6 border-t border-[#C99A32]/15 space-y-4">
+          <p className="text-xs text-[#C9C4B8] leading-relaxed italic">
             &ldquo;Where Cinema Meets Creativity &amp; Events Become Experiences&rdquo;
           </p>
           <Button

@@ -50,7 +50,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
 
       <h2
         className={cn(
-          "font-[var(--font-heading)] text-[#FAF8F2] leading-[1.12]",
+          "font-[var(--font-heading)] text-[#FFF8E8] leading-[1.12]",
           titleSizes[size]
         )}
       >
@@ -58,7 +58,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
       </h2>
 
       {description && (
-        <p className="mt-4 text-sm sm:text-base lg:text-lg text-[#B9B0BE] leading-relaxed">
+        <p className="mt-4 text-sm sm:text-base lg:text-lg text-[#C9C4B8] leading-relaxed">
           {description}
         </p>
       )}

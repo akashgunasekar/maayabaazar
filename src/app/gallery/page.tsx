@@ -62,12 +62,12 @@ export default function GalleryPage() {
         title="The Experience Gallery"
         description="A visual curation of stadium concert touring stages, acoustic cinema soundstages, red-carpet entertainment galas, and on-ground production rigs."
         breadcrumbs={
-          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-[#B9B0BE]">
-            <Link href="/" className="hover:text-[#FAF8F2] transition-colors">
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-[#C9C4B8]">
+            <Link href="/" className="hover:text-[#FFF8E8] transition-colors">
               Home
             </Link>
-            <span className="text-[#FAF8F2]/30">/</span>
-            <span className="text-[#D4A72C]">Gallery</span>
+            <span className="text-[#FFF8E8]/30">/</span>
+            <span className="text-[#C99A32]">Gallery</span>
           </nav>
         }
         actions={

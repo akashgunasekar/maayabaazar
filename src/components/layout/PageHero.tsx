@@ -28,13 +28,17 @@ export const PageHero: React.FC<PageHeroProps> = ({
   return (
     <div
       className={cn(
-        "relative pt-32 pb-16 sm:pt-36 sm:pb-20 lg:pt-40 lg:pb-24 border-b border-[#FAF8F2]/[0.08] atmosphere-hero overflow-hidden",
+        "relative pt-32 pb-16 sm:pt-36 sm:pb-20 lg:pt-40 lg:pb-24 border-b border-[#C99A32]/20 atmosphere-hero overflow-hidden bg-[#020817]",
         className
       )}
       {...props}
     >
-      {/* Background ambient lighting */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[radial-gradient(circle,rgba(212,167,44,0.08),transparent_70%)] pointer-events-none" />
+      {/* Background ambient royal blue & gold lighting */}
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[radial-gradient(circle,rgba(11,33,69,0.5),transparent_70%)] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-[radial-gradient(circle,rgba(201,154,50,0.1),transparent_70%)] pointer-events-none" />
+
+      {/* Subtle architectural gold line at top */}
+      <div className="absolute top-20 left-1/2 -translate-x-1/2 w-48 h-px bg-gradient-to-r from-transparent via-[#C99A32]/40 to-transparent pointer-events-none" />
 
       <Container>
         <div
@@ -53,14 +57,14 @@ export const PageHero: React.FC<PageHeroProps> = ({
             </div>
           )}
 
-          <DisplayHeading size="2xl" className="mb-5 text-[#FAF8F2] animate-hero-text">
+          <DisplayHeading size="2xl" className="mb-5 text-[#FFF8E8] animate-hero-text">
             {title}
           </DisplayHeading>
 
           {description && (
             <p
               style={{ animationDelay: "120ms" }}
-              className="text-base sm:text-lg lg:text-xl text-[#B9B0BE] leading-relaxed max-w-3xl mb-8 animate-fade-in"
+              className="text-base sm:text-lg lg:text-xl text-[#C9C4B8] leading-relaxed max-w-3xl mb-8 animate-fade-in"
             >
               {description}
             </p>

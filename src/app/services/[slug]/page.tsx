@@ -98,15 +98,15 @@ export async function generateMetadata({
 }
 
 const iconMap: Record<string, React.ReactNode> = {
-  Film: <Film className="w-5 h-5 text-[#D4A72C]" />,
-  Music: <Music className="w-5 h-5 text-[#D4A72C]" />,
-  Sparkles: <Sparkles className="w-5 h-5 text-[#D4A72C]" />,
-  Building2: <Building2 className="w-5 h-5 text-[#D4A72C]" />,
-  Trophy: <Trophy className="w-5 h-5 text-[#D4A72C]" />,
-  TrendingUp: <TrendingUp className="w-5 h-5 text-[#D4A72C]" />,
-  Users: <Users className="w-5 h-5 text-[#D4A72C]" />,
-  Globe: <Globe className="w-5 h-5 text-[#D4A72C]" />,
-  Layers: <Layers className="w-5 h-5 text-[#D4A72C]" />,
+  Film: <Film className="w-5 h-5 text-[#C99A32]" />,
+  Music: <Music className="w-5 h-5 text-[#C99A32]" />,
+  Sparkles: <Sparkles className="w-5 h-5 text-[#C99A32]" />,
+  Building2: <Building2 className="w-5 h-5 text-[#C99A32]" />,
+  Trophy: <Trophy className="w-5 h-5 text-[#C99A32]" />,
+  TrendingUp: <TrendingUp className="w-5 h-5 text-[#C99A32]" />,
+  Users: <Users className="w-5 h-5 text-[#C99A32]" />,
+  Globe: <Globe className="w-5 h-5 text-[#C99A32]" />,
+  Layers: <Layers className="w-5 h-5 text-[#C99A32]" />,
 };
 
 export default async function ServiceDetailPage({ params }: ServiceDetailPageProps) {
@@ -153,16 +153,16 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
         title={service.title}
         description={service.shortDescription}
         breadcrumbs={
-          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-[#B9B0BE]">
-            <Link href="/" className="hover:text-[#FAF8F2] transition-colors">
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-[#C9C4B8]">
+            <Link href="/" className="hover:text-[#FFF8E8] transition-colors">
               Home
             </Link>
-            <span className="text-[#FAF8F2]/30">/</span>
-            <Link href="/services" className="hover:text-[#FAF8F2] transition-colors">
+            <span className="text-[#FFF8E8]/30">/</span>
+            <Link href="/services" className="hover:text-[#FFF8E8] transition-colors">
               Services
             </Link>
-            <span className="text-[#FAF8F2]/30">/</span>
-            <span className="text-[#D4A72C]">{service.title}</span>
+            <span className="text-[#FFF8E8]/30">/</span>
+            <span className="text-[#C99A32]">{service.title}</span>
           </nav>
         }
         actions={
@@ -188,7 +188,7 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Visual Image */}
             <div className="lg:col-span-6 relative">
-              <div className="relative aspect-[16/11] w-full rounded-3xl overflow-hidden bg-[#08050D] border border-[#FAF8F2]/10 shadow-[0_20px_50px_rgba(8,5,13,0.9)] group">
+              <div className="relative aspect-[16/11] w-full rounded-3xl overflow-hidden bg-[#020817] border border-[#FFF8E8]/10 shadow-[0_20px_50px_rgba(2,8,23,0.9)] group">
                 {service.image && (
                   <Image
                     src={service.image.src}
@@ -199,11 +199,11 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 )}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#08050D] via-transparent to-transparent opacity-60" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#020817] via-transparent to-transparent opacity-60" />
 
                 {service.image?.caption && (
-                  <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-[#08050D]/80 backdrop-blur-md border border-[#FAF8F2]/10 text-xs text-[#FAF8F2]/90 flex items-center gap-2">
-                    <ShieldCheck className="w-4 h-4 text-[#D4A72C] shrink-0" />
+                  <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-[#020817]/80 backdrop-blur-md border border-[#FFF8E8]/10 text-xs text-[#FFF8E8]/90 flex items-center gap-2">
+                    <ShieldCheck className="w-4 h-4 text-[#C99A32] shrink-0" />
                     <span>{service.image.caption}</span>
                   </div>
                 )}
@@ -213,27 +213,27 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
             {/* Introduction Copy */}
             <div className="lg:col-span-6 space-y-6">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-[#08050D] border border-[#D4A72C]/30 flex items-center justify-center">
-                  {iconMap[service.iconName] || <Film className="w-5 h-5 text-[#D4A72C]" />}
+                <div className="w-10 h-10 rounded-xl bg-[#020817] border border-[#C99A32]/30 flex items-center justify-center">
+                  {iconMap[service.iconName] || <Film className="w-5 h-5 text-[#C99A32]" />}
                 </div>
                 <div>
-                  <span className="text-[10px] font-mono uppercase tracking-widest text-[#D4A72C] block">
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-[#C99A32] block">
                     Discipline Overview
                   </span>
-                  <h2 className="font-[var(--font-heading)] text-2xl font-bold text-[#FAF8F2]">
+                  <h2 className="font-[var(--font-heading)] text-2xl font-bold text-[#FFF8E8]">
                     Operational Scope &amp; Rigor
                   </h2>
                 </div>
               </div>
 
               {service.fullDescription.map((paragraph, pIdx) => (
-                <p key={pIdx} className="text-sm sm:text-base text-[#B9B0BE] leading-relaxed">
+                <p key={pIdx} className="text-sm sm:text-base text-[#C9C4B8] leading-relaxed">
                   {paragraph}
                 </p>
               ))}
 
-              <div className="p-4 rounded-2xl bg-[#08050D] border border-[#FAF8F2]/[0.08] flex items-center gap-3 text-xs text-[#FAF8F2]/80">
-                <ShieldCheck className="w-4 h-4 text-[#D4A72C] shrink-0" />
+              <div className="p-4 rounded-2xl bg-[#020817] border border-[#FFF8E8]/[0.08] flex items-center gap-3 text-xs text-[#FFF8E8]/80">
+                <ShieldCheck className="w-4 h-4 text-[#C99A32] shrink-0" />
                 <span>
                   Delivered under strict client confidentiality, transparent milestones, and international safety compliance.
                 </span>
@@ -258,16 +258,16 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
             {service.capabilities.map((cap, cIdx) => (
               <div
                 key={cIdx}
-                className="p-6 rounded-2xl bg-[#16091F]/50 border border-[#FAF8F2]/[0.08] hover:border-[#D4A72C]/40 transition-all flex items-start gap-4 group"
+                className="p-6 rounded-2xl bg-[#06152F]/50 border border-[#FFF8E8]/[0.08] hover:border-[#C99A32]/40 transition-all flex items-start gap-4 group"
               >
-                <div className="w-8 h-8 rounded-lg bg-[#08050D] border border-[#D4A72C]/30 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-110 transition-transform">
-                  <CheckCircle2 className="w-4 h-4 text-[#D4A72C]" />
+                <div className="w-8 h-8 rounded-lg bg-[#020817] border border-[#C99A32]/30 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-110 transition-transform">
+                  <CheckCircle2 className="w-4 h-4 text-[#C99A32]" />
                 </div>
                 <div className="space-y-1">
-                  <span className="text-[10px] font-mono text-[#FAF8F2]/40 uppercase tracking-wider block">
+                  <span className="text-[10px] font-mono text-[#FFF8E8]/40 uppercase tracking-wider block">
                     Capability 0{cIdx + 1}
                   </span>
-                  <p className="text-sm font-semibold text-[#FAF8F2] group-hover:text-[#F4D76A] transition-colors leading-relaxed">
+                  <p className="text-sm font-semibold text-[#FFF8E8] group-hover:text-[#F2D477] transition-colors leading-relaxed">
                     {cap}
                   </p>
                 </div>
@@ -293,16 +293,16 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
               {service.deliverables.map((deliv, dIdx) => (
                 <div
                   key={dIdx}
-                  className="p-5 rounded-2xl bg-[#08050D] border border-[#FAF8F2]/[0.08] hover:border-[#D4A72C]/30 transition-all flex flex-col justify-between"
+                  className="p-5 rounded-2xl bg-[#020817] border border-[#FFF8E8]/[0.08] hover:border-[#C99A32]/30 transition-all flex flex-col justify-between"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-[#16091F] border border-[#D4A72C]/20 flex items-center justify-center text-[#D4A72C] mb-3">
+                  <div className="w-8 h-8 rounded-lg bg-[#06152F] border border-[#C99A32]/20 flex items-center justify-center text-[#C99A32] mb-3">
                     <Boxes className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[10px] font-mono text-[#D4A72C] uppercase tracking-wider block mb-1">
+                    <span className="text-[10px] font-mono text-[#C99A32] uppercase tracking-wider block mb-1">
                       Tier 0{dIdx + 1}
                     </span>
-                    <h4 className="font-[var(--font-heading)] text-sm font-bold text-[#FAF8F2]">
+                    <h4 className="font-[var(--font-heading)] text-sm font-bold text-[#FFF8E8]">
                       {deliv}
                     </h4>
                   </div>
@@ -316,15 +316,15 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
       {/* 5. CTA SECTION */}
       <Section background="midnight" spacing="lg" borderBottom id="inquire">
         <FadeIn direction="up">
-          <div className="p-8 sm:p-12 lg:p-16 rounded-3xl bg-gradient-to-r from-[#16091F] via-[#08050D] to-[#16091F] border border-[#D4A72C]/40 flex flex-col md:flex-row items-center justify-between gap-8 shadow-[0_24px_64px_rgba(8,5,13,0.95)]">
+          <div className="p-8 sm:p-12 lg:p-16 rounded-3xl bg-gradient-to-r from-[#06152F] via-[#020817] to-[#06152F] border border-[#C99A32]/40 flex flex-col md:flex-row items-center justify-between gap-8 shadow-[0_24px_64px_rgba(2,8,23,0.95)]">
             <div className="space-y-3 max-w-2xl text-center md:text-left">
-              <span className="text-xs font-mono uppercase tracking-widest text-[#D4A72C] block">
+              <span className="text-xs font-mono uppercase tracking-widest text-[#C99A32] block">
                 Production Engagement
               </span>
-              <h3 className="font-[var(--font-heading)] text-2xl sm:text-3xl font-black text-[#FAF8F2]">
+              <h3 className="font-[var(--font-heading)] text-2xl sm:text-3xl font-black text-[#FFF8E8]">
                 Plan a {service.title} Project with Our Team
               </h3>
-              <p className="text-xs sm:text-sm text-[#B9B0BE] leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#C9C4B8] leading-relaxed">
                 Connect directly with our creative directors and line producers. We evaluate project briefs, technical riders, and schedules with strict turnaround times.
               </p>
             </div>
@@ -364,9 +364,9 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
               <Link
                 key={rel.id}
                 href={`/services/${rel.slug}`}
-                className="rounded-2xl bg-[#08050D] border border-[#FAF8F2]/[0.08] hover:border-[#D4A72C]/40 overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:shadow-[0_16px_36px_rgba(8,5,13,0.9)]"
+                className="rounded-2xl bg-[#020817] border border-[#FFF8E8]/[0.08] hover:border-[#C99A32]/40 overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:shadow-[0_16px_36px_rgba(2,8,23,0.9)]"
               >
-                <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#16091F]">
+                <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#06152F]">
                   {rel.image && (
                     <Image
                       src={rel.image.src}
@@ -376,26 +376,26 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#08050D] via-transparent to-transparent opacity-80" />
-                  <div className="absolute top-3 left-3 w-8 h-8 rounded-lg bg-[#08050D]/80 backdrop-blur-md border border-[#D4A72C]/30 flex items-center justify-center">
-                    {iconMap[rel.iconName] || <Film className="w-4 h-4 text-[#D4A72C]" />}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#020817] via-transparent to-transparent opacity-80" />
+                  <div className="absolute top-3 left-3 w-8 h-8 rounded-lg bg-[#020817]/80 backdrop-blur-md border border-[#C99A32]/30 flex items-center justify-center">
+                    {iconMap[rel.iconName] || <Film className="w-4 h-4 text-[#C99A32]" />}
                   </div>
                 </div>
 
                 <div className="p-5 flex-1 flex flex-col justify-between space-y-3">
                   <div>
-                    <span className="text-[10px] font-mono text-[#D4A72C] uppercase tracking-wider block mb-1">
+                    <span className="text-[10px] font-mono text-[#C99A32] uppercase tracking-wider block mb-1">
                       {rel.tagline}
                     </span>
-                    <h4 className="font-[var(--font-heading)] text-base font-bold text-[#FAF8F2] group-hover:text-[#F4D76A] transition-colors">
+                    <h4 className="font-[var(--font-heading)] text-base font-bold text-[#FFF8E8] group-hover:text-[#F2D477] transition-colors">
                       {rel.title}
                     </h4>
-                    <p className="text-xs text-[#B9B0BE] leading-relaxed line-clamp-2 mt-1">
+                    <p className="text-xs text-[#C9C4B8] leading-relaxed line-clamp-2 mt-1">
                       {rel.shortDescription}
                     </p>
                   </div>
 
-                  <div className="pt-3 border-t border-[#FAF8F2]/[0.06] flex items-center justify-between text-xs font-semibold text-[#D4A72C]">
+                  <div className="pt-3 border-t border-[#FFF8E8]/[0.06] flex items-center justify-between text-xs font-semibold text-[#C99A32]">
                     <span>View Service</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </div>

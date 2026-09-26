@@ -3,7 +3,7 @@ import { Container } from "./Container";
 import { cn } from "@/lib/utils";
 
 export interface SectionProps extends React.HTMLAttributes<HTMLElement> {
-  background?: "midnight" | "deepPurple" | "royalGlow" | "void" | "transparent";
+  background?: "midnight" | "deepNavy" | "deepPurple" | "royalGlow" | "void" | "transparent";
   spacing?: "none" | "sm" | "md" | "lg" | "xl";
   containerSize?: "default" | "narrow" | "wide" | "full";
   borderTop?: boolean;
@@ -22,10 +22,11 @@ export const Section: React.FC<SectionProps> = ({
   ...props
 }) => {
   const bgStyles = {
-    midnight: "bg-[#08050D]",
-    deepPurple: "bg-[#16091F]",
-    royalGlow: "bg-[#08050D] atmosphere-purple",
-    void: "bg-[#08050D]",
+    midnight: "bg-[#020817]",
+    deepNavy: "bg-[#06152F]",
+    deepPurple: "bg-[#06152F]", // mapped to deep navy
+    royalGlow: "bg-[#020817] atmosphere-royal",
+    void: "bg-[#020817]",
     transparent: "bg-transparent",
   };
 
@@ -43,8 +44,8 @@ export const Section: React.FC<SectionProps> = ({
         "relative w-full overflow-hidden",
         bgStyles[background],
         spacingStyles[spacing],
-        borderTop && "border-t border-[#FAF8F2]/[0.08]",
-        borderBottom && "border-b border-[#FAF8F2]/[0.08]",
+        borderTop && "border-t border-[#C99A32]/15",
+        borderBottom && "border-b border-[#C99A32]/15",
         className
       )}
       {...props}

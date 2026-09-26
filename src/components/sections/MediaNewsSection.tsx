@@ -37,10 +37,10 @@ export const MediaNewsSection: React.FC = () => {
           {mediaArticlesData.map((article, idx) => (
             <FadeIn key={article.id} direction="up" delay={idx * 100} duration={600}>
               <article
-                className="rounded-2xl bg-[#16091F]/40 border border-[#FAF8F2]/[0.08] hover:border-[#D4A72C]/40 overflow-hidden flex flex-col group transition-all duration-400 hover-lift glow-purple-hover h-full"
+                className="rounded-2xl bg-[#06152F]/40 border border-[#FFF8E8]/[0.08] hover:border-[#C99A32]/40 overflow-hidden flex flex-col group transition-all duration-400 hover-lift glow-gold-hover h-full"
               >
                 {/* Article Image */}
-                <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#08050D]">
+                <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#020817]">
                   <Image
                     src={article.image?.src || "/images/film-production.jpg"}
                     alt={article.image?.alt || article.title}
@@ -48,10 +48,10 @@ export const MediaNewsSection: React.FC = () => {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover transition-transform duration-700 cubic-bezier(0.16, 1, 0.3, 1) will-change-transform group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#08050D] via-transparent to-transparent opacity-80" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#020817] via-transparent to-transparent opacity-80" />
 
                   <div className="absolute top-4 left-4">
-                    <span className="px-2.5 py-1 rounded-md bg-[#08050D]/80 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-[#D4A72C] border border-[#D4A72C]/30">
+                    <span className="px-2.5 py-1 rounded-md bg-[#020817]/80 backdrop-blur-md text-[10px] font-mono uppercase tracking-wider text-[#C99A32] border border-[#C99A32]/30">
                       {article.categoryLabel}
                     </span>
                   </div>
@@ -60,24 +60,24 @@ export const MediaNewsSection: React.FC = () => {
                 {/* Content Body */}
                 <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                   <div className="space-y-2.5">
-                    <div className="flex items-center gap-1.5 text-xs text-[#B9B0BE]">
-                      <Calendar className="w-3.5 h-3.5 text-[#D4A72C]" />
+                    <div className="flex items-center gap-1.5 text-xs text-[#C9C4B8]">
+                      <Calendar className="w-3.5 h-3.5 text-[#C99A32]" />
                       <time dateTime={article.isoDate}>{article.publishDate}</time>
                     </div>
 
-                    <h3 className="font-[var(--font-heading)] text-lg font-bold text-[#FAF8F2] group-hover:text-[#F4D76A] transition-colors line-clamp-2">
+                    <h3 className="font-[var(--font-heading)] text-lg font-bold text-[#FFF8E8] group-hover:text-[#F2D477] transition-colors line-clamp-2">
                       {article.title}
                     </h3>
 
-                    <p className="text-xs text-[#B9B0BE] leading-relaxed line-clamp-3">
+                    <p className="text-xs text-[#C9C4B8] leading-relaxed line-clamp-3">
                       {article.summary}
                     </p>
                   </div>
 
-                  <div className="pt-4 border-t border-[#FAF8F2]/[0.06] flex items-center justify-between">
+                  <div className="pt-4 border-t border-[#FFF8E8]/[0.06] flex items-center justify-between">
                     <Link
                       href={`/media/${article.slug}`}
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#D4A72C] hover:text-[#F4D76A] transition-colors"
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#C99A32] hover:text-[#F2D477] transition-colors"
                     >
                       <span>Read Full Statement</span>
                       <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />

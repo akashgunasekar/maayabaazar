@@ -62,12 +62,12 @@ export default function ProjectsPage() {
         title="Our Production Projects"
         description="A curated overview of active feature film productions, completed stadium concert tours, and major entertainment initiatives managed by Maayaa Bazaar Hub."
         breadcrumbs={
-          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-[#B9B0BE]">
-            <Link href="/" className="hover:text-[#FAF8F2] transition-colors">
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-[#C9C4B8]">
+            <Link href="/" className="hover:text-[#FFF8E8] transition-colors">
               Home
             </Link>
-            <span className="text-[#FAF8F2]/30">/</span>
-            <span className="text-[#D4A72C]">Projects</span>
+            <span className="text-[#FFF8E8]/30">/</span>
+            <span className="text-[#C99A32]">Projects</span>
           </nav>
         }
         actions={
@@ -85,8 +85,8 @@ export default function ProjectsPage() {
       {/* 2. Interactive Client Filter & Coming Soon State */}
       <Suspense
         fallback={
-          <div className="min-h-[50vh] bg-[#16091F] flex items-center justify-center">
-            <span className="font-mono text-xs text-[#D4A72C]">Loading Portfolio Archive...</span>
+          <div className="min-h-[50vh] bg-[#06152F] flex items-center justify-center">
+            <span className="font-mono text-xs text-[#C99A32]">Loading Portfolio Archive...</span>
           </div>
         }
       >

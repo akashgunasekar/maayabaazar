@@ -63,11 +63,11 @@ export const metadata: Metadata = {
 export const dynamic = "force-static";
 
 const iconMap: Record<string, React.ReactNode> = {
-  Music: <Music className="w-5 h-5 text-[#D4A72C]" />,
-  Sparkles: <Sparkles className="w-5 h-5 text-[#D4A72C]" />,
-  Film: <Film className="w-5 h-5 text-[#D4A72C]" />,
-  Building2: <Building2 className="w-5 h-5 text-[#D4A72C]" />,
-  Users: <Users className="w-5 h-5 text-[#D4A72C]" />,
+  Music: <Music className="w-5 h-5 text-[#C99A32]" />,
+  Sparkles: <Sparkles className="w-5 h-5 text-[#C99A32]" />,
+  Film: <Film className="w-5 h-5 text-[#C99A32]" />,
+  Building2: <Building2 className="w-5 h-5 text-[#C99A32]" />,
+  Users: <Users className="w-5 h-5 text-[#C99A32]" />,
 };
 
 export default async function EventsPage() {
@@ -120,12 +120,12 @@ export default async function EventsPage() {
         title="Events at Maayaa Bazaar Hub"
         description="Engineering unforgettable live experiences across five core disciplines: monumental stadium concerts, star-studded film promotional galas, televised award ceremonies, executive corporate summits, and grand cultural celebrations."
         breadcrumbs={
-          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-[#B9B0BE]">
-            <Link href="/" className="hover:text-[#FAF8F2] transition-colors">
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-[#C9C4B8]">
+            <Link href="/" className="hover:text-[#FFF8E8] transition-colors">
               Home
             </Link>
-            <span className="text-[#FAF8F2]/30">/</span>
-            <span className="text-[#D4A72C]">Events</span>
+            <span className="text-[#FFF8E8]/30">/</span>
+            <span className="text-[#C99A32]">Events</span>
           </nav>
         }
         actions={
@@ -168,9 +168,9 @@ export default async function EventsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {events.map((evt, idx) => (
               <FadeIn key={evt.id} direction="up" delay={idx * 100} duration={600}>
-                <div className="rounded-3xl bg-[#08050D] border border-[#FAF8F2]/[0.08] hover:border-[#D4A72C]/40 overflow-hidden flex flex-col group transition-all duration-400 hover:shadow-[0_16px_40px_rgba(75,10,120,0.3)] h-full hover-lift">
+                <div className="rounded-3xl bg-[#020817] border border-[#FFF8E8]/[0.08] hover:border-[#C99A32]/40 overflow-hidden flex flex-col group transition-all duration-400 hover:shadow-[0_16px_40px_rgba(11,33,69,0.3)] h-full hover-lift">
                   {/* Event Image */}
-                  <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#16091F]">
+                  <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#06152F]">
                     <Image
                       src={evt.image.src}
                       alt={evt.image.alt || evt.title}
@@ -178,7 +178,7 @@ export default async function EventsPage() {
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-cover transition-transform duration-700 cubic-bezier(0.16, 1, 0.3, 1) will-change-transform group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#08050D] via-transparent to-transparent opacity-80" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#020817] via-transparent to-transparent opacity-80" />
 
                     {/* Status Badge */}
                     <div className="absolute top-4 left-4">
@@ -188,8 +188,8 @@ export default async function EventsPage() {
                     </div>
 
                     {evt.capacity && (
-                      <div className="absolute bottom-3 left-4 flex items-center gap-1.5 text-[11px] font-mono text-[#F4D76A] bg-[#08050D]/85 backdrop-blur-md px-2.5 py-1 rounded-md border border-[#D4A72C]/20">
-                        <Users className="w-3 h-3 text-[#D4A72C]" />
+                      <div className="absolute bottom-3 left-4 flex items-center gap-1.5 text-[11px] font-mono text-[#F2D477] bg-[#020817]/85 backdrop-blur-md px-2.5 py-1 rounded-md border border-[#C99A32]/20">
+                        <Users className="w-3 h-3 text-[#C99A32]" />
                         <span>{evt.capacity}</span>
                       </div>
                     )}
@@ -199,31 +199,31 @@ export default async function EventsPage() {
                   <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                     <div className="space-y-3">
                       {/* Meta: Date & Location */}
-                      <div className="flex flex-wrap items-center gap-2.5 text-xs text-[#B9B0BE]">
+                      <div className="flex flex-wrap items-center gap-2.5 text-xs text-[#C9C4B8]">
                         <span className="flex items-center gap-1.5">
-                          <Calendar className="w-3.5 h-3.5 text-[#D4A72C]" />
+                          <Calendar className="w-3.5 h-3.5 text-[#C99A32]" />
                           {evt.date}
                         </span>
-                        <span className="text-[#FAF8F2]/20">•</span>
+                        <span className="text-[#FFF8E8]/20">•</span>
                         <span className="flex items-center gap-1.5">
-                          <MapPin className="w-3.5 h-3.5 text-[#D4A72C]" />
+                          <MapPin className="w-3.5 h-3.5 text-[#C99A32]" />
                           {evt.location}
                         </span>
                       </div>
 
-                      <h3 className="font-[var(--font-heading)] text-xl font-bold text-[#FAF8F2] group-hover:text-[#F4D76A] transition-colors line-clamp-2 leading-snug">
+                      <h3 className="font-[var(--font-heading)] text-xl font-bold text-[#FFF8E8] group-hover:text-[#F2D477] transition-colors line-clamp-2 leading-snug">
                         {evt.title}
                       </h3>
 
-                      <p className="text-xs sm:text-sm text-[#B9B0BE] leading-relaxed line-clamp-2">
+                      <p className="text-xs sm:text-sm text-[#C9C4B8] leading-relaxed line-clamp-2">
                         {evt.shortDescription}
                       </p>
                     </div>
 
-                    <div className="pt-4 border-t border-[#FAF8F2]/[0.06] flex items-center justify-between">
+                    <div className="pt-4 border-t border-[#FFF8E8]/[0.06] flex items-center justify-between">
                       <Link
                         href={`/events/${evt.slug}`}
-                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#D4A72C] hover:text-[#F4D76A] transition-colors"
+                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#C99A32] hover:text-[#F2D477] transition-colors"
                       >
                         <span>View Details</span>
                         <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -231,9 +231,9 @@ export default async function EventsPage() {
 
                       <Link
                         href={`/contact?event=${evt.slug}`}
-                        className="text-[11px] font-mono text-[#B9B0BE] hover:text-[#FAF8F2] transition-colors flex items-center gap-1"
+                        className="text-[11px] font-mono text-[#C9C4B8] hover:text-[#FFF8E8] transition-colors flex items-center gap-1"
                       >
-                        <Ticket className="w-3.5 h-3.5 text-[#D4A72C]" />
+                        <Ticket className="w-3.5 h-3.5 text-[#C99A32]" />
                         <span>Inquire Access</span>
                       </Link>
                     </div>
@@ -248,11 +248,11 @@ export default async function EventsPage() {
       {/* 3. FLAGSHIP VISUAL PROMINENCE: LIVE CONCERTS & MUSIC SPECTACLES */}
       <Section background="midnight" spacing="lg" borderBottom id="live-concerts-flagship" className="scroll-mt-24">
         <FadeIn direction="up">
-          <div className="rounded-3xl bg-[#08050D] border border-[#D4A72C]/40 overflow-hidden relative shadow-[0_24px_64px_rgba(8,5,13,0.95)]">
+          <div className="rounded-3xl bg-[#020817] border border-[#C99A32]/40 overflow-hidden relative shadow-[0_24px_64px_rgba(2,8,23,0.95)]">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               {/* Grand Live Concert Arena Visual */}
               <div className="lg:col-span-7 relative group">
-                <div className="relative aspect-[16/10] w-full rounded-2xl sm:rounded-3xl overflow-hidden bg-[#16091F] border border-[#FAF8F2]/[0.08] hover:border-[#D4A72C]/40 hover-lift glow-purple-hover">
+                <div className="relative aspect-[16/10] w-full rounded-2xl sm:rounded-3xl overflow-hidden bg-[#06152F] border border-[#FFF8E8]/[0.08] hover:border-[#C99A32]/40 hover-lift glow-gold-hover">
                   <Image
                     src="/images/live-concerts.jpg"
                     alt="Maayaa Bazaar Hub Live Concert Arena with Spatial Lighting and Audio Rigging"
@@ -261,24 +261,24 @@ export default async function EventsPage() {
                     sizes="(max-width: 1024px) 100vw, 60vw"
                     className="object-cover transition-transform duration-700 cubic-bezier(0.16, 1, 0.3, 1) will-change-transform group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#08050D] via-[#08050D]/40 to-transparent opacity-80" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#020817] via-[#020817]/40 to-transparent opacity-80" />
 
                   {/* Flagship Badges */}
                   <div className="absolute top-4 left-4 flex items-center gap-2">
-                    <span className="px-3 py-1 rounded-full bg-[#D4A72C] text-[#08050D] text-[10px] font-mono font-bold uppercase tracking-wider shadow-[0_0_12px_rgba(212,167,44,0.4)]">
+                    <span className="px-3 py-1 rounded-full bg-[#C99A32] text-[#020817] text-[10px] font-mono font-bold uppercase tracking-wider shadow-[0_0_12px_rgba(201,154,50,0.4)]">
                       Flagship Production
                     </span>
-                    <span className="px-3 py-1 rounded-full bg-[#08050D]/80 backdrop-blur-md text-[#FAF8F2] text-[10px] font-mono border border-[#FAF8F2]/10">
+                    <span className="px-3 py-1 rounded-full bg-[#020817]/80 backdrop-blur-md text-[#FFF8E8] text-[10px] font-mono border border-[#FFF8E8]/10">
                       Stadium &amp; Colosseum Tier
                     </span>
                   </div>
 
-                  <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-xl bg-[#08050D]/85 backdrop-blur-md border border-[#D4A72C]/20 text-xs text-[#FAF8F2]/90 flex items-center justify-between">
+                  <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-xl bg-[#020817]/85 backdrop-blur-md border border-[#C99A32]/20 text-xs text-[#FFF8E8]/90 flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <Zap className="w-4 h-4 text-[#D4A72C]" />
+                      <Zap className="w-4 h-4 text-[#C99A32]" />
                       <span>Spatial 360° Acoustic Architecture &amp; Touring Rigging</span>
                     </div>
-                    <span className="text-[10px] font-mono text-[#D4A72C]">
+                    <span className="text-[10px] font-mono text-[#C99A32]">
                       25,000+ Capacity
                     </span>
                   </div>
@@ -289,33 +289,33 @@ export default async function EventsPage() {
               <div className="lg:col-span-5 p-6 sm:p-8 lg:p-10 space-y-6">
                 <div>
                   <div className="flex items-center gap-2 mb-2">
-                    <div className="w-8 h-8 rounded-lg bg-[#16091F] border border-[#D4A72C]/30 flex items-center justify-center text-[#D4A72C]">
+                    <div className="w-8 h-8 rounded-lg bg-[#06152F] border border-[#C99A32]/30 flex items-center justify-center text-[#C99A32]">
                       <Mic className="w-4 h-4" />
                     </div>
-                    <span className="text-xs font-mono uppercase tracking-widest text-[#D4A72C] font-semibold">
+                    <span className="text-xs font-mono uppercase tracking-widest text-[#C99A32] font-semibold">
                       Flagship Showcase
                     </span>
                   </div>
 
-                  <h2 className="font-[var(--font-heading)] text-2xl sm:text-3xl font-black text-[#FAF8F2] tracking-tight leading-snug">
+                  <h2 className="font-[var(--font-heading)] text-2xl sm:text-3xl font-black text-[#FFF8E8] tracking-tight leading-snug">
                     Live Concerts &amp; Stadium Music Spectacles
                   </h2>
 
-                  <p className="text-xs sm:text-sm text-[#B9B0BE] leading-relaxed mt-2">
+                  <p className="text-xs sm:text-sm text-[#C9C4B8] leading-relaxed mt-2">
                     Concerts are an integral cornerstone of Maayaa Bazaar Hub&apos;s creative offering. We design, produce, and manage monumentally engineered musical events that unite celebrated vocalists and bands with thousands of passionate fans.
                   </p>
                 </div>
 
                 {/* Subcategories Pills */}
                 <div className="space-y-2">
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-[#FAF8F2]/60 block">
+                  <span className="text-[10px] font-mono uppercase tracking-wider text-[#FFF8E8]/60 block">
                     Concert Formats &amp; Specializations
                   </span>
                   <div className="flex flex-wrap gap-1.5">
                     {musicCategory.subcategories.map((sub) => (
                       <span
                         key={sub.id}
-                        className="px-2.5 py-1 rounded-md bg-[#16091F] text-[11px] font-mono text-[#D4A72C] border border-[#D4A72C]/20"
+                        className="px-2.5 py-1 rounded-md bg-[#06152F] text-[11px] font-mono text-[#C99A32] border border-[#C99A32]/20"
                       >
                         {sub.name}
                       </span>
@@ -324,14 +324,14 @@ export default async function EventsPage() {
                 </div>
 
                 {/* Technical Staging Checklist */}
-                <div className="space-y-2 pt-2 border-t border-[#FAF8F2]/[0.08]">
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-[#FAF8F2]/60 block">
+                <div className="space-y-2 pt-2 border-t border-[#FFF8E8]/[0.08]">
+                  <span className="text-[10px] font-mono uppercase tracking-wider text-[#FFF8E8]/60 block">
                     Turnkey Engineering Specs
                   </span>
                   <div className="space-y-1.5">
                     {musicCategory.capabilities?.slice(0, 3).map((cap, cIdx) => (
-                      <div key={cIdx} className="flex items-start gap-2 text-xs text-[#FAF8F2]/90">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#D4A72C] shrink-0 mt-0.5" />
+                      <div key={cIdx} className="flex items-start gap-2 text-xs text-[#FFF8E8]/90">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#C99A32] shrink-0 mt-0.5" />
                         <span>{cap}</span>
                       </div>
                     ))}
@@ -372,16 +372,16 @@ export default async function EventsPage() {
               <a
                 key={cat.id}
                 href={`#${cat.slug}`}
-                className="p-3.5 rounded-xl bg-[#08050D] border border-[#FAF8F2]/[0.08] hover:border-[#D4A72C]/40 hover:bg-[#16091F] transition-all duration-300 group flex items-center gap-3 glow-purple-hover"
+                className="p-3.5 rounded-xl bg-[#020817] border border-[#FFF8E8]/[0.08] hover:border-[#C99A32]/40 hover:bg-[#06152F] transition-all duration-300 group flex items-center gap-3 glow-gold-hover"
               >
-                <div className="w-8 h-8 rounded-lg bg-[#16091F] border border-[#D4A72C]/20 flex items-center justify-center text-[#D4A72C] shrink-0 group-hover:scale-105 transition-transform">
-                  {iconMap[cat.iconName] || <Sparkles className="w-4 h-4 text-[#D4A72C]" />}
+                <div className="w-8 h-8 rounded-lg bg-[#06152F] border border-[#C99A32]/20 flex items-center justify-center text-[#C99A32] shrink-0 group-hover:scale-105 transition-transform">
+                  {iconMap[cat.iconName] || <Sparkles className="w-4 h-4 text-[#C99A32]" />}
                 </div>
                 <div className="min-w-0">
-                  <div className="font-[var(--font-heading)] text-xs font-bold text-[#FAF8F2] group-hover:text-[#F4D76A] transition-colors truncate">
+                  <div className="font-[var(--font-heading)] text-xs font-bold text-[#FFF8E8] group-hover:text-[#F2D477] transition-colors truncate">
                     {cat.title}
                   </div>
-                  <div className="text-[10px] font-mono text-[#B9B0BE]">
+                  <div className="text-[10px] font-mono text-[#C9C4B8]">
                     {cat.subcategories.length} Formats
                   </div>
                 </div>
@@ -394,12 +394,12 @@ export default async function EventsPage() {
               <div
                 key={cat.id}
                 id={cat.slug}
-                className="p-8 sm:p-12 rounded-3xl bg-[#08050D] border border-[#FAF8F2]/[0.08] hover:border-[#D4A72C]/40 transition-all duration-300 relative overflow-hidden scroll-mt-28 shadow-[0_16px_40px_rgba(8,5,13,0.8)]"
+                className="p-8 sm:p-12 rounded-3xl bg-[#020817] border border-[#FFF8E8]/[0.08] hover:border-[#C99A32]/40 transition-all duration-300 relative overflow-hidden scroll-mt-28 shadow-[0_16px_40px_rgba(2,8,23,0.8)]"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
                   {/* Category Image */}
                   <div className={`lg:col-span-5 relative ${idx % 2 === 1 ? "lg:order-2" : ""}`}>
-                    <div className="relative aspect-[16/11] w-full rounded-2xl overflow-hidden bg-[#16091F] border border-[#FAF8F2]/10 shadow-[0_16px_40px_rgba(8,5,13,0.8)] group">
+                    <div className="relative aspect-[16/11] w-full rounded-2xl overflow-hidden bg-[#06152F] border border-[#FFF8E8]/10 shadow-[0_16px_40px_rgba(2,8,23,0.8)] group">
                       {cat.image && (
                         <Image
                           src={cat.image.src}
@@ -409,11 +409,11 @@ export default async function EventsPage() {
                           className="object-cover transition-transform duration-700 group-hover:scale-105"
                         />
                       )}
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#08050D] via-transparent to-transparent opacity-70" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#020817] via-transparent to-transparent opacity-70" />
 
                       <div className="absolute top-4 left-4 flex items-center gap-2">
-                        <div className="w-8 h-8 rounded-lg bg-[#08050D]/90 backdrop-blur-md border border-[#D4A72C]/30 flex items-center justify-center text-[#D4A72C]">
-                          {iconMap[cat.iconName] || <Sparkles className="w-4 h-4 text-[#D4A72C]" />}
+                        <div className="w-8 h-8 rounded-lg bg-[#020817]/90 backdrop-blur-md border border-[#C99A32]/30 flex items-center justify-center text-[#C99A32]">
+                          {iconMap[cat.iconName] || <Sparkles className="w-4 h-4 text-[#C99A32]" />}
                         </div>
                         <Badge variant="purple" size="sm">
                           Vertical 0{idx + 1}
@@ -421,7 +421,7 @@ export default async function EventsPage() {
                       </div>
 
                       {cat.image?.caption && (
-                        <div className="absolute bottom-3 left-4 right-4 p-2.5 rounded-lg bg-[#08050D]/80 backdrop-blur-md border border-[#FAF8F2]/10 text-[11px] text-[#FAF8F2]/80">
+                        <div className="absolute bottom-3 left-4 right-4 p-2.5 rounded-lg bg-[#020817]/80 backdrop-blur-md border border-[#FFF8E8]/10 text-[11px] text-[#FFF8E8]/80">
                           {cat.image.caption}
                         </div>
                       )}
@@ -431,32 +431,32 @@ export default async function EventsPage() {
                   {/* Category Details & Subcategories */}
                   <div className={`lg:col-span-7 space-y-6 ${idx % 2 === 1 ? "lg:order-1" : ""}`}>
                     <div>
-                      <span className="text-xs font-mono uppercase tracking-widest text-[#D4A72C] font-semibold block mb-1">
+                      <span className="text-xs font-mono uppercase tracking-widest text-[#C99A32] font-semibold block mb-1">
                         Vertical Discipline
                       </span>
-                      <h3 className="font-[var(--font-heading)] text-2xl sm:text-3xl font-bold text-[#FAF8F2] tracking-tight">
+                      <h3 className="font-[var(--font-heading)] text-2xl sm:text-3xl font-bold text-[#FFF8E8] tracking-tight">
                         {cat.title}
                       </h3>
-                      <p className="text-xs sm:text-sm text-[#B9B0BE] leading-relaxed mt-2">
+                      <p className="text-xs sm:text-sm text-[#C9C4B8] leading-relaxed mt-2">
                         {cat.description}
                       </p>
                     </div>
 
                     {/* Subcategories Grid */}
                     <div className="space-y-2.5">
-                      <span className="text-[10px] font-mono uppercase tracking-wider text-[#FAF8F2]/60 block">
+                      <span className="text-[10px] font-mono uppercase tracking-wider text-[#FFF8E8]/60 block">
                         Included Formats &amp; Event Types ({cat.subcategories.length})
                       </span>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                         {cat.subcategories.map((sub) => (
                           <div
                             key={sub.id}
-                            className="p-3.5 rounded-xl bg-[#16091F]/50 border border-[#FAF8F2]/[0.06] hover:border-[#D4A72C]/30 transition-colors"
+                            className="p-3.5 rounded-xl bg-[#06152F]/50 border border-[#FFF8E8]/[0.06] hover:border-[#C99A32]/30 transition-colors"
                           >
-                            <h4 className="font-[var(--font-heading)] text-xs font-bold text-[#FAF8F2] mb-1">
+                            <h4 className="font-[var(--font-heading)] text-xs font-bold text-[#FFF8E8] mb-1">
                               {sub.name}
                             </h4>
-                            <p className="text-[11px] text-[#B9B0BE] leading-snug">
+                            <p className="text-[11px] text-[#C9C4B8] leading-snug">
                               {sub.description}
                             </p>
                           </div>
@@ -466,14 +466,14 @@ export default async function EventsPage() {
 
                     {/* Capabilities Checklist */}
                     {cat.capabilities && (
-                      <div className="pt-3 border-t border-[#FAF8F2]/[0.08] space-y-2">
-                        <span className="text-[10px] font-mono uppercase tracking-wider text-[#FAF8F2]/60 block">
+                      <div className="pt-3 border-t border-[#FFF8E8]/[0.08] space-y-2">
+                        <span className="text-[10px] font-mono uppercase tracking-wider text-[#FFF8E8]/60 block">
                           Production Standards &amp; Riders
                         </span>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                           {cat.capabilities.map((cap, cIdx) => (
-                            <div key={cIdx} className="flex items-start gap-2 text-xs text-[#FAF8F2]/80">
-                              <CheckCircle2 className="w-3.5 h-3.5 text-[#D4A72C] shrink-0 mt-0.5" />
+                            <div key={cIdx} className="flex items-start gap-2 text-xs text-[#FFF8E8]/80">
+                              <CheckCircle2 className="w-3.5 h-3.5 text-[#C99A32] shrink-0 mt-0.5" />
                               <span>{cap}</span>
                             </div>
                           ))}
@@ -482,7 +482,7 @@ export default async function EventsPage() {
                     )}
 
                     {/* Action Bar */}
-                    <div className="pt-4 border-t border-[#FAF8F2]/[0.08] flex items-center justify-between">
+                    <div className="pt-4 border-t border-[#FFF8E8]/[0.08] flex items-center justify-between">
                       <Button
                         href={`/contact?category=${cat.slug}`}
                         variant="primary"
@@ -492,7 +492,7 @@ export default async function EventsPage() {
                         Inquire For {cat.title}
                       </Button>
 
-                      <span className="text-[11px] font-mono text-[#FAF8F2]/50">
+                      <span className="text-[11px] font-mono text-[#FFF8E8]/50">
                         {cat.subcategories.length} Specialized Event Formats
                       </span>
                     </div>
@@ -507,16 +507,16 @@ export default async function EventsPage() {
       {/* 5. TRANSPARENT BOOKING & SCHEDULING NOTICE */}
       <Section background="midnight" spacing="lg" borderBottom>
         <FadeIn direction="up">
-          <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-[#16091F] via-[#08050D] to-[#16091F] border border-[#D4A72C]/30 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-[0_20px_50px_rgba(8,5,13,0.9)]">
+          <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-[#06152F] via-[#020817] to-[#06152F] border border-[#C99A32]/30 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-[0_20px_50px_rgba(2,8,23,0.9)]">
             <div className="space-y-3 max-w-2xl text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#08050D] border border-[#D4A72C]/30 text-xs font-mono text-[#D4A72C]">
-                <ShieldCheck className="w-3.5 h-3.5 text-[#D4A72C]" />
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#020817] border border-[#C99A32]/30 text-xs font-mono text-[#C99A32]">
+                <ShieldCheck className="w-3.5 h-3.5 text-[#C99A32]" />
                 <span>Transparent Ticketing &amp; Press Schedules</span>
               </div>
-              <h3 className="font-[var(--font-heading)] text-2xl sm:text-3xl font-bold text-[#FAF8F2]">
+              <h3 className="font-[var(--font-heading)] text-2xl sm:text-3xl font-bold text-[#FFF8E8]">
                 Event Scheduling &amp; Ticketing Framework
               </h3>
-              <p className="text-xs sm:text-sm text-[#B9B0BE] leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#C9C4B8] leading-relaxed">
                 Official public dates, concert tour lineups, and theatrical audio launch passes are released through authorized partner channels and official media statements. Maayaa Bazaar Hub guarantees 100% verified event coordination without unverified claims.
               </p>
             </div>
@@ -536,16 +536,16 @@ export default async function EventsPage() {
       {/* 6. CLOSING CTA */}
       <Section background="deepPurple" spacing="lg" className="relative overflow-hidden">
         <FadeIn direction="up">
-          <div className="max-w-4xl mx-auto rounded-3xl p-8 sm:p-14 bg-gradient-to-b from-[#16091F] to-[#08050D] border border-[#D4A72C]/40 text-center space-y-6">
-            <span className="text-xs font-mono uppercase tracking-widest text-[#D4A72C] block">
+          <div className="max-w-4xl mx-auto rounded-3xl p-8 sm:p-14 bg-gradient-to-b from-[#06152F] to-[#020817] border border-[#C99A32]/40 text-center space-y-6">
+            <span className="text-xs font-mono uppercase tracking-widest text-[#C99A32] block">
               Event Management &amp; Production
             </span>
 
-            <h2 className="font-[var(--font-heading)] text-3xl sm:text-5xl font-black text-[#FAF8F2] tracking-tight">
+            <h2 className="font-[var(--font-heading)] text-3xl sm:text-5xl font-black text-[#FFF8E8] tracking-tight">
               Let&apos;s Engineer Your Next Monumental Event
             </h2>
 
-            <p className="text-sm sm:text-base text-[#B9B0BE] max-w-xl mx-auto leading-relaxed">
+            <p className="text-sm sm:text-base text-[#C9C4B8] max-w-xl mx-auto leading-relaxed">
               From stadium acoustic arrays and heavy truss structures to VIP guest liaison and multi-camera live telecasts, our event production team is ready.
             </p>
 

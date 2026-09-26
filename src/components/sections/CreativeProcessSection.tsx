@@ -30,7 +30,7 @@ const processSteps: ProcessStep[] = [
     description:
       "Ideating core creative premises, thematic architecture, target audience positioning, and high-level structural feasibility for cinema or live events.",
     deliverables: ["Creative Brief", "Thematic Strategy", "Feasibility Matrix"],
-    icon: <Lightbulb className="w-5 h-5 text-[#D4A72C]" />,
+    icon: <Lightbulb className="w-5 h-5 text-[#C99A32]" />,
   },
   {
     step: "02",
@@ -39,7 +39,7 @@ const processSteps: ProcessStep[] = [
     description:
       "Drafting screenplays, visual storyboards, 3D stage pre-visualizations, spatial acoustic models, and technical lighting specifications.",
     deliverables: ["Script & Storyboards", "3D Stage Renderings", "Audio Rigs"],
-    icon: <Compass className="w-5 h-5 text-[#D4A72C]" />,
+    icon: <Compass className="w-5 h-5 text-[#C99A32]" />,
   },
   {
     step: "03",
@@ -48,7 +48,7 @@ const processSteps: ProcessStep[] = [
     description:
       "Granular budgeting, regulatory municipal permits, artist agreements, technical equipment sourcing, and contingency protocols.",
     deliverables: ["Master Production Schedule", "Technical Riders", "Permit Approvals"],
-    icon: <FileCheck className="w-5 h-5 text-[#D4A72C]" />,
+    icon: <FileCheck className="w-5 h-5 text-[#C99A32]" />,
   },
   {
     step: "04",
@@ -57,7 +57,7 @@ const processSteps: ProcessStep[] = [
     description:
       "Acoustic soundstage principal photography, heavy truss structural rigging, spatial line-array tuning, and calibrated stage lighting.",
     deliverables: ["Principal Photography", "Stage Rigging", "Acoustic Tuning"],
-    icon: <Zap className="w-5 h-5 text-[#D4A72C]" />,
+    icon: <Zap className="w-5 h-5 text-[#C99A32]" />,
   },
   {
     step: "05",
@@ -66,7 +66,7 @@ const processSteps: ProcessStep[] = [
     description:
       "Nationwide press releases, theatrical trailer reveals, audio launches, digital campaigns, and targeted media broadcast coverage.",
     deliverables: ["Trailer Reveals", "Press Conferences", "Digital Campaigns"],
-    icon: <Megaphone className="w-5 h-5 text-[#D4A72C]" />,
+    icon: <Megaphone className="w-5 h-5 text-[#C99A32]" />,
   },
   {
     step: "06",
@@ -75,7 +75,7 @@ const processSteps: ProcessStep[] = [
     description:
       "Live show execution, high-throughput crowd hospitality, broadcast quality streaming, visceral audience connection, and enduring brand impact.",
     deliverables: ["Live Experience Delivery", "Broadcast Feeds", "Post-Event Archive"],
-    icon: <Sparkles className="w-5 h-5 text-[#D4A72C]" />,
+    icon: <Sparkles className="w-5 h-5 text-[#C99A32]" />,
   },
 ];
 
@@ -97,42 +97,42 @@ export const CreativeProcessSection: React.FC = () => {
           {processSteps.map((item, idx) => (
             <FadeIn key={item.step} direction="up" delay={idx * 80} duration={600}>
               <div
-                className="p-8 rounded-2xl bg-[#08050D] border border-[#FAF8F2]/[0.08] hover:border-[#D4A72C]/40 transition-all duration-300 relative group flex flex-col justify-between hover-lift glow-purple-hover h-full"
+                className="p-8 rounded-2xl bg-[#020817] border border-[#FFF8E8]/[0.08] hover:border-[#C99A32]/40 transition-all duration-300 relative group flex flex-col justify-between hover-lift glow-gold-hover h-full"
               >
                 {/* Header: Step Number & Icon */}
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <span className="font-mono text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#D4A72C] to-[#F4D76A] tracking-wider">
+                    <span className="font-mono text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#C99A32] to-[#F2D477] tracking-wider">
                       {item.step}
                     </span>
-                    <div className="w-10 h-10 rounded-xl bg-[#16091F] border border-[#D4A72C]/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-10 h-10 rounded-xl bg-[#06152F] border border-[#C99A32]/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       {item.icon}
                     </div>
                   </div>
 
-                  <span className="text-[11px] font-mono tracking-widest text-[#D4A72C] uppercase block mb-1">
+                  <span className="text-[11px] font-mono tracking-widest text-[#C99A32] uppercase block mb-1">
                     {item.tagline}
                   </span>
 
-                  <h3 className="font-[var(--font-heading)] text-xl font-bold text-[#FAF8F2] mb-3 group-hover:text-[#F4D76A] transition-colors">
+                  <h3 className="font-[var(--font-heading)] text-xl font-bold text-[#FFF8E8] mb-3 group-hover:text-[#F2D477] transition-colors">
                     {item.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-[#B9B0BE] leading-relaxed mb-6">
+                  <p className="text-xs sm:text-sm text-[#C9C4B8] leading-relaxed mb-6">
                     {item.description}
                   </p>
                 </div>
 
                 {/* Deliverables Pills */}
-                <div className="pt-4 border-t border-[#FAF8F2]/[0.06]">
-                  <span className="text-[10px] font-mono text-[#B9B0BE]/70 uppercase tracking-wider block mb-2">
+                <div className="pt-4 border-t border-[#FFF8E8]/[0.06]">
+                  <span className="text-[10px] font-mono text-[#C9C4B8]/70 uppercase tracking-wider block mb-2">
                     Key Deliverables
                   </span>
                   <div className="flex flex-wrap gap-1.5">
                     {item.deliverables.map((deliv, dIdx) => (
                       <span
                         key={dIdx}
-                        className="px-2.5 py-1 rounded-md bg-[#16091F] text-[11px] font-mono text-[#FAF8F2]/90 border border-[#FAF8F2]/[0.05]"
+                        className="px-2.5 py-1 rounded-md bg-[#06152F] text-[11px] font-mono text-[#FFF8E8]/90 border border-[#FFF8E8]/[0.05]"
                       >
                         {deliv}
                       </span>
@@ -141,19 +141,19 @@ export const CreativeProcessSection: React.FC = () => {
                 </div>
 
                 {/* Subtle Step Glow Effect */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[radial-gradient(circle,rgba(212,167,44,0.06)_0%,transparent_70%)] pointer-events-none rounded-2xl group-hover:opacity-100 transition-opacity" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[radial-gradient(circle,rgba(201,154,50,0.06)_0%,transparent_70%)] pointer-events-none rounded-2xl group-hover:opacity-100 transition-opacity" />
               </div>
             </FadeIn>
           ))}
         </div>
 
         {/* Process Guarantee Banner */}
-        <div className="mt-12 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-[#16091F] via-[#08050D] to-[#16091F] border border-[#D4A72C]/30 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="mt-12 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-[#06152F] via-[#020817] to-[#06152F] border border-[#C99A32]/30 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-1 text-center md:text-left">
-            <h4 className="font-[var(--font-heading)] text-base sm:text-lg font-bold text-[#FAF8F2]">
+            <h4 className="font-[var(--font-heading)] text-base sm:text-lg font-bold text-[#FFF8E8]">
               Ready to embark on a production journey with us?
             </h4>
-            <p className="text-xs sm:text-sm text-[#B9B0BE]">
+            <p className="text-xs sm:text-sm text-[#C9C4B8]">
               Our production leadership guarantees transparent timelines, technical rigor, and flawless on-ground delivery.
             </p>
           </div>

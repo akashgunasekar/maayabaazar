@@ -36,7 +36,7 @@ const bentoServices: BentoServiceItem[] = [
     tagline: "Feature Films, Web Series & Cinematic Narratives",
     description:
       "End-to-end film production bridging creative screenwriting, casting, soundstage filming, and post-production execution.",
-    icon: <Film className="w-6 h-6 text-[#D4A72C]" />,
+    icon: <Film className="w-6 h-6 text-[#C99A32]" />,
     colSpanClass: "lg:col-span-8",
     badgeText: "Pillar 01 • Core Vertical",
   },
@@ -47,7 +47,7 @@ const bentoServices: BentoServiceItem[] = [
     tagline: "Stadium Concerts, Symphonies & Mega Festivals",
     description:
       "Large-scale live music spectacles, touring concerts, and orchestral performances with spatial 360° acoustic fidelity.",
-    icon: <Music className="w-6 h-6 text-[#D4A72C]" />,
+    icon: <Music className="w-6 h-6 text-[#C99A32]" />,
     colSpanClass: "lg:col-span-4",
     badgeText: "Pillar 02 • Live Experience",
   },
@@ -58,7 +58,7 @@ const bentoServices: BentoServiceItem[] = [
     tagline: "Audio Launches, Pre-Releases & Movie Premieres",
     description:
       "Star-studded movie audio releases, pre-release celebrations, and theatrical trailer reveals with multi-camera live telecasts.",
-    icon: <Sparkles className="w-6 h-6 text-[#D4A72C]" />,
+    icon: <Sparkles className="w-6 h-6 text-[#C99A32]" />,
     colSpanClass: "lg:col-span-4",
     badgeText: "Pillar 03 • Cinema Events",
   },
@@ -69,7 +69,7 @@ const bentoServices: BentoServiceItem[] = [
     tagline: "Product Launches, Brand Activations & Annual Days",
     description:
       "High-impact product unveilings, corporate annual day celebrations, conferences, and executive gala award ceremonies.",
-    icon: <Building2 className="w-6 h-6 text-[#D4A72C]" />,
+    icon: <Building2 className="w-6 h-6 text-[#C99A32]" />,
     colSpanClass: "lg:col-span-4",
     badgeText: "Pillar 04 • Corporate",
   },
@@ -80,7 +80,7 @@ const bentoServices: BentoServiceItem[] = [
     tagline: "Red Carpet Galas, Reality Shows & Milestone Honors",
     description:
       "Glamorous award ceremonies, televised reality show finales, and celebratory galas executed with broadcast-grade stagecraft.",
-    icon: <Trophy className="w-6 h-6 text-[#D4A72C]" />,
+    icon: <Trophy className="w-6 h-6 text-[#C99A32]" />,
     colSpanClass: "lg:col-span-4",
     badgeText: "Pillar 05 • Galas",
   },
@@ -91,7 +91,7 @@ const bentoServices: BentoServiceItem[] = [
     tagline: "Omnichannel Campaigns, Content Creation & Strategy",
     description:
       "Creative brand commercials, digital marketing video campaigns, and promotional content that connects with culture.",
-    icon: <TrendingUp className="w-6 h-6 text-[#D4A72C]" />,
+    icon: <TrendingUp className="w-6 h-6 text-[#C99A32]" />,
     colSpanClass: "lg:col-span-4",
     badgeText: "Pillar 06 • Digital",
   },
@@ -102,7 +102,7 @@ const bentoServices: BentoServiceItem[] = [
     tagline: "Talent Representation, Appearances & Collaborations",
     description:
       "Facilitating celebrity appearances, concert performance contracts, brand ambassador endorsements, and VIP hospitality.",
-    icon: <Users className="w-6 h-6 text-[#D4A72C]" />,
+    icon: <Users className="w-6 h-6 text-[#C99A32]" />,
     colSpanClass: "lg:col-span-4",
     badgeText: "Pillar 07 • Talent",
   },
@@ -113,7 +113,7 @@ const bentoServices: BentoServiceItem[] = [
     tagline: "Cross-Border Cinema Shoots & Global Concert Tours",
     description:
       "Overseas film production logistics, international concert tours for diaspora audiences, and cross-border cultural delegations.",
-    icon: <Globe className="w-6 h-6 text-[#D4A72C]" />,
+    icon: <Globe className="w-6 h-6 text-[#C99A32]" />,
     colSpanClass: "lg:col-span-4",
     badgeText: "Pillar 08 • Global",
   },
@@ -124,7 +124,7 @@ const bentoServices: BentoServiceItem[] = [
     tagline: "Turnkey Stagecraft, Heavy Truss, Audio & Lighting",
     description:
       "Custom 3D stage architecture, heavy-load touring trusses, motorized lighting grids, and synchronized LED display walls.",
-    icon: <Layers className="w-6 h-6 text-[#D4A72C]" />,
+    icon: <Layers className="w-6 h-6 text-[#C99A32]" />,
     colSpanClass: "lg:col-span-12",
     badgeText: "Pillar 09 • Turnkey Staging Infrastructure",
   },
@@ -160,35 +160,35 @@ export const WhatWeDoSection: React.FC = () => {
             >
               <Link
                 href="/services"
-                className="group p-8 rounded-3xl bg-[#16091F] border border-[#FAF8F2]/[0.08] hover:border-[#D4A72C]/40 transition-all duration-300 hover:bg-[#1E0C2B] flex flex-col justify-between hover-lift relative overflow-hidden h-full glow-purple-hover"
+                className="group p-8 rounded-3xl bg-[#06152F] border border-[#FFF8E8]/[0.08] hover:border-[#C99A32]/40 transition-all duration-300 hover:bg-[#1E0C2B] flex flex-col justify-between hover-lift relative overflow-hidden h-full glow-gold-hover"
               >
                 {/* Subtle Ambient Radial Highlight */}
-                <div className="absolute top-0 right-0 w-64 h-64 bg-[radial-gradient(circle_at_top_right,rgba(75,10,120,0.18),transparent_70%)] pointer-events-none transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="absolute top-0 right-0 w-64 h-64 bg-[radial-gradient(circle_at_top_right,rgba(11,33,69,0.18),transparent_70%)] pointer-events-none transition-opacity duration-500 group-hover:opacity-100" />
 
                 <div className="relative z-10">
                   <div className="flex items-center justify-between mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-[#08050D] border border-[#D4A72C]/25 flex items-center justify-center group-hover:border-[#D4A72C] transition-colors">
+                    <div className="w-12 h-12 rounded-xl bg-[#020817] border border-[#C99A32]/25 flex items-center justify-center group-hover:border-[#C99A32] transition-colors">
                       {service.icon}
                     </div>
-                    <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#D4A72C] px-2.5 py-1 rounded bg-[#08050D] border border-[#D4A72C]/20">
+                    <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#C99A32] px-2.5 py-1 rounded bg-[#020817] border border-[#C99A32]/20">
                       {service.badgeText}
                     </span>
                   </div>
 
-                  <h3 className="font-[var(--font-heading)] text-xl sm:text-2xl font-bold text-[#FAF8F2] tracking-tight group-hover:text-white transition-colors mb-2">
+                  <h3 className="font-[var(--font-heading)] text-xl sm:text-2xl font-bold text-[#FFF8E8] tracking-tight group-hover:text-white transition-colors mb-2">
                     {service.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-[#D4A72C] font-medium mb-3">
+                  <p className="text-xs sm:text-sm text-[#C99A32] font-medium mb-3">
                     {service.tagline}
                   </p>
 
-                  <p className="text-xs sm:text-sm text-[#B9B0BE] leading-relaxed max-w-2xl">
+                  <p className="text-xs sm:text-sm text-[#C9C4B8] leading-relaxed max-w-2xl">
                     {service.description}
                   </p>
                 </div>
 
-                <div className="mt-8 pt-4 border-t border-[#FAF8F2]/[0.06] flex items-center justify-between text-xs font-semibold text-[#D4A72C] group-hover:text-[#F4D76A] relative z-10">
+                <div className="mt-8 pt-4 border-t border-[#FFF8E8]/[0.06] flex items-center justify-between text-xs font-semibold text-[#C99A32] group-hover:text-[#F2D477] relative z-10">
                   <span>Explore Capabilities</span>
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </div>

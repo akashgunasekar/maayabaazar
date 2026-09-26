@@ -36,17 +36,18 @@ const LinkedinIcon = () => (
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#08050D] border-t border-[#FAF8F2]/[0.08] relative overflow-hidden">
-      {/* Subtle Purple Atmosphere in Footer */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-[radial-gradient(ellipse_at_bottom,rgba(75,10,120,0.18),transparent_70%)] pointer-events-none" />
+    <footer className="bg-[#020817] border-t border-[#C99A32]/20 relative overflow-hidden">
+      {/* Subtle Royal Blue Atmosphere in Footer */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[900px] h-[350px] bg-[radial-gradient(ellipse_at_bottom,rgba(11,33,69,0.5),transparent_70%)] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[150px] bg-[radial-gradient(ellipse_at_bottom,rgba(201,154,50,0.12),transparent_70%)] pointer-events-none" />
 
       {/* 1. Main Footer Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-[#FAF8F2]/[0.08]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-[#C99A32]/15">
           {/* Brand Column (Col 1-5) */}
           <div className="lg:col-span-5 space-y-4">
             <Link href="/" className="inline-flex items-center gap-3 group">
-              <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-lg overflow-hidden shrink-0">
+              <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-lg overflow-hidden shrink-0 border border-[#C99A32]/30 shadow-[0_0_10px_rgba(201,154,50,0.2)]">
                 <Image
                   src="/images/maayaa-logo.png"
                   alt="Maayaa Bazaar Hub Logo"
@@ -56,32 +57,32 @@ export const Footer: React.FC = () => {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-[var(--font-heading)] font-black text-base sm:text-lg tracking-[0.12em] text-[#FAF8F2]">
+                <span className="font-[var(--font-cinzel)] font-bold text-base sm:text-lg tracking-[0.14em] text-[#FFF8E8]">
                   MAAYAA BAZAAR
                 </span>
-                <span className="text-[10px] font-mono tracking-[0.25em] text-[#D4A72C] uppercase -mt-1 font-semibold">
+                <span className="text-[10px] font-mono tracking-[0.25em] text-[#C99A32] uppercase -mt-1 font-semibold">
                   HUB
                 </span>
               </div>
             </Link>
 
             {/* Category Subtitle */}
-            <p className="text-xs sm:text-sm text-[#D4A72C] font-mono tracking-wider font-semibold">
+            <p className="text-xs sm:text-sm text-[#C99A32] font-mono tracking-wider font-semibold">
               Cinema &bull; Music &bull; Events &bull; Entertainment &bull; Experiences
             </p>
 
             {/* Brand Core Quote */}
-            <blockquote className="text-sm text-[#FAF8F2] font-medium italic border-l-2 border-[#D4A72C] pl-3 py-0.5">
-              &ldquo;Creating Stories. Producing Experiences. Connecting Audiences.&rdquo;
+            <blockquote className="text-sm text-[#FFF8E8] font-medium italic border-l-2 border-[#C99A32] pl-3 py-0.5">
+              &ldquo;Where Cinema Meets Creativity &amp; Events Become Experiences&rdquo;
             </blockquote>
 
-            <p className="text-xs sm:text-sm text-[#B9B0BE] leading-relaxed max-w-sm pt-1">
-              A creative media and entertainment company bringing together cinema production, live concerts, corporate activations, and international projects.
+            <p className="text-xs sm:text-sm text-[#C9C4B8] leading-relaxed max-w-sm pt-1">
+              A creative media and entertainment company focused on Film Production, Event Management, Music &amp; Entertainment, Digital Media, Brand Promotions, and International Projects.
             </p>
 
             {/* Social Media Links */}
             <div className="pt-3">
-              <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#B9B0BE] block mb-2.5">
+              <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#C9C4B8] block mb-2.5">
                 Connect With Us
               </span>
               <div className="flex items-center gap-3">
@@ -90,7 +91,7 @@ export const Footer: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit Maayaa Bazaar Hub on Instagram"
-                  className="w-9 h-9 rounded-xl bg-[#16091F] border border-[#FAF8F2]/10 hover:border-[#D4A72C]/50 flex items-center justify-center text-[#B9B0BE] hover:text-[#D4A72C] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4A72C]"
+                  className="w-9 h-9 rounded-lg bg-[#06152F] border border-[#C99A32]/25 hover:border-[#F2D477] hover:bg-[#0B2145] flex items-center justify-center text-[#C9C4B8] hover:text-[#F2D477] transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C99A32]"
                 >
                   <InstagramIcon />
                 </a>
@@ -99,7 +100,7 @@ export const Footer: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit Maayaa Bazaar Hub on Facebook"
-                  className="w-9 h-9 rounded-xl bg-[#16091F] border border-[#FAF8F2]/10 hover:border-[#D4A72C]/50 flex items-center justify-center text-[#B9B0BE] hover:text-[#D4A72C] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4A72C]"
+                  className="w-9 h-9 rounded-lg bg-[#06152F] border border-[#C99A32]/25 hover:border-[#F2D477] hover:bg-[#0B2145] flex items-center justify-center text-[#C9C4B8] hover:text-[#F2D477] transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C99A32]"
                 >
                   <FacebookIcon />
                 </a>
@@ -108,7 +109,7 @@ export const Footer: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit Maayaa Bazaar Hub on YouTube"
-                  className="w-9 h-9 rounded-xl bg-[#16091F] border border-[#FAF8F2]/10 hover:border-[#D4A72C]/50 flex items-center justify-center text-[#B9B0BE] hover:text-[#D4A72C] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4A72C]"
+                  className="w-9 h-9 rounded-lg bg-[#06152F] border border-[#C99A32]/25 hover:border-[#F2D477] hover:bg-[#0B2145] flex items-center justify-center text-[#C9C4B8] hover:text-[#F2D477] transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C99A32]"
                 >
                   <YoutubeIcon />
                 </a>
@@ -117,7 +118,7 @@ export const Footer: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit Maayaa Bazaar Hub on LinkedIn"
-                  className="w-9 h-9 rounded-xl bg-[#16091F] border border-[#FAF8F2]/10 hover:border-[#D4A72C]/50 flex items-center justify-center text-[#B9B0BE] hover:text-[#D4A72C] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4A72C]"
+                  className="w-9 h-9 rounded-lg bg-[#06152F] border border-[#C99A32]/25 hover:border-[#F2D477] hover:bg-[#0B2145] flex items-center justify-center text-[#C9C4B8] hover:text-[#F2D477] transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C99A32]"
                 >
                   <LinkedinIcon />
                 </a>
@@ -125,92 +126,111 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Links Column: Navigation (Col 6-8) */}
-          <div className="lg:col-span-3 space-y-3">
-            <span className="text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-[#D4A72C] block">
+          {/* Quick Links Column (Col 6-7) */}
+          <div className="lg:col-span-2 space-y-4">
+            <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#C99A32] font-semibold block">
               Navigation
             </span>
-            <ul className="space-y-2.5 text-xs sm:text-sm text-[#B9B0BE]">
-              <li>
-                <Link href="/about" className="hover:text-[#FAF8F2] transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="hover:text-[#FAF8F2] transition-colors">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/events" className="hover:text-[#FAF8F2] transition-colors">
-                  Events
-                </Link>
-              </li>
-              <li>
-                <Link href="/projects" className="hover:text-[#FAF8F2] transition-colors">
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link href="/gallery" className="hover:text-[#FAF8F2] transition-colors">
-                  Gallery
-                </Link>
-              </li>
-              <li>
-                <Link href="/media" className="hover:text-[#FAF8F2] transition-colors">
-                  Media
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-[#FAF8F2] transition-colors">
-                  Contact
-                </Link>
-              </li>
+            <ul className="space-y-2.5 text-xs sm:text-sm">
+              {[
+                { label: "About Us", href: "/about" },
+                { label: "Services", href: "/services" },
+                { label: "Events", href: "/events" },
+                { label: "Projects", href: "/projects" },
+                { label: "Gallery", href: "/gallery" },
+                { label: "Media & Press", href: "/media" },
+                { label: "Partners", href: "/partners" },
+                { label: "Contact Us", href: "/contact" },
+              ].map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-[#C9C4B8] hover:text-[#FFF8E8] transition-colors inline-block py-0.5"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Call to Action Column (Col 9-12) */}
-          <div className="lg:col-span-4 space-y-4">
-            <span className="text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-[#D4A72C] block">
-              Start a Conversation
+          {/* Core Verticals Column (Col 8-9) */}
+          <div className="lg:col-span-2 space-y-4">
+            <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#C99A32] font-semibold block">
+              Verticals
             </span>
-            <p className="text-xs sm:text-sm text-[#B9B0BE] leading-relaxed">
-              Planning a cinema feature, high-impact music festival, or international brand spectacle? Let&apos;s collaborate.
+            <ul className="space-y-2.5 text-xs sm:text-sm">
+              {[
+                { label: "Cinema Production", href: "/services/cinema-production" },
+                { label: "Music & Entertainment", href: "/services/music-entertainment-events" },
+                { label: "Film Entertainment", href: "/services/film-entertainment-events" },
+                { label: "Arena Spectacles", href: "/services/mass-public-events-arena-spectacles" },
+                { label: "Corporate Conclaves", href: "/services/corporate-events-brand-activations" },
+                { label: "Celebrity Management", href: "/services/artist-celebrity-management" },
+                { label: "Creative Media", href: "/services/creative-media-digital-productions" },
+                { label: "International Projects", href: "/services/international-projects-cross-border-initiatives" },
+              ].map((service) => (
+                <li key={service.href}>
+                  <Link
+                    href={service.href}
+                    className="text-[#C9C4B8] hover:text-[#FFF8E8] transition-colors inline-block py-0.5"
+                  >
+                    {service.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* VIP Inquiry Column (Col 10-12) */}
+          <div className="lg:col-span-3 space-y-4">
+            <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#C99A32] font-semibold block">
+              Direct Contact
+            </span>
+            <p className="text-xs sm:text-sm text-[#C9C4B8] leading-relaxed">
+              For project consultations, film slate inquiries, and arena production riders:
             </p>
-            <div>
+
+            <div className="p-4 rounded-xl bg-[#06152F]/90 border border-[#C99A32]/25 space-y-3">
+              <div className="flex items-center gap-2.5 text-xs text-[#FFF8E8]">
+                <Mail className="w-4 h-4 text-[#C99A32] shrink-0" />
+                <a
+                  href="mailto:contact@maayabaazarhub.com"
+                  className="hover:text-[#F2D477] transition-colors truncate font-mono"
+                >
+                  contact@maayabaazarhub.com
+                </a>
+              </div>
               <Button
                 href="/contact"
                 variant="primary"
-                size="md"
+                size="sm"
                 className="w-full text-center"
                 icon={<ArrowRight className="w-3.5 h-3.5" />}
               >
                 Let&apos;s Create
               </Button>
             </div>
-            <div className="pt-2 text-xs text-[#B9B0BE] space-y-1.5">
-              <div className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-[#D4A72C]" />
-                <a href="mailto:filmmakerram@gmail.com" className="hover:text-[#FAF8F2] transition-colors">
-                  filmmakerram@gmail.com
-                </a>
-              </div>
-              <div className="text-[11px] text-[#FAF8F2]/60">
-                Chennai, Tamil Nadu, India
-              </div>
-            </div>
           </div>
         </div>
 
-        {/* 2. Bottom Legal Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#807687]">
-          <div>
+        {/* 2. Bottom Copyright & Legal Sub-footer */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#C9C4B8]">
+          <p>
             &copy; {new Date().getFullYear()} Maayaa Bazaar Hub. All rights reserved.
-          </div>
-          <div className="flex items-center gap-4 text-[11px] text-[#B9B0BE]">
-            <span>Where Cinema Meets Creativity</span>
-            <span className="w-1 h-1 rounded-full bg-[#D4A72C]" />
-            <span>Events Become Experiences</span>
+          </p>
+          <div className="flex items-center gap-6">
+            <Link href="/contact" className="hover:text-[#FFF8E8] transition-colors">
+              Privacy Policy
+            </Link>
+            <span className="text-[#C99A32]/40">&bull;</span>
+            <Link href="/contact" className="hover:text-[#FFF8E8] transition-colors">
+              Terms of Engagement
+            </Link>
+            <span className="text-[#C99A32]/40">&bull;</span>
+            <Link href="/contact" className="hover:text-[#FFF8E8] transition-colors">
+              Production Office
+            </Link>
           </div>
         </div>
       </div>

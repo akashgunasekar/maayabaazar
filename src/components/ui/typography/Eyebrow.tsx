@@ -2,7 +2,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 export interface EyebrowProps extends React.HTMLAttributes<HTMLSpanElement> {
-  variant?: "gold" | "purple" | "muted" | "pill";
+  variant?: "gold" | "royal" | "purple" | "muted" | "pill";
   children: React.ReactNode;
 }
 
@@ -13,16 +13,17 @@ export const Eyebrow: React.FC<EyebrowProps> = ({
   ...props
 }) => {
   const variantStyles = {
-    gold: "text-[#D4A72C]",
-    purple: "text-[#9F5BCC]",
-    muted: "text-[#B9B0BE]",
-    pill: "inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#16091F] border border-[#D4A72C]/30 text-[#D4A72C]",
+    gold: "text-[#C99A32]",
+    royal: "text-[#F2D477]",
+    purple: "text-[#F2D477]", // mapped away from purple to gold highlight
+    muted: "text-[#C9C4B8]",
+    pill: "inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#06152F] border border-[#C99A32]/30 text-[#C99A32] shadow-[0_0_12px_rgba(201,154,50,0.15)]",
   };
 
   return (
     <span
       className={cn(
-        "text-[11px] sm:text-xs uppercase font-mono font-bold tracking-[0.2em] select-none",
+        "text-[10px] sm:text-xs uppercase font-mono font-bold tracking-[0.22em] select-none",
         variantStyles[variant],
         className
       )}

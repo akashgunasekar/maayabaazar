@@ -40,7 +40,7 @@ export const HeroTextReveal: React.FC<HeroTextRevealProps> = ({
               className={cn(
                 "block will-change-transform animate-hero-text",
                 line.gradient &&
-                  "text-transparent bg-clip-text bg-gradient-to-r from-[#FAF8F2] via-[#F4D76A] to-[#D4A72C]",
+                  "text-transparent bg-clip-text bg-gradient-to-r from-[#FFF8E8] via-[#F2D477] to-[#C99A32]",
                 line.className
               )}
             >

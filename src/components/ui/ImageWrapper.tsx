@@ -32,15 +32,15 @@ export const ImageWrapper: React.FC<ImageWrapperProps> = ({
   };
 
   const overlayGradients = {
-    subtle: "bg-gradient-to-t from-[#08050D]/80 via-transparent to-transparent",
+    subtle: "bg-gradient-to-t from-[#020817]/85 via-transparent to-transparent",
     cinematic:
-      "bg-gradient-to-t from-[#08050D] via-[#08050D]/40 to-transparent",
+      "bg-gradient-to-t from-[#020817] via-[#020817]/45 to-transparent",
   };
 
   return (
     <div
       className={cn(
-        "relative w-full rounded-2xl sm:rounded-3xl overflow-hidden bg-[#16091F] border border-[#FAF8F2]/[0.08] hover:border-[#D4A72C]/30 shadow-[0_8px_30px_rgba(8,5,13,0.6)] hover:shadow-[0_16px_40px_rgba(75,10,120,0.25)] transition-all duration-500 group",
+        "relative w-full rounded-xl overflow-hidden bg-[#06152F] border border-[#C99A32]/20 hover:border-[#C99A32]/50 shadow-[0_8px_30px_rgba(2,8,23,0.8)] hover:shadow-[0_16px_40px_rgba(11,33,69,0.4),0_0_20px_rgba(201,154,50,0.15)] transition-all duration-500 group",
         aspectClasses[aspectRatio],
         className
       )}
@@ -52,26 +52,21 @@ export const ImageWrapper: React.FC<ImageWrapperProps> = ({
         fill
         priority={priority}
         sizes={sizes}
-        className="object-cover transition-transform duration-700 cubic-bezier(0.16, 1, 0.3, 1) will-change-transform group-hover:scale-105"
+        className="object-cover transition-transform duration-700 ease-out will-change-transform group-hover:scale-105"
       />
 
       {overlay && (
         <div
           className={cn(
             "absolute inset-0 pointer-events-none transition-opacity duration-300",
-            overlay === "cinematic"
-              ? overlayGradients.cinematic
-              : overlayGradients.subtle
+            typeof overlay === "string" ? overlayGradients[overlay] : overlayGradients.subtle
           )}
         />
       )}
 
       {caption && (
-        <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#08050D]/85 backdrop-blur-md border border-[#FAF8F2]/10 text-xs text-[#FAF8F2]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#D4A72C]" />
-            <span className="font-medium line-clamp-1">{caption}</span>
-          </div>
+        <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#020817] via-[#020817]/80 to-transparent z-10">
+          <p className="text-xs sm:text-sm text-[#C9C4B8] font-medium">{caption}</p>
         </div>
       )}
     </div>

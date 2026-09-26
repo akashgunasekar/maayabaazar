@@ -60,20 +60,20 @@ export default function ContactPage() {
       {/* 1. Page Hero */}
       <PageHero
         badge={
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#16091F] border border-[#D4A72C]/30 text-xs font-mono text-[#D4A72C]">
-            <Sparkles className="w-3.5 h-3.5 text-[#D4A72C]" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#06152F] border border-[#C99A32]/30 text-xs font-mono text-[#C99A32]">
+            <Sparkles className="w-3.5 h-3.5 text-[#C99A32]" />
             <span>DIRECT EXECUTIVE PROTOCOL</span>
           </div>
         }
         title="Let's Create Something Extraordinary."
         description="Whether you are planning a theatrical feature film, stadium concert tour, high-profile corporate summit, or cross-border entertainment activation, our creative and production teams are ready to bring your vision to life."
         breadcrumbs={
-          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-[#B9B0BE]">
-            <Link href="/" className="hover:text-[#FAF8F2] transition-colors">
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-[#C9C4B8]">
+            <Link href="/" className="hover:text-[#FFF8E8] transition-colors">
               Home
             </Link>
-            <span className="text-[#FAF8F2]/30">/</span>
-            <span className="text-[#D4A72C]">Contact</span>
+            <span className="text-[#FFF8E8]/30">/</span>
+            <span className="text-[#C99A32]">Contact</span>
           </nav>
         }
       />
@@ -82,7 +82,7 @@ export default function ContactPage() {
       <Section background="deepPurple" spacing="lg" borderBottom id="inquiry-form">
         <Suspense
           fallback={
-            <div className="min-h-[40vh] flex items-center justify-center text-[#D4A72C] font-mono text-xs">
+            <div className="min-h-[40vh] flex items-center justify-center text-[#C99A32] font-mono text-xs">
               Loading executive contact portal...
             </div>
           }

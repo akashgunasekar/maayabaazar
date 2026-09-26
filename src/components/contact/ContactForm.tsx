@@ -200,51 +200,51 @@ export function ContactForm() {
       {/* Left Column: Direct Contact Dossier & Socials */}
       <div className="lg:col-span-5 space-y-8">
         <div className="space-y-4">
-          <span className="text-xs font-mono uppercase tracking-widest text-[#D4A72C] font-semibold block">
+          <span className="text-xs font-mono uppercase tracking-widest text-[#C99A32] font-semibold block">
             Executive Liaison
           </span>
-          <h2 className="font-[var(--font-heading)] text-2xl sm:text-3xl font-bold text-[#FAF8F2] tracking-tight">
+          <h2 className="font-[var(--font-heading)] text-2xl sm:text-3xl font-bold text-[#FFF8E8] tracking-tight">
             Connect With Our Leadership
           </h2>
-          <p className="text-xs sm:text-sm text-[#B9B0BE] leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#C9C4B8] leading-relaxed">
             We partner with film producers, musical artists, corporate brands, and international promoters. Share your project requirements and our production directors will connect directly.
           </p>
         </div>
 
         {/* Verified Location & Direct Email Box */}
-        <div className="p-6 sm:p-7 rounded-3xl bg-[#08050D] border border-[#FAF8F2]/[0.08] space-y-5 shadow-[0_16px_36px_rgba(8,5,13,0.8)]">
+        <div className="p-6 sm:p-7 rounded-3xl bg-[#020817] border border-[#FFF8E8]/[0.08] space-y-5 shadow-[0_16px_36px_rgba(2,8,23,0.8)]">
           <div className="flex items-start gap-3.5">
-            <div className="w-10 h-10 rounded-xl bg-[#16091F] border border-[#D4A72C]/30 flex items-center justify-center text-[#D4A72C] shrink-0 mt-0.5">
+            <div className="w-10 h-10 rounded-xl bg-[#06152F] border border-[#C99A32]/30 flex items-center justify-center text-[#C99A32] shrink-0 mt-0.5">
               <MapPin className="w-5 h-5" />
             </div>
             <div>
-              <span className="text-[10px] font-mono text-[#FAF8F2]/50 uppercase tracking-wider block mb-0.5">
+              <span className="text-[10px] font-mono text-[#FFF8E8]/50 uppercase tracking-wider block mb-0.5">
                 Headquarters
               </span>
-              <h4 className="font-[var(--font-heading)] text-sm font-bold text-[#FAF8F2]">
+              <h4 className="font-[var(--font-heading)] text-sm font-bold text-[#FFF8E8]">
                 Maayaa Bazaar Hub
               </h4>
-              <p className="text-xs text-[#B9B0BE] mt-0.5">
+              <p className="text-xs text-[#C9C4B8] mt-0.5">
                 Chennai, Tamil Nadu, India
               </p>
             </div>
           </div>
 
-          <div className="pt-4 border-t border-[#FAF8F2]/[0.06] flex items-start gap-3.5">
-            <div className="w-10 h-10 rounded-xl bg-[#16091F] border border-[#D4A72C]/30 flex items-center justify-center text-[#D4A72C] shrink-0 mt-0.5">
+          <div className="pt-4 border-t border-[#FFF8E8]/[0.06] flex items-start gap-3.5">
+            <div className="w-10 h-10 rounded-xl bg-[#06152F] border border-[#C99A32]/30 flex items-center justify-center text-[#C99A32] shrink-0 mt-0.5">
               <Mail className="w-5 h-5" />
             </div>
             <div>
-              <span className="text-[10px] font-mono text-[#FAF8F2]/50 uppercase tracking-wider block mb-0.5">
+              <span className="text-[10px] font-mono text-[#FFF8E8]/50 uppercase tracking-wider block mb-0.5">
                 Official Direct Email
               </span>
               <a
                 href="mailto:filmmakerram@gmail.com"
-                className="text-xs sm:text-sm font-semibold text-[#D4A72C] hover:text-[#F4D76A] transition-colors"
+                className="text-xs sm:text-sm font-semibold text-[#C99A32] hover:text-[#F2D477] transition-colors"
               >
                 filmmakerram@gmail.com
               </a>
-              <p className="text-[11px] text-[#B9B0BE] mt-0.5">
+              <p className="text-[11px] text-[#C9C4B8] mt-0.5">
                 General inquiries, co-productions &amp; press releases
               </p>
             </div>
@@ -252,8 +252,8 @@ export function ContactForm() {
         </div>
 
         {/* Social Channels */}
-        <div className="p-6 rounded-3xl bg-[#08050D] border border-[#FAF8F2]/[0.08] space-y-4">
-          <span className="text-xs font-mono uppercase tracking-widest text-[#FAF8F2]/60 block">
+        <div className="p-6 rounded-3xl bg-[#020817] border border-[#FFF8E8]/[0.08] space-y-4">
+          <span className="text-xs font-mono uppercase tracking-widest text-[#FFF8E8]/60 block">
             Follow Our Updates
           </span>
 
@@ -263,7 +263,7 @@ export function ContactForm() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Follow Maayaa Bazaar Hub on Instagram"
-              className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#16091F] border border-[#FAF8F2]/10 text-xs font-mono text-[#FAF8F2] hover:text-[#D4A72C] hover:border-[#D4A72C]/40 transition-all"
+              className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#06152F] border border-[#FFF8E8]/10 text-xs font-mono text-[#FFF8E8] hover:text-[#C99A32] hover:border-[#C99A32]/40 transition-all"
             >
               <InstagramIcon />
               <span>Instagram</span>
@@ -274,7 +274,7 @@ export function ContactForm() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Follow Maayaa Bazaar Hub on Facebook"
-              className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#16091F] border border-[#FAF8F2]/10 text-xs font-mono text-[#FAF8F2] hover:text-[#D4A72C] hover:border-[#D4A72C]/40 transition-all"
+              className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#06152F] border border-[#FFF8E8]/10 text-xs font-mono text-[#FFF8E8] hover:text-[#C99A32] hover:border-[#C99A32]/40 transition-all"
             >
               <FacebookIcon />
               <span>Facebook</span>
@@ -285,7 +285,7 @@ export function ContactForm() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Subscribe to Maayaa Bazaar Hub on YouTube"
-              className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#16091F] border border-[#FAF8F2]/10 text-xs font-mono text-[#FAF8F2] hover:text-[#D4A72C] hover:border-[#D4A72C]/40 transition-all"
+              className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#06152F] border border-[#FFF8E8]/10 text-xs font-mono text-[#FFF8E8] hover:text-[#C99A32] hover:border-[#C99A32]/40 transition-all"
             >
               <YoutubeIcon />
               <span>YouTube</span>
@@ -296,7 +296,7 @@ export function ContactForm() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Connect with Maayaa Bazaar Hub on LinkedIn"
-              className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#16091F] border border-[#FAF8F2]/10 text-xs font-mono text-[#FAF8F2] hover:text-[#D4A72C] hover:border-[#D4A72C]/40 transition-all"
+              className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#06152F] border border-[#FFF8E8]/10 text-xs font-mono text-[#FFF8E8] hover:text-[#C99A32] hover:border-[#C99A32]/40 transition-all"
             >
               <LinkedinIcon />
               <span>LinkedIn</span>
@@ -307,19 +307,19 @@ export function ContactForm() {
 
       {/* Right Column: Accessible Form & Submission Confirmation */}
       <div className="lg:col-span-7">
-        <div className="p-8 sm:p-12 rounded-3xl bg-[#08050D] border border-[#FAF8F2]/[0.08] relative overflow-hidden shadow-[0_24px_64px_rgba(8,5,13,0.95)]">
+        <div className="p-8 sm:p-12 rounded-3xl bg-[#020817] border border-[#FFF8E8]/[0.08] relative overflow-hidden shadow-[0_24px_64px_rgba(2,8,23,0.95)]">
           {isSubmitted ? (
             <div className="py-12 text-center space-y-6 animate-fade-in" role="alert">
-              <div className="w-16 h-16 rounded-full bg-[#16091F] border-2 border-[#D4A72C] flex items-center justify-center text-[#D4A72C] mx-auto shadow-[0_0_24px_rgba(212,167,44,0.3)]">
+              <div className="w-16 h-16 rounded-full bg-[#06152F] border-2 border-[#C99A32] flex items-center justify-center text-[#C99A32] mx-auto shadow-[0_0_24px_rgba(201,154,50,0.3)]">
                 <CheckCircle2 className="w-8 h-8" />
               </div>
 
               <div className="space-y-2 max-w-md mx-auto">
-                <h3 className="font-[var(--font-heading)] text-2xl font-bold text-[#FAF8F2]">
+                <h3 className="font-[var(--font-heading)] text-2xl font-bold text-[#FFF8E8]">
                   Enquiry Received
                 </h3>
-                <p className="text-xs sm:text-sm text-[#B9B0BE] leading-relaxed">
-                  Thank you, <strong className="text-[#FAF8F2]">{formData.name}</strong>. Your {formData.enquiryType} brief has been routed to our executive production desk. We will respond to <strong className="text-[#FAF8F2]">{formData.email}</strong> within 24 business hours.
+                <p className="text-xs sm:text-sm text-[#C9C4B8] leading-relaxed">
+                  Thank you, <strong className="text-[#FFF8E8]">{formData.name}</strong>. Your {formData.enquiryType} brief has been routed to our executive production desk. We will respond to <strong className="text-[#FFF8E8]">{formData.email}</strong> within 24 business hours.
                 </p>
               </div>
 
@@ -327,7 +327,7 @@ export function ContactForm() {
                 <button
                   type="button"
                   onClick={handleReset}
-                  className="px-6 py-2.5 rounded-full bg-[#16091F] border border-[#D4A72C]/40 text-xs font-mono text-[#D4A72C] hover:bg-[#D4A72C] hover:text-[#08050D] transition-all font-semibold"
+                  className="px-6 py-2.5 rounded-full bg-[#06152F] border border-[#C99A32]/40 text-xs font-mono text-[#C99A32] hover:bg-[#C99A32] hover:text-[#020817] transition-all font-semibold"
                 >
                   Submit Another Brief
                 </button>
@@ -336,10 +336,10 @@ export function ContactForm() {
           ) : (
             <form onSubmit={handleSubmit} noValidate className="space-y-6">
               <div className="space-y-1">
-                <span className="text-xs font-mono uppercase tracking-widest text-[#D4A72C] font-semibold block">
+                <span className="text-xs font-mono uppercase tracking-widest text-[#C99A32] font-semibold block">
                   Project Brief Submission
                 </span>
-                <h3 className="font-[var(--font-heading)] text-xl sm:text-2xl font-bold text-[#FAF8F2]">
+                <h3 className="font-[var(--font-heading)] text-xl sm:text-2xl font-bold text-[#FFF8E8]">
                   Send Your Project Specifications
                 </h3>
               </div>
@@ -348,8 +348,8 @@ export function ContactForm() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 {/* 1. Name */}
                 <div className="space-y-1.5">
-                  <label htmlFor="contact-name" className="text-xs font-mono text-[#FAF8F2]/80 block">
-                    Full Name <span className="text-[#D4A72C]">*</span>
+                  <label htmlFor="contact-name" className="text-xs font-mono text-[#FFF8E8]/80 block">
+                    Full Name <span className="text-[#C99A32]">*</span>
                   </label>
                   <input
                     id="contact-name"
@@ -360,8 +360,8 @@ export function ContactForm() {
                     aria-invalid={errors.name ? "true" : "false"}
                     aria-describedby={errors.name ? "name-error" : undefined}
                     placeholder="e.g. Anand Ranganathan"
-                    className={`w-full px-4 py-3 rounded-xl bg-[#16091F] text-sm text-[#FAF8F2] placeholder-[#FAF8F2]/30 border transition-all focus:outline-none focus:ring-1 focus:ring-[#D4A72C] ${
-                      errors.name ? "border-red-500/80" : "border-[#FAF8F2]/10 focus:border-[#D4A72C]"
+                    className={`w-full px-4 py-3 rounded-xl bg-[#06152F] text-sm text-[#FFF8E8] placeholder-[#FFF8E8]/30 border transition-all focus:outline-none focus:ring-1 focus:ring-[#C99A32] ${
+                      errors.name ? "border-red-500/80" : "border-[#FFF8E8]/10 focus:border-[#C99A32]"
                     }`}
                   />
                   {errors.name && (
@@ -374,8 +374,8 @@ export function ContactForm() {
 
                 {/* 2. Company / Organisation */}
                 <div className="space-y-1.5">
-                  <label htmlFor="contact-company" className="text-xs font-mono text-[#FAF8F2]/80 block">
-                    Company / Organisation <span className="text-[#FAF8F2]/40">(Optional)</span>
+                  <label htmlFor="contact-company" className="text-xs font-mono text-[#FFF8E8]/80 block">
+                    Company / Organisation <span className="text-[#FFF8E8]/40">(Optional)</span>
                   </label>
                   <input
                     id="contact-company"
@@ -383,14 +383,14 @@ export function ContactForm() {
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                     placeholder="e.g. Studio Productions / Media Ltd"
-                    className="w-full px-4 py-3 rounded-xl bg-[#16091F] text-sm text-[#FAF8F2] placeholder-[#FAF8F2]/30 border border-[#FAF8F2]/10 focus:border-[#D4A72C] transition-all focus:outline-none focus:ring-1 focus:ring-[#D4A72C]"
+                    className="w-full px-4 py-3 rounded-xl bg-[#06152F] text-sm text-[#FFF8E8] placeholder-[#FFF8E8]/30 border border-[#FFF8E8]/10 focus:border-[#C99A32] transition-all focus:outline-none focus:ring-1 focus:ring-[#C99A32]"
                   />
                 </div>
 
                 {/* 3. Email */}
                 <div className="space-y-1.5">
-                  <label htmlFor="contact-email" className="text-xs font-mono text-[#FAF8F2]/80 block">
-                    Business Email <span className="text-[#D4A72C]">*</span>
+                  <label htmlFor="contact-email" className="text-xs font-mono text-[#FFF8E8]/80 block">
+                    Business Email <span className="text-[#C99A32]">*</span>
                   </label>
                   <input
                     id="contact-email"
@@ -401,8 +401,8 @@ export function ContactForm() {
                     aria-invalid={errors.email ? "true" : "false"}
                     aria-describedby={errors.email ? "email-error" : undefined}
                     placeholder="name@company.com"
-                    className={`w-full px-4 py-3 rounded-xl bg-[#16091F] text-sm text-[#FAF8F2] placeholder-[#FAF8F2]/30 border transition-all focus:outline-none focus:ring-1 focus:ring-[#D4A72C] ${
-                      errors.email ? "border-red-500/80" : "border-[#FAF8F2]/10 focus:border-[#D4A72C]"
+                    className={`w-full px-4 py-3 rounded-xl bg-[#06152F] text-sm text-[#FFF8E8] placeholder-[#FFF8E8]/30 border transition-all focus:outline-none focus:ring-1 focus:ring-[#C99A32] ${
+                      errors.email ? "border-red-500/80" : "border-[#FFF8E8]/10 focus:border-[#C99A32]"
                     }`}
                   />
                   {errors.email && (
@@ -415,8 +415,8 @@ export function ContactForm() {
 
                 {/* 4. Phone */}
                 <div className="space-y-1.5">
-                  <label htmlFor="contact-phone" className="text-xs font-mono text-[#FAF8F2]/80 block">
-                    Contact Phone <span className="text-[#D4A72C]">*</span>
+                  <label htmlFor="contact-phone" className="text-xs font-mono text-[#FFF8E8]/80 block">
+                    Contact Phone <span className="text-[#C99A32]">*</span>
                   </label>
                   <input
                     id="contact-phone"
@@ -427,8 +427,8 @@ export function ContactForm() {
                     aria-invalid={errors.phone ? "true" : "false"}
                     aria-describedby={errors.phone ? "phone-error" : undefined}
                     placeholder="+91 98765 43210"
-                    className={`w-full px-4 py-3 rounded-xl bg-[#16091F] text-sm text-[#FAF8F2] placeholder-[#FAF8F2]/30 border transition-all focus:outline-none focus:ring-1 focus:ring-[#D4A72C] ${
-                      errors.phone ? "border-red-500/80" : "border-[#FAF8F2]/10 focus:border-[#D4A72C]"
+                    className={`w-full px-4 py-3 rounded-xl bg-[#06152F] text-sm text-[#FFF8E8] placeholder-[#FFF8E8]/30 border transition-all focus:outline-none focus:ring-1 focus:ring-[#C99A32] ${
+                      errors.phone ? "border-red-500/80" : "border-[#FFF8E8]/10 focus:border-[#C99A32]"
                     }`}
                   />
                   {errors.phone && (
@@ -442,18 +442,18 @@ export function ContactForm() {
 
               {/* 5. Enquiry Type Dropdown */}
               <div className="space-y-1.5">
-                <label htmlFor="contact-enquiry-type" className="text-xs font-mono text-[#FAF8F2]/80 block">
-                  Enquiry Type <span className="text-[#D4A72C]">*</span>
+                <label htmlFor="contact-enquiry-type" className="text-xs font-mono text-[#FFF8E8]/80 block">
+                  Enquiry Type <span className="text-[#C99A32]">*</span>
                 </label>
                 <select
                   id="contact-enquiry-type"
                   required
                   value={formData.enquiryType}
                   onChange={(e) => setFormData({ ...formData, enquiryType: e.target.value as EnquiryType })}
-                  className="w-full px-4 py-3 rounded-xl bg-[#16091F] text-sm text-[#FAF8F2] border border-[#FAF8F2]/10 focus:border-[#D4A72C] transition-all focus:outline-none focus:ring-1 focus:ring-[#D4A72C]"
+                  className="w-full px-4 py-3 rounded-xl bg-[#06152F] text-sm text-[#FFF8E8] border border-[#FFF8E8]/10 focus:border-[#C99A32] transition-all focus:outline-none focus:ring-1 focus:ring-[#C99A32]"
                 >
                   {ENQUIRY_TYPES.map((type) => (
-                    <option key={type} value={type} className="bg-[#08050D] text-[#FAF8F2]">
+                    <option key={type} value={type} className="bg-[#020817] text-[#FFF8E8]">
                       {type}
                     </option>
                   ))}
@@ -462,8 +462,8 @@ export function ContactForm() {
 
               {/* 6. Message */}
               <div className="space-y-1.5">
-                <label htmlFor="contact-message" className="text-xs font-mono text-[#FAF8F2]/80 block">
-                  Message / Project Scope <span className="text-[#D4A72C]">*</span>
+                <label htmlFor="contact-message" className="text-xs font-mono text-[#FFF8E8]/80 block">
+                  Message / Project Scope <span className="text-[#C99A32]">*</span>
                 </label>
                 <textarea
                   id="contact-message"
@@ -474,8 +474,8 @@ export function ContactForm() {
                   aria-invalid={errors.message ? "true" : "false"}
                   aria-describedby={errors.message ? "message-error" : undefined}
                   placeholder="Outline your project timeline, venue location, scale of production, or specific requirements..."
-                  className={`w-full px-4 py-3 rounded-xl bg-[#16091F] text-sm text-[#FAF8F2] placeholder-[#FAF8F2]/30 border transition-all focus:outline-none focus:ring-1 focus:ring-[#D4A72C] ${
-                    errors.message ? "border-red-500/80" : "border-[#FAF8F2]/10 focus:border-[#D4A72C]"
+                  className={`w-full px-4 py-3 rounded-xl bg-[#06152F] text-sm text-[#FFF8E8] placeholder-[#FFF8E8]/30 border transition-all focus:outline-none focus:ring-1 focus:ring-[#C99A32] ${
+                    errors.message ? "border-red-500/80" : "border-[#FFF8E8]/10 focus:border-[#C99A32]"
                   }`}
                 />
                 {errors.message && (
@@ -492,7 +492,7 @@ export function ContactForm() {
                   type="submit"
                   disabled={isSubmitting}
                   aria-busy={isSubmitting}
-                  className="w-full inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#D4A72C] hover:bg-[#F4D76A] text-[#08050D] font-bold text-sm font-mono tracking-wider transition-all shadow-[0_0_24px_rgba(212,167,44,0.35)] disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4A72C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#08050D]"
+                  className="w-full inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#C99A32] hover:bg-[#F2D477] text-[#020817] font-bold text-sm font-mono tracking-wider transition-all shadow-[0_0_24px_rgba(201,154,50,0.35)] disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C99A32] focus-visible:ring-offset-2 focus-visible:ring-offset-[#020817]"
                 >
                   {isSubmitting ? (
                     <span>Routing To Production Desk...</span>
