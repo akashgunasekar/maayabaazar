@@ -178,7 +178,7 @@ export const HeroSection: React.FC = () => {
 
       {/* Main Hero Content */}
       <Container className="relative z-20 flex-1 flex flex-col justify-center my-auto py-6 sm:py-10">
-        <div className="max-w-3xl space-y-5 sm:space-y-6">
+        <div className="max-w-4xl lg:max-w-5xl xl:max-w-6xl space-y-5 sm:space-y-6">
           {/* Eyebrow / Current Slide Vertical Badge */}
           <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-md bg-[#06152F]/90 backdrop-blur-md border border-[#C99A32]/30 shadow-[0_0_20px_rgba(201,154,50,0.18)] transition-all duration-300">
             <span className="w-1.5 h-1.5 rounded-full bg-[#C99A32] shadow-[0_0_8px_rgba(201,154,50,0.8)] animate-pulse" />
@@ -187,16 +187,17 @@ export const HeroSection: React.FC = () => {
             </span>
           </div>
 
-          {/* Exact Brand Headline: Where Cinema Meets Creativity & Events Become Experiences */}
-          <h1 className="font-[var(--font-cinzel)] font-bold text-3xl sm:text-5xl lg:text-6xl text-[#FFF8E8] tracking-tight leading-[1.12] transition-all duration-500">
-            <span className="block">Where Cinema Meets Creativity</span>
-            <span className="block mt-1 bg-gradient-to-r from-[#F2D477] via-[#C99A32] to-[#F7E7B0] bg-clip-text text-transparent">
+          {/* Exact Brand Headline: Formatted in 3 bold lines with increased width */}
+          <h1 className="font-[var(--font-manrope)] font-black text-4xl sm:text-6xl md:text-7xl lg:text-[4.75rem] text-[#FFF8E8] tracking-tight leading-[1.08] sm:leading-[1.05] transition-all duration-500">
+            <span className="block">Where Cinema Meets</span>
+            <span className="block">Creativity</span>
+            <span className="block mt-1 sm:mt-2 bg-gradient-to-r from-[#F2D477] via-[#C99A32] to-[#F7E7B0] bg-clip-text text-transparent lg:whitespace-nowrap">
               &amp; Events Become Experiences
             </span>
           </h1>
 
           {/* Exact Brand Supporting Copy */}
-          <p className="text-sm sm:text-base lg:text-lg text-[#C9C4B8] leading-relaxed max-w-2xl font-normal transition-all duration-500">
+          <p className="text-sm sm:text-base lg:text-lg text-[#C9C4B8] leading-relaxed max-w-3xl font-normal transition-all duration-500">
             Maayaa Bazaar Hub is a creative media and entertainment company focused on Film Production, Event Management, Music &amp; Entertainment, Digital Media, Brand Promotions, and International Projects.
           </p>
 
