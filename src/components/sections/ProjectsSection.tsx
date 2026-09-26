@@ -96,7 +96,7 @@ export const ProjectsSection: React.FC = () => {
                       <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                     </Link>
 
-                    <span className="text-[11px] font-mono text-[#807687]">
+                    <span className="text-[11px] font-mono text-[#C9C4B8]">
                       Maayaa Bazaar Hub
                     </span>
                   </div>

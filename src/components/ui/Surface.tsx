@@ -20,21 +20,21 @@ export const Surface = React.forwardRef<HTMLDivElement, SurfaceProps>(
     ref
   ) => {
     const variantStyles = {
-      base: "bg-[#1C1F26] border border-white/[0.08]",
-      elevated: "bg-[#242831] border border-white/[0.12] shadow-xl",
-      subtle: "bg-[#14171D] border border-white/[0.05]",
-      muted: "bg-[#101217] border border-white/[0.04]",
-      glass: "bg-[#1C1F26]/80 backdrop-blur-md border border-white/[0.08]",
+      base: "bg-[#06152F] border border-[#C99A32]/20",
+      elevated: "bg-[#0B2145] border border-[#C99A32]/30 shadow-xl",
+      subtle: "bg-[#040F22] border border-[#C99A32]/10",
+      muted: "bg-[#020817] border border-[#C99A32]/10",
+      glass: "bg-[#06152F]/80 backdrop-blur-md border border-[#C99A32]/20",
     };
 
     const glowStyles = {
       none: "",
-      accent: "shadow-[0_0_40px_-10px_rgba(214,179,106,0.15)]",
+      accent: "shadow-[0_0_40px_-10px_rgba(201,154,50,0.25)]",
       active: "shadow-[0_0_35px_-10px_rgba(82,200,120,0.2)]",
     };
 
     const interactiveStyles = interactive
-      ? "transition-all duration-300 hover:border-[#D6B36A]/40 hover:bg-[#242831] hover:-translate-y-0.5 cursor-pointer"
+      ? "transition-all duration-300 hover:border-[#C99A32]/50 hover:bg-[#0B2145] hover:-translate-y-0.5 cursor-pointer"
       : "";
 
     return (

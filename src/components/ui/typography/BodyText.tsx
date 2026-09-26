@@ -25,7 +25,7 @@ export const BodyText: React.FC<BodyTextProps> = ({
     primary: "text-[#FFF8E8]",
     secondary: "text-[#C9C4B8]",
     gold: "text-[#C99A32]",
-    muted: "text-[#807687]",
+    muted: "text-[#C9C4B8]/60",
   };
 
   return (

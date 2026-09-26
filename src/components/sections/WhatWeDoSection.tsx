@@ -160,10 +160,10 @@ export const WhatWeDoSection: React.FC = () => {
             >
               <Link
                 href="/services"
-                className="group p-8 rounded-3xl bg-[#06152F] border border-[#FFF8E8]/[0.08] hover:border-[#C99A32]/40 transition-all duration-300 hover:bg-[#1E0C2B] flex flex-col justify-between hover-lift relative overflow-hidden h-full glow-gold-hover"
+                className="group p-8 rounded-2xl bg-[#06152F] border border-[#FFF8E8]/[0.08] hover:border-[#C99A32]/60 transition-all duration-300 hover:bg-[#0B2145] flex flex-col justify-between hover-lift relative overflow-hidden h-full shadow-[0_4px_20px_rgba(2,8,23,0.6)] hover:shadow-[0_12px_36px_rgba(2,8,23,0.9),0_0_24px_rgba(11,33,69,0.5),0_0_15px_rgba(201,154,50,0.2)]"
               >
-                {/* Subtle Ambient Radial Highlight */}
-                <div className="absolute top-0 right-0 w-64 h-64 bg-[radial-gradient(circle_at_top_right,rgba(11,33,69,0.18),transparent_70%)] pointer-events-none transition-opacity duration-500 group-hover:opacity-100" />
+                {/* Subtle Ambient Radial Highlight - Warm Gold on hover */}
+                <div className="absolute top-0 right-0 w-64 h-64 bg-[radial-gradient(circle_at_top_right,rgba(201,154,50,0.14),transparent_70%)] pointer-events-none transition-opacity duration-500 opacity-40 group-hover:opacity-100" />
 
                 <div className="relative z-10">
                   <div className="flex items-center justify-between mb-6">
