@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
+  { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Events", href: "/events" },
@@ -102,7 +103,7 @@ export const Header: React.FC = () => {
           {/* Desktop Navigation: Royal Navy Pill with Metallic Gold Highlights */}
           <nav
             aria-label="Primary Navigation"
-            className="hidden md:flex items-center gap-1 lg:gap-2 px-3 py-1.5 rounded-full bg-[#06152F]/85 border border-[#C99A32]/20 backdrop-blur-md shadow-[0_4px_20px_rgba(2,8,23,0.6)]"
+            className="hidden md:flex items-center gap-1 lg:gap-1.5 px-2.5 py-1.5 rounded-full bg-[#06152F]/85 border border-[#C99A32]/20 backdrop-blur-md shadow-[0_4px_20px_rgba(2,8,23,0.6)]"
           >
             {NAV_LINKS.map((link) => {
               const isActive =
@@ -115,7 +116,7 @@ export const Header: React.FC = () => {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "relative px-3.5 py-1.5 text-xs lg:text-sm font-medium tracking-wide transition-all duration-200 rounded-full select-none",
+                    "relative px-2.5 lg:px-3.5 py-1.5 text-xs lg:text-sm font-medium tracking-wide transition-all duration-200 rounded-full select-none",
                     isActive
                       ? "text-[#FFF8E8] font-semibold bg-[#0B2145]/80 border border-[#C99A32]/30 shadow-[0_0_12px_rgba(201,154,50,0.25)]"
                       : "text-[#C9C4B8] hover:text-[#FFF8E8] hover:bg-[#0B2145]/40"
