@@ -75,28 +75,21 @@ export const Header: React.FC = () => {
         )}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Logo using supplied Maayaa Bazaar Hub logo asset */}
+          {/* Logo only (enlarged by 20% without text) */}
           <Link
             href="/"
-            className="flex items-center gap-3 group select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C99A32] rounded-lg"
+            aria-label="Maayaa Bazaar Hub Home"
+            className="flex items-center group select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C99A32] rounded-xl"
           >
-            <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-lg overflow-hidden shrink-0 transition-transform duration-300 group-hover:scale-105 border border-[#C99A32]/30 shadow-[0_0_12px_rgba(201,154,50,0.2)]">
+            <div className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-xl overflow-hidden shrink-0 transition-all duration-300 group-hover:scale-105 border border-[#C99A32]/35 shadow-[0_0_15px_rgba(201,154,50,0.25)] group-hover:border-[#C99A32]/60 group-hover:shadow-[0_0_20px_rgba(201,154,50,0.4)]">
               <Image
                 src="/images/maayaa-logo.png"
                 alt="Maayaa Bazaar Hub Logo"
                 fill
-                sizes="40px"
+                sizes="(max-width: 640px) 44px, 48px"
                 priority
-                className="object-contain"
+                className="object-contain p-0.5"
               />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-[var(--font-cinzel)] font-bold text-sm sm:text-base tracking-[0.14em] text-[#FFF8E8] group-hover:text-white transition-colors">
-                MAAYAA BAZAAR
-              </span>
-              <span className="text-[9px] font-mono tracking-[0.24em] text-[#C99A32] uppercase -mt-1 font-semibold">
-                HUB
-              </span>
             </div>
           </Link>
 
