@@ -142,9 +142,9 @@ export interface Project {
     alt: string;
     caption?: string;
   }>;
-  status?: "Completed" | "In Production" | "Coming Soon";
+  status?: "Completed" | "In Production" | "Coming Soon" | "Active Initiative";
   isFeatured?: boolean;
-  sectionGroup?: "key-projects" | "feature-film-credentials";
+  sectionGroup?: "key-projects" | "feature-film-credentials" | "international-initiatives";
   roleTitle?: string;
   director?: string;
   producer?: string;
@@ -153,6 +153,13 @@ export interface Project {
   presentedBy?: string;
   accolades?: string[];
   highlightBadges?: string[];
+  initiatives?: Array<{
+    number: string;
+    title: string;
+    description: string;
+  }>;
+  benefits?: string[];
+  pillars?: string[];
 }
 
 // ==========================================

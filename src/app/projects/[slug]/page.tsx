@@ -15,6 +15,14 @@ import {
   Sparkles,
   UserCheck,
   Star,
+  Globe2,
+  Plane,
+  Camera,
+  MapPin,
+  Palmtree,
+  Trees,
+  Compass,
+  Building,
 } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
@@ -60,13 +68,13 @@ export async function generateMetadata({
     : `${SITE_URL}${project.image.src}`;
 
   return {
-    title: `${project.title} | Maayaa Bazaar Hub Projects`,
+    title: `${project.title} | Maayaa Bazaar Hub`,
     description: project.overview,
     alternates: {
       canonical: canonicalUrl,
     },
     openGraph: {
-      title: `${project.title} | Maayaa Bazaar Hub Projects`,
+      title: `${project.title} | Maayaa Bazaar Hub`,
       description: project.overview,
       url: canonicalUrl,
       siteName: "Maayaa Bazaar Hub",
@@ -83,7 +91,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `${project.title} | Maayaa Bazaar Hub Projects`,
+      title: `${project.title} | Maayaa Bazaar Hub`,
       description: project.overview,
       images: [imageUrl],
     },
@@ -107,6 +115,8 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
     { name: project.title, path: `/projects/${project.slug}` },
   ]);
 
+  const isSabah = project.slug === "sabah-film-tourism";
+
   return (
     <>
       {/* Breadcrumb Structured Data (JSON-LD) */}
@@ -120,7 +130,9 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
         badge={
           <div className="flex flex-wrap items-center gap-2">
             <Badge variant="gold" size="sm">
-              {project.sectionGroup === "key-projects"
+              {project.sectionGroup === "international-initiatives"
+                ? "International Initiative"
+                : project.sectionGroup === "key-projects"
                 ? "Key Projects"
                 : "Feature Film Credentials"}
             </Badge>
@@ -150,12 +162,16 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
         actions={
           <div className="flex flex-wrap items-center gap-4">
             <Button
-              href={`/contact?project=${project.slug}`}
+              href={
+                isSabah
+                  ? `/contact?initiative=${project.slug}`
+                  : `/contact?project=${project.slug}`
+              }
               variant="primary"
               size="md"
               icon={<ArrowRight className="w-4 h-4" />}
             >
-              Inquire About This Title
+              {isSabah ? "Inquire For Filming In Sabah" : "Inquire About This Title"}
             </Button>
             <Button href="/projects" variant="secondary" size="md" icon={<ArrowLeft className="w-4 h-4" />}>
               All Projects ({allProjects.length})
@@ -164,20 +180,24 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
         }
       />
 
-      {/* 2. Visual Artwork & Production Scope */}
+      {/* 2. Visual Artwork & Scope */}
       <Section background="deepPurple" spacing="lg" borderBottom>
         <FadeIn direction="up">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             {/* Visual Image / Poster */}
             <div className="lg:col-span-6 relative">
-              <div className="relative aspect-[4/3] sm:aspect-[16/11] w-full rounded-3xl overflow-hidden bg-[#020817] border border-[#C99A32]/40 shadow-[0_20px_50px_rgba(2,8,23,0.95)] group">
+              <div
+                className={`relative w-full rounded-3xl overflow-hidden bg-[#020817] border border-[#C99A32]/40 shadow-[0_20px_50px_rgba(2,8,23,0.95)] group ${
+                  isSabah ? "aspect-[10/15] max-w-[460px] mx-auto" : "aspect-[4/3] sm:aspect-[16/11]"
+                }`}
+              >
                 <Image
-                  src={project.image.src}
+                  src={isSabah ? "/images/projects/sabah-film-tourism.jpg" : project.image.src}
                   alt={project.image.alt}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   priority
-                  className="object-contain sm:object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#020817]/80 via-transparent to-transparent pointer-events-none" />
 
@@ -215,18 +235,31 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
               <div className="p-6 sm:p-7 rounded-2xl bg-[#020817] border border-[#C99A32]/35 space-y-5 shadow-[0_10px_30px_rgba(2,8,23,0.9)]">
                 <div className="flex items-center justify-between border-b border-[#FFF8E8]/[0.08] pb-4">
                   <h3 className="font-[var(--font-heading)] text-lg font-bold text-[#FFF8E8]">
-                    Production Credentials
+                    {isSabah ? "Initiative Overview" : "Production Credentials"}
                   </h3>
                   <span className="text-[11px] font-mono text-[#C99A32] uppercase tracking-wider font-semibold">
-                    {project.sectionGroup === "key-projects" ? "Key Projects" : "Feature Film"}
+                    {project.sectionGroup === "international-initiatives"
+                      ? "Film Tourism"
+                      : project.sectionGroup === "key-projects"
+                      ? "Key Projects"
+                      : "Feature Film"}
                   </span>
                 </div>
 
                 <div className="space-y-3 text-xs sm:text-sm">
                   <div className="flex items-start justify-between py-1.5 border-b border-[#FFF8E8]/[0.05]">
-                    <span className="text-[#C9C4B8]">Title</span>
+                    <span className="text-[#C9C4B8]">Initiative / Title</span>
                     <span className="font-bold text-[#FFF8E8] text-right">{project.title}</span>
                   </div>
+
+                  {project.clientOrPartner && (
+                    <div className="flex items-start justify-between py-1.5 border-b border-[#FFF8E8]/[0.05]">
+                      <span className="text-[#C9C4B8]">Destination Partner</span>
+                      <span className="font-semibold text-[#F2D477] text-right">
+                        {project.clientOrPartner}
+                      </span>
+                    </div>
+                  )}
 
                   {project.roleTitle && (
                     <div className="flex items-start justify-between py-1.5 border-b border-[#FFF8E8]/[0.05]">
@@ -285,13 +318,17 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
 
                 <div className="pt-2">
                   <Button
-                    href={`/contact?project=${project.slug}`}
+                    href={
+                      isSabah
+                        ? `/contact?initiative=${project.slug}`
+                        : `/contact?project=${project.slug}`
+                    }
                     variant="primary"
                     size="md"
                     className="w-full justify-center"
                     icon={<ArrowRight className="w-4 h-4" />}
                   >
-                    Discuss Co-Production &amp; Distribution
+                    {isSabah ? "Inquire For Filming & Permissions" : "Discuss Co-Production & Distribution"}
                   </Button>
                 </div>
               </div>
@@ -300,7 +337,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
               {project.roleOrScope && project.roleOrScope.length > 0 && (
                 <div className="p-6 rounded-2xl bg-[#06152F]/60 border border-[#C99A32]/25 space-y-3">
                   <h4 className="font-[var(--font-heading)] text-base font-bold text-[#FFF8E8]">
-                    Production Scope &amp; Deliverables
+                    {isSabah ? "Strategic Scope & Facilitation" : "Production Scope & Deliverables"}
                   </h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#C9C4B8]">
                     {project.roleOrScope.map((scope, idx) => (
@@ -317,13 +354,104 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
         </FadeIn>
       </Section>
 
-      {/* 3. Related Projects */}
+      {/* 3. DEDICATED SABAH DESTINATION & 5 INITIATIVES SECTION */}
+      {isSabah && project.initiatives && (
+        <Section background="midnight" spacing="lg" borderBottom>
+          <FadeIn direction="up">
+            <SectionHeading
+              eyebrow="Strategic Roadmap"
+              title="Our 5 Key Initiatives"
+              description="A multifaceted framework designed to bridge Indian cinematic storytellers with Sabah's world-class filming ecosystems."
+              size="lg"
+              className="mb-12"
+            />
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+              {project.initiatives.map((init) => (
+                <div
+                  key={init.number}
+                  className="p-6 rounded-2xl bg-[#020817] border border-[#C99A32]/30 hover:border-[#C99A32]/70 space-y-3 shadow-[0_10px_30px_rgba(2,8,23,0.8)] transition-all hover-lift glow-gold-hover"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="font-mono text-xl font-bold text-[#C99A32]">
+                      {init.number}
+                    </span>
+                    <Badge variant="gold" size="sm">
+                      Program
+                    </Badge>
+                  </div>
+                  <h4 className="font-[var(--font-heading)] text-lg font-bold text-[#FFF8E8]">
+                    {init.title}
+                  </h4>
+                  <p className="text-xs text-[#C9C4B8] leading-relaxed">
+                    {init.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* 6 Location Pillars & Long-Term Vision */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+              {/* Pillars Box */}
+              <div className="lg:col-span-6 p-7 rounded-3xl bg-[#06152F]/70 border border-[#C99A32]/35 space-y-4">
+                <div className="flex items-center gap-2 text-[#F2D477] font-semibold text-sm">
+                  <Palmtree className="w-5 h-5 text-[#C99A32]" />
+                  <span className="font-[var(--font-cinzel)] uppercase tracking-wider">
+                    Filming Backdrops &amp; Location Pillars
+                  </span>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-[#FFF8E8]">
+                  {[
+                    "Pristine Beaches & Coral Islands",
+                    "Ancient Rainforests & Wildlife",
+                    "Luxury Overwater Resorts & Hospitality",
+                    "Rich Indigenous Culture & Heritage",
+                    "Adventure & Outdoor Expeditions",
+                    "Modern Facilities & Urban Infrastructure",
+                  ].map((p, idx) => (
+                    <div key={idx} className="flex items-center gap-2 p-2.5 rounded-lg bg-[#020817]/80 border border-[#FFF8E8]/10">
+                      <Sparkles className="w-3.5 h-3.5 text-[#C99A32] shrink-0" />
+                      <span>{p}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Long-Term Vision Box */}
+              <div className="lg:col-span-6 p-7 rounded-3xl bg-gradient-to-br from-[#06152F] via-[#020817] to-[#0B2145] border border-[#C99A32]/45 space-y-4 flex flex-col justify-between">
+                <div className="space-y-3">
+                  <span className="text-[11px] font-mono text-[#C99A32] uppercase tracking-widest font-semibold block">
+                    Strategic 5-Year Vision
+                  </span>
+                  <h4 className="font-[var(--font-cinzel)] text-xl font-bold text-[#F2D477]">
+                    &ldquo;One Story Can Inspire Millions to Travel&rdquo;
+                  </h4>
+                  <p className="text-xs text-[#C9C4B8] leading-relaxed">
+                    Within five years, Sabah will establish itself as Southeast Asia&apos;s leading film-friendly destination for Indian entertainment productions, creating a powerful tourism engine that combines destination marketing, international media exposure, and measurable visitor growth.
+                  </p>
+                </div>
+
+                <div className="pt-4 border-t border-[#FFF8E8]/[0.08] flex items-center justify-between">
+                  <span className="text-xs text-[#FFF8E8] font-mono">
+                    Sabah Tourism Board × Maayaa Bazaar Hub
+                  </span>
+                  <Button href="/contact?initiative=sabah-film-tourism" variant="primary" size="sm">
+                    Inquire For Filming
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </FadeIn>
+        </Section>
+      )}
+
+      {/* 4. Related Projects */}
       {otherProjects.length > 0 && (
         <Section background="midnight" spacing="lg" borderTop>
           <FadeIn direction="up">
             <SectionHeading
               eyebrow="Portfolio Archive"
-              title="More Verified Projects"
+              title="More Verified Productions"
               description="Explore additional landmark titles and credentials in our production slate."
               size="lg"
               className="mb-10"

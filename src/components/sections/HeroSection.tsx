@@ -31,9 +31,9 @@ const HERO_SLIDES: HeroSlide[] = [
     id: "cinema-production",
     image: "/images/hero-cinematic.jpg",
     alt: "Maayaa Bazaar Hub Cinematic Film Production Soundstage",
-    badge: "CINEMA & THEATRICAL PRODUCTIONS",
-    category: "Feature Films & OTT",
-    capability: "Theatrical Films & Soundstages",
+    badge: "WHERE STORIES COME ALIVE • MAAYAA BAZAAR HUB",
+    category: "Maayaa Bazaar Hub",
+    capability: "Film Studios & Entertainment",
     icon: Film,
   },
   {
@@ -147,7 +147,7 @@ export const HeroSection: React.FC = () => {
       aria-label="Hero Featured Showcase"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
-      className="relative min-h-[92vh] w-full flex flex-col justify-between pt-28 pb-10 sm:pt-32 sm:pb-12 overflow-hidden bg-[#020817] select-none"
+      className="relative min-h-[95vh] w-full flex flex-col justify-between pt-28 pb-10 sm:pt-32 sm:pb-12 overflow-hidden bg-[#020817] select-none"
     >
       {/* Background Images with Cinematic Fade & Ken Burns Scaling */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
@@ -176,7 +176,7 @@ export const HeroSection: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-[#020817] via-[#020817]/80 to-[#020817]/55" />
               <div className="absolute inset-0 bg-gradient-to-r from-[#020817] via-[#020817]/75 to-transparent" />
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(16,47,92,0.5)_0%,rgba(11,33,69,0.35)_40%,transparent_75%)]" />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_25%,rgba(201,154,50,0.12)_0%,transparent_60%)]" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(201,154,50,0.18)_0%,transparent_70%)]" />
             </div>
           );
         })}
@@ -187,54 +187,151 @@ export const HeroSection: React.FC = () => {
 
       {/* Main Hero Content */}
       <Container className="relative z-20 flex-1 flex flex-col justify-center my-auto py-6 sm:py-10">
-        <div className="max-w-4xl lg:max-w-5xl xl:max-w-6xl space-y-5 sm:space-y-6">
-          {/* Eyebrow / Current Slide Vertical Badge */}
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-md bg-[#06152F]/90 backdrop-blur-md border border-[#C99A32]/30 shadow-[0_0_20px_rgba(201,154,50,0.18)] transition-all duration-300">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#C99A32] shadow-[0_0_8px_rgba(201,154,50,0.8)] animate-pulse" />
-            <span className="text-[10px] sm:text-xs font-mono font-bold uppercase tracking-[0.24em] text-[#C99A32]">
-              {activeSlide.badge}
-            </span>
-          </div>
+        {currentIndex === 0 ? (
+          /* ======================================================== */
+          /* SLIDE 1: CENTERED LOGO (ENLARGED) & BUTTONS ONLY        */
+          /* ======================================================== */
+          <div className="max-w-4xl mx-auto text-center flex flex-col items-center justify-center space-y-8 sm:space-y-10 transition-all duration-700 my-auto">
+            {/* Visually Hidden SEO Heading */}
+            <h1 className="sr-only">
+              Maayaa Bazaar Hub — Where Stories Come Alive
+            </h1>
 
-          {/* Exact Brand Headline: Formatted in 3 bold lines with increased width */}
-          <h1 className="font-[var(--font-manrope)] font-black text-4xl sm:text-6xl md:text-7xl lg:text-[4.75rem] text-[#FFF8E8] tracking-tight leading-[1.08] sm:leading-[1.05] transition-all duration-500">
-            <span className="block">Where Cinema Meets</span>
-            <span className="block">Creativity</span>
-            <span className="block mt-1 sm:mt-2 bg-gradient-to-r from-[#F2D477] via-[#C99A32] to-[#F7E7B0] bg-clip-text text-transparent lg:whitespace-nowrap">
-              &amp; Events Become Experiences
-            </span>
-          </h1>
+            {/* 1. LOGO ENLARGED & CENTERED WITH MAJESTIC GOLDEN AURA */}
+            <div className="relative group">
+              {/* Outer Golden Halo Ambient Glow */}
+              <div className="absolute -inset-6 sm:-inset-8 bg-gradient-to-r from-[#C99A32]/40 via-[#F2D477]/55 to-[#C99A32]/40 rounded-3xl blur-3xl opacity-85 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
-          {/* Exact Brand Supporting Copy */}
-          <p className="text-sm sm:text-base lg:text-lg text-[#C9C4B8] leading-relaxed max-w-3xl font-normal transition-all duration-500">
-            Maayaa Bazaar Hub is a creative media and entertainment company focused on Film Production, Event Management, Music &amp; Entertainment, Digital Media, Brand Promotions, and International Projects.
-          </p>
+              <div className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-3xl sm:rounded-[2rem] overflow-hidden border-2 sm:border-[3px] border-[#C99A32]/75 shadow-[0_0_60px_rgba(201,154,50,0.5)] bg-[#020817]/95 backdrop-blur-md p-2 sm:p-3 transition-transform duration-500 group-hover:scale-105">
+                <Image
+                  src="/images/maayaa-logo.png"
+                  alt="Maayaa Bazaar Hub — Where Stories Come Alive"
+                  fill
+                  sizes="(max-width: 640px) 240px, (max-width: 1024px) 340px, 400px"
+                  priority
+                  className="object-contain"
+                />
+              </div>
+            </div>
 
-          {/* CTAs: Exact Primary "Explore Our Services" & Secondary "Let's Create" */}
-          <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-4">
-            <Button
-              href="/services"
-              variant="primary"
-              size="md"
-              icon={<ArrowRight className="w-4 h-4" />}
-            >
-              Explore Our Services
-            </Button>
-
-            <Button
-              href="/contact"
-              variant="secondary"
-              size="md"
-            >
-              Let&apos;s Create
-            </Button>
-
-            <div className="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-md bg-[#06152F]/90 backdrop-blur-md border border-[#C99A32]/25 text-xs font-mono text-[#F2D477] shadow-[0_2px_12px_rgba(2,8,23,0.5)]">
-              {React.createElement(activeSlide.icon, { className: "w-3.5 h-3.5 text-[#C99A32]" })}
-              <span>{activeSlide.capability}</span>
+            {/* 2. ONLY BUTTONS (CENTERED DIRECTLY UNDERNEATH) */}
+            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-5">
+              <Button
+                href="/services"
+                variant="primary"
+                size="lg"
+                icon={<ArrowRight className="w-4 h-4" />}
+                className="px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold shadow-[0_0_25px_rgba(201,154,50,0.35)]"
+              >
+                Explore Our Services
+              </Button>
+              <Button
+                href="/contact"
+                variant="secondary"
+                size="lg"
+                className="px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold"
+              >
+                Let&apos;s Create
+              </Button>
             </div>
           </div>
-        </div>
+        ) : currentIndex === 1 ? (
+          /* ======================================================== */
+          /* SLIDE 2: MUSIC OF THE MILLENNIUM SHOWCASE                */
+          /* ======================================================== */
+          <div className="max-w-4xl lg:max-w-5xl xl:max-w-6xl space-y-5 sm:space-y-6 animate-fadeIn">
+            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-md bg-[#06152F]/90 backdrop-blur-md border border-[#C99A32]/30 shadow-[0_0_20px_rgba(201,154,50,0.18)] transition-all duration-300">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#C99A32] shadow-[0_0_8px_rgba(201,154,50,0.8)] animate-pulse" />
+              <span className="text-[10px] sm:text-xs font-mono font-bold uppercase tracking-[0.24em] text-[#C99A32]">
+                {activeSlide.badge}
+              </span>
+            </div>
+
+            <div className="space-y-4">
+              <h1 className="font-[var(--font-manrope)] font-black text-4xl sm:text-6xl md:text-7xl lg:text-[4.75rem] text-[#FFF8E8] tracking-tight leading-[1.08] sm:leading-[1.05]">
+                <span className="block">Music of the</span>
+                <span className="block bg-gradient-to-r from-[#F2D477] via-[#C99A32] to-[#FFF8E8] bg-clip-text text-transparent">
+                  Millennium
+                </span>
+                <span className="block text-xl sm:text-3xl lg:text-4xl font-[var(--font-cinzel)] font-bold text-[#FFF8E8]/90 mt-2">
+                  A Reinvention Tour — First Look &amp; Announcement
+                </span>
+              </h1>
+
+              <p className="text-sm sm:text-base lg:text-lg text-[#C9C4B8] leading-relaxed max-w-3xl font-normal">
+                Cine Musicians Union, Maa Aai Production &amp; Maayaa Bazaar Hub present a timeless musical journey taking center stage on Wednesday, 9th September 2026 at the Grand Ballroom, ITC Grand Chola, Chennai.
+              </p>
+
+              <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-4">
+                <Button
+                  href="/events/music-of-the-millennium"
+                  variant="primary"
+                  size="md"
+                  icon={<ArrowRight className="w-4 h-4" />}
+                >
+                  Explore Event Details
+                </Button>
+                <Button
+                  href="/contact?event=music-of-the-millennium"
+                  variant="secondary"
+                  size="md"
+                >
+                  RSVP / Inquire Passes
+                </Button>
+                <div className="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-md bg-[#06152F]/90 backdrop-blur-md border border-[#C99A32]/25 text-xs font-mono text-[#F2D477] shadow-[0_2px_12px_rgba(2,8,23,0.5)]">
+                  <Music className="w-3.5 h-3.5 text-[#C99A32]" />
+                  <span>ITC Grand Chola • 9th Sept 2026</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : (
+          /* ======================================================== */
+          /* SLIDES 3-6: OTHER SPECTACLES                             */
+          /* ======================================================== */
+          <div className="max-w-4xl lg:max-w-5xl xl:max-w-6xl space-y-5 sm:space-y-6 animate-fadeIn">
+            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-md bg-[#06152F]/90 backdrop-blur-md border border-[#C99A32]/30 shadow-[0_0_20px_rgba(201,154,50,0.18)] transition-all duration-300">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#C99A32] shadow-[0_0_8px_rgba(201,154,50,0.8)] animate-pulse" />
+              <span className="text-[10px] sm:text-xs font-mono font-bold uppercase tracking-[0.24em] text-[#C99A32]">
+                {activeSlide.badge}
+              </span>
+            </div>
+
+            <h1 className="font-[var(--font-manrope)] font-black text-4xl sm:text-6xl md:text-7xl lg:text-[4.75rem] text-[#FFF8E8] tracking-tight leading-[1.08] sm:leading-[1.05]">
+              <span className="block">Where Cinema Meets</span>
+              <span className="block">Creativity</span>
+              <span className="block mt-1 sm:mt-2 bg-gradient-to-r from-[#F2D477] via-[#C99A32] to-[#F7E7B0] bg-clip-text text-transparent lg:whitespace-nowrap">
+                &amp; Events Become Experiences
+              </span>
+            </h1>
+
+            <p className="text-sm sm:text-base lg:text-lg text-[#C9C4B8] leading-relaxed max-w-3xl font-normal">
+              Maayaa Bazaar Hub is a creative media and entertainment company focused on Film Production, Event Management, Music &amp; Entertainment, Digital Media, Brand Promotions, and International Projects.
+            </p>
+
+            <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-4">
+              <Button
+                href="/services"
+                variant="primary"
+                size="md"
+                icon={<ArrowRight className="w-4 h-4" />}
+              >
+                Explore Our Services
+              </Button>
+              <Button
+                href="/contact"
+                variant="secondary"
+                size="md"
+              >
+                Let&apos;s Create
+              </Button>
+              <div className="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-md bg-[#06152F]/90 backdrop-blur-md border border-[#C99A32]/25 text-xs font-mono text-[#F2D477] shadow-[0_2px_12px_rgba(2,8,23,0.5)]">
+                {React.createElement(activeSlide.icon, { className: "w-3.5 h-3.5 text-[#C99A32]" })}
+                <span>{activeSlide.capability}</span>
+              </div>
+            </div>
+          </div>
+        )}
       </Container>
 
       {/* Footer Navigation Bar within Hero */}

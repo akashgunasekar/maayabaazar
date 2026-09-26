@@ -229,6 +229,90 @@ export const projectsData: Project[] = [
       "Pan-India Theatrical Distribution Strategy",
     ],
   },
+
+  // ----------------------------------------------------
+  // SECTION: INTERNATIONAL FILM TOURISM INITIATIVES
+  // ----------------------------------------------------
+  {
+    id: "sabah-film-tourism",
+    slug: "sabah-film-tourism",
+    title: "Sabah — Bollywood & OTT Film Tourism Initiative",
+    categoryKey: "international-projects",
+    categoryLabel: "International Projects",
+    sectionGroup: "international-initiatives",
+    tagline: "Lights. Camera. Sabah! • Where Stories Inspire Journeys",
+    roleTitle: "Destination Film Tourism Partner",
+    clientOrPartner: "Sabah Tourism Board, Malaysia",
+    overview:
+      "A flagship international film tourism collaboration positioning Sabah, Malaysia as Southeast Asia's leading film-friendly destination for Indian cinema, Bollywood feature films, and major OTT streaming productions. Leveraging film-induced tourism, the initiative connects world-class filming incentives, breathtaking landscapes, and streamlined permissions with India's top entertainment creators.",
+    image: {
+      src: "/images/projects/sabah-hero-landscape.jpg",
+      alt: "Sabah — Bollywood & OTT Film Tourism Initiative",
+      caption: "Southeast Asia's Film-Friendly Destination — Sabah, Malaysia",
+    },
+    status: "Active Initiative",
+    isFeatured: true,
+    highlightBadges: [
+      "International Initiative",
+      "Southeast Asia's Film-Friendly Destination",
+      "Bollywood & OTT Tourism",
+      "5 Strategic Programs",
+    ],
+    initiatives: [
+      {
+        number: "01",
+        title: "Sabah Film Incentive Program",
+        description:
+          "Competitive financial incentives, production facilitation, location permits, and tailored logistical support to attract high-value Indian feature films and OTT series.",
+      },
+      {
+        number: "02",
+        title: "Bollywood in Sabah Program",
+        description:
+          "Curated familiarization delegations inviting India's top producers, directors, A-list actors, and veteran location scouts to experience Sabah's cinematic terrain first-hand.",
+      },
+      {
+        number: "03",
+        title: "Sabah Screen Showcase",
+        description:
+          "A comprehensive digital location library and production directory showcasing cinematic locations, premium accommodations, state-of-the-art facilities, and local filming crews.",
+      },
+      {
+        number: "04",
+        title: "Music Video & Celebrity Content Program",
+        description:
+          "High-speed production pipeline encouraging blockbuster Indian music videos, celebrity travel vlogs, and digital influencer series for exponential social reach.",
+      },
+      {
+        number: "05",
+        title: "OTT & Reality Show Partnerships",
+        description:
+          "Strategic co-productions with leading Indian OTT platforms and TV networks for adventure travel series, survival reality shows, lifestyle, and culinary competitions.",
+      },
+    ],
+    benefits: [
+      "Reach Millions of Viewers Across India & Global Diaspora",
+      "Massive Global Destination Visibility Across Cinematic Screens",
+      "Establish Deep Emotional Connection with Travelers & Audiences",
+      "Inspire Direct Tourism Footfall to Iconic Filming Locations",
+      "Drive Sustainable, High-Yield Long-Term Tourism Economy",
+    ],
+    pillars: [
+      "Pristine Beaches & Tropical Coral Islands",
+      "Ancient Rainforests & Exotic Wildlife",
+      "Luxury Overwater Resorts & World-Class Hospitality",
+      "Rich Indigenous Culture & Heritage",
+      "High-Adrenaline Adventure & Eco-Outdoors",
+      "Modern Facilities & Filming Infrastructure",
+    ],
+    roleOrScope: [
+      "Destination Film Marketing & Strategic Partnerships",
+      "Bilateral India-Malaysia Entertainment Bilateral Bridge",
+      "Producer & Director Familiarization Delegations",
+      "Location Scouting, Permits & Government Liaison",
+      "Incentive Structuring & Co-Production Facilitation",
+    ],
+  },
 ];
 
 export async function getAllProjects(): Promise<Project[]> {
@@ -239,7 +323,9 @@ export async function getProjectsByCategory(categoryKey: ProjectCategoryKey): Pr
   return projectsData.filter((p) => p.categoryKey === categoryKey);
 }
 
-export async function getProjectsByGroup(group: "key-projects" | "feature-film-credentials"): Promise<Project[]> {
+export async function getProjectsByGroup(
+  group: "key-projects" | "feature-film-credentials" | "international-initiatives"
+): Promise<Project[]> {
   return projectsData.filter((p) => p.sectionGroup === group);
 }
 
