@@ -278,6 +278,44 @@ export async function getEventCategoryByKey(key: string): Promise<EventCategory 
 
 export const sampleEvents: Event[] = [
   {
+    id: "music-of-the-millennium",
+    slug: "music-of-the-millennium",
+    title: "Music of the Millennium — A Reinvention Tour",
+    categoryKey: "music-events",
+    subcategorySlug: "live-concerts",
+    date: "September 9, 2026 (Wednesday)",
+    isoDate: "2026-09-09",
+    location: "ITC Grand Chola, Guindy, Chennai",
+    status: "Upcoming",
+    shortDescription:
+      "Cine Musicians Union, Maa Aai Production & Maayaa Bazaar Hub present 'Music of the Millennium: A Reinvention Tour' — First Look & Announcement Date Gala at ITC Grand Chola, Chennai.",
+    fullDescription: [
+      "Cine Musicians Union, Maa Aai Production, and Maayaa Bazaar Hub proudly present 'Music of the Millennium — A Reinvention Tour'. This epochal musical extravaganza celebrates the timeless legacy of Indian cinematic music while pioneering a futuristic live concert experience.",
+      "Commencing with an exclusive First Look and official Announcement Date Gala at the legendary ITC Grand Chola in Chennai on Wednesday, 9th September 2026 from 7:00 PM onwards, the evening brings together revered composers, virtuoso instrumentalists, acclaimed playback singers, and film industry luminaries.",
+      "Under the positioning 'A Timeless Journey Through Music', this reinvention tour honors the unsung legends of the Cine Musicians Union, combining symphonic acoustic grandeur with next-generation spatial soundscapes and kinetic visual storytelling.",
+      "Venue Address: ITC Grand Chola, 63 Mount Rd, Little Mount, Guindy, Chennai, Tamil Nadu 600032. Managed and produced with turnkey production excellence by Maayaa Bazaar Hub.",
+    ],
+    image: {
+      src: "/images/music-of-the-millennium.jpg",
+      alt: "Music of the Millennium — A Reinvention Tour Official Announcement Poster",
+      caption: "First Look & Announcement Date Gala • ITC Grand Chola, Chennai",
+    },
+    capacity: "VIP & Industry Delegation (7 PM Onwards)",
+    schedule: [
+      { time: "07:00 PM", activity: "Red Carpet VIP Arrivals & Champagne Reception" },
+      { time: "07:30 PM", activity: "Grand Orchestral Overture by Cine Musicians Union" },
+      { time: "08:00 PM", activity: "Official Welcome & Keynote by Maayaa Bazaar Hub & Partners" },
+      { time: "08:30 PM", activity: "First Look Unveiling & Global Tour Route Announcement" },
+      { time: "09:00 PM", activity: "Special Musical Performance Showcase" },
+      { time: "09:45 PM", activity: "Executive Networking & Royal Gala Dinner" },
+    ],
+    enquiryCta: {
+      label: "Inquire VIP Access",
+      href: "/contact?event=music-of-the-millennium",
+    },
+    isFeatured: true,
+  },
+  {
     id: "symphonic-crescendo-concert",
     slug: "symphonic-crescendo-concert",
     title: "Symphonic Crescendo: Live in Concert",

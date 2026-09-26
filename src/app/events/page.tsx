@@ -23,6 +23,7 @@ import { SectionHeading } from "@/components/ui/typography/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { UpcomingEventsSlider } from "@/components/sections/UpcomingEventsSlider";
 import { getAllEventCategories, getAllEvents } from "@/data/events";
 
 import { SITE_URL, generateBreadcrumbSchema, generateEventSchema } from "@/lib/seo";
@@ -162,6 +163,96 @@ export default async function EventsPage() {
               >
                 Inquire Event Access
               </Button>
+            </div>
+          </div>
+
+          {/* PREMIER HEADLINER SPOTLIGHT: MUSIC OF THE MILLENIUM */}
+          <div className="mb-14 rounded-3xl bg-gradient-to-br from-[#06152F] via-[#020817] to-[#06152F] border-2 border-[#C99A32]/50 p-6 sm:p-10 lg:p-12 shadow-[0_24px_64px_rgba(2,8,23,0.95)] relative overflow-hidden">
+            {/* Ambient Lighting */}
+            <div className="absolute -top-24 -right-24 w-96 h-96 bg-[radial-gradient(ellipse_at_center,rgba(201,154,50,0.18),transparent_70%)] pointer-events-none" />
+            <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[radial-gradient(ellipse_at_center,rgba(11,33,69,0.5),transparent_70%)] pointer-events-none" />
+
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
+              {/* Event Poster Visual */}
+              <div className="lg:col-span-5 flex justify-center">
+                <div className="relative w-full max-w-[340px] aspect-[10/16] rounded-2xl sm:rounded-3xl overflow-hidden bg-[#020817] border-2 border-[#C99A32]/60 shadow-[0_0_35px_rgba(201,154,50,0.25),0_20px_50px_rgba(2,8,23,0.95)] group">
+                  <Image
+                    src="/images/music-of-the-millennium.jpg"
+                    alt="Music of the Millennium — A Reinvention Tour First Look Announcement Poster"
+                    fill
+                    priority
+                    sizes="(max-width: 640px) 300px, 340px"
+                    className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#020817] via-transparent to-transparent opacity-40" />
+                </div>
+              </div>
+
+              {/* Event Content */}
+              <div className="lg:col-span-7 space-y-6">
+                <div>
+                  <div className="flex flex-wrap items-center gap-2 mb-3">
+                    <span className="px-3 py-1 rounded-full bg-[#C99A32] text-[#020817] text-[10px] font-mono font-bold uppercase tracking-wider shadow-[0_0_12px_rgba(201,154,50,0.4)]">
+                      Upcoming Flagship Event
+                    </span>
+                    <span className="px-3 py-1 rounded-full bg-[#0B2145] text-[#F2D477] text-[10px] font-mono border border-[#C99A32]/30">
+                      Cine Musicians Union • Maa Aai Production • Maayaa Bazaar Hub
+                    </span>
+                  </div>
+
+                  <h2 className="font-[var(--font-heading)] text-3xl sm:text-4xl lg:text-5xl font-black text-[#FFF8E8] tracking-tight leading-tight">
+                    Music of the Millennium
+                  </h2>
+                  <p className="text-base sm:text-lg font-mono text-[#C99A32] font-semibold mt-1">
+                    A Reinvention Tour — First Look &amp; Announcement Date
+                  </p>
+                </div>
+
+                <blockquote className="p-4 sm:p-5 rounded-2xl bg-[#020817]/85 border-l-2 border-[#C99A32] text-[#FFF8E8] font-medium italic text-sm sm:text-base leading-relaxed">
+                  &ldquo;A Timeless Journey Through Music&rdquo;
+                </blockquote>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs text-[#C9C4B8]">
+                  <div className="flex items-center gap-2.5 p-3 rounded-xl bg-[#020817]/70 border border-[#FFF8E8]/[0.08]">
+                    <Calendar className="w-4 h-4 text-[#C99A32] shrink-0" />
+                    <div>
+                      <span className="text-[10px] font-mono uppercase text-[#C99A32] block">Date &amp; Time</span>
+                      <span className="font-semibold text-[#FFF8E8]">9th September 2026 (Wed) • 7 PM</span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-2.5 p-3 rounded-xl bg-[#020817]/70 border border-[#FFF8E8]/[0.08]">
+                    <MapPin className="w-4 h-4 text-[#C99A32] shrink-0" />
+                    <div>
+                      <span className="text-[10px] font-mono uppercase text-[#C99A32] block">Venue Location</span>
+                      <span className="font-semibold text-[#FFF8E8]">ITC Grand Chola, Guindy, Chennai</span>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="text-xs sm:text-sm text-[#C9C4B8] leading-relaxed">
+                  Cine Musicians Union, Maa Aai Production, and Maayaa Bazaar Hub proudly present &ldquo;Music of the Millennium — A Reinvention Tour&rdquo;. Commencing with an exclusive First Look and Announcement Date Gala at ITC Grand Chola, celebrating the immortal legacy of Indian film music.
+                </p>
+
+                <div className="pt-2 flex flex-wrap items-center gap-4">
+                  <Button
+                    href="/events/music-of-the-millennium"
+                    variant="primary"
+                    size="md"
+                    icon={<ArrowRight className="w-4 h-4" />}
+                  >
+                    Explore Full Event Dossier
+                  </Button>
+                  <Button
+                    href="/contact?event=music-of-the-millennium"
+                    variant="secondary"
+                    size="md"
+                    icon={<Ticket className="w-4 h-4" />}
+                  >
+                    Inquire VIP Access
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -533,7 +624,10 @@ export default async function EventsPage() {
         </FadeIn>
       </Section>
 
-      {/* 6. CLOSING CTA */}
+      {/* 6. UPCOMING EVENTS CAROUSEL (AUTO-SLIDE BEFORE FOOTER) */}
+      <UpcomingEventsSlider />
+
+      {/* 7. CLOSING CTA */}
       <Section background="deepPurple" spacing="lg" className="relative overflow-hidden">
         <FadeIn direction="up">
           <div className="max-w-4xl mx-auto rounded-3xl p-8 sm:p-14 bg-gradient-to-b from-[#06152F] to-[#020817] border border-[#C99A32]/40 text-center space-y-6">

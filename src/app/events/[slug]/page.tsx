@@ -13,6 +13,9 @@ import {
   ShieldCheck,
   Ticket,
   Sparkles,
+  Clock,
+  Music,
+  Building,
 } from "lucide-react";
 import { Section } from "@/components/layout/Section";
 import { PageHero } from "@/components/layout/PageHero";
@@ -270,6 +273,51 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
           </div>
         </FadeIn>
       </Section>
+
+      {/* 2.5. OFFICIAL EVENT AGENDA & RUN OF SHOW */}
+      {event.schedule && event.schedule.length > 0 && (
+        <Section background="midnight" spacing="lg" borderBottom id="event-schedule">
+          <FadeIn direction="up">
+            <div className="max-w-4xl mx-auto space-y-8">
+              <div className="text-center space-y-3">
+                <span className="text-xs font-mono uppercase tracking-widest text-[#C99A32] font-semibold">
+                  Program Schedule
+                </span>
+                <h3 className="font-[var(--font-heading)] text-2xl sm:text-3xl font-black text-[#FFF8E8] tracking-tight">
+                  Official Run of Show &amp; Agenda
+                </h3>
+                <p className="text-xs sm:text-sm text-[#C9C4B8] max-w-xl mx-auto">
+                  Curated timing and sequence for the evening&apos;s proceedings, announcements, and musical celebrations.
+                </p>
+              </div>
+
+              <div className="rounded-3xl bg-[#020817] border border-[#C99A32]/35 p-6 sm:p-10 shadow-[0_20px_50px_rgba(2,8,23,0.9)] divide-y divide-[#FFF8E8]/[0.08]">
+                {event.schedule.map((slot, sIdx) => (
+                  <div
+                    key={sIdx}
+                    className="py-4 first:pt-0 last:pb-0 flex flex-col sm:flex-row sm:items-center justify-between gap-3 group"
+                  >
+                    <div className="flex items-center gap-3">
+                      <span className="w-8 h-8 rounded-lg bg-[#06152F] border border-[#C99A32]/30 flex items-center justify-center text-[#C99A32] text-xs font-mono font-bold shrink-0">
+                        0{sIdx + 1}
+                      </span>
+                      <p className="text-sm sm:text-base font-bold text-[#FFF8E8] group-hover:text-[#F2D477] transition-colors">
+                        {slot.activity}
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-2 self-start sm:self-auto shrink-0 pl-11 sm:pl-0">
+                      <Clock className="w-3.5 h-3.5 text-[#C99A32]" />
+                      <span className="px-3 py-1 rounded-md bg-[#0B2145] text-[#F2D477] border border-[#C99A32]/30 text-xs font-mono font-semibold">
+                        {slot.time}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
+        </Section>
+      )}
 
       {/* 3. Related Events */}
       {otherEvents.length > 0 && (

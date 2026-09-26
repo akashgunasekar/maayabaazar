@@ -37,6 +37,15 @@ const HERO_SLIDES: HeroSlide[] = [
     icon: Film,
   },
   {
+    id: "music-of-the-millennium",
+    image: "/images/music-of-the-millennium.jpg",
+    alt: "Music of the Millennium — A Reinvention Tour First Look Announcement at ITC Grand Chola Chennai",
+    badge: "UPCOMING EVENT • 9TH SEPT 2026 • CHENNAI",
+    category: "Music of the Millennium",
+    capability: "ITC Grand Chola • 9th Sept 2026",
+    icon: Music,
+  },
+  {
     id: "live-concerts",
     image: "/images/live-concerts.jpg",
     alt: "Stadium Live Concert Arena with Spatial Lighting and Audio Rigging",

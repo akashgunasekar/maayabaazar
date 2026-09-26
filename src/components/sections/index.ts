@@ -9,4 +9,5 @@ export { ProjectsSection } from "./ProjectsSection";
 export { GalleryPreviewSection } from "./GalleryPreviewSection";
 export { PartnersSection } from "./PartnersSection";
 export { MediaNewsSection } from "./MediaNewsSection";
+export { UpcomingEventsSlider } from "./UpcomingEventsSlider";
 export { ContactCtaSection } from "./ContactCtaSection";

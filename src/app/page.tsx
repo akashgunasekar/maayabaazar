@@ -12,6 +12,7 @@ import {
   GalleryPreviewSection,
   PartnersSection,
   MediaNewsSection,
+  UpcomingEventsSlider,
   ContactCtaSection,
 } from "@/components/sections";
 
@@ -87,7 +88,10 @@ export default function HomePage() {
       {/* 11. Media & News: Real Supplied Updates */}
       <MediaNewsSection />
 
-      {/* 12. Contact CTA: Let's Create Something Extraordinary */}
+      {/* 12. Upcoming Events: Auto-Slide Preview Before Footer */}
+      <UpcomingEventsSlider />
+
+      {/* 13. Contact CTA: Let's Create Something Extraordinary */}
       <ContactCtaSection />
     </>
   );
