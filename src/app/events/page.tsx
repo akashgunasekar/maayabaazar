@@ -217,7 +217,7 @@ export default async function EventsPage() {
                     <Calendar className="w-4 h-4 text-[#C99A32] shrink-0" />
                     <div>
                       <span className="text-[10px] font-mono uppercase text-[#C99A32] block">Date &amp; Time</span>
-                      <span className="font-semibold text-[#FFF8E8]">9th September 2026 (Wed) • 7 PM</span>
+                      <span className="font-semibold text-[#FFF8E8]">28th September 2026 (Mon) • 7 PM</span>
                     </div>
                   </div>
 

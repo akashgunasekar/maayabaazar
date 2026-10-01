@@ -283,15 +283,15 @@ export const sampleEvents: Event[] = [
     title: "Music of the Millennium — A Reinvention Tour",
     categoryKey: "music-events",
     subcategorySlug: "live-concerts",
-    date: "September 9, 2026 (Wednesday)",
-    isoDate: "2026-09-09",
+    date: "September 28, 2026 (Monday)",
+    isoDate: "2026-09-28",
     location: "ITC Grand Chola, Guindy, Chennai",
     status: "Upcoming",
     shortDescription:
       "Cine Musicians Union, Maa Aai Production & Maayaa Bazaar Hub present 'Music of the Millennium: A Reinvention Tour' — First Look & Announcement Date Gala at ITC Grand Chola, Chennai.",
     fullDescription: [
       "Cine Musicians Union, Maa Aai Production, and Maayaa Bazaar Hub proudly present 'Music of the Millennium — A Reinvention Tour'. This epochal musical extravaganza celebrates the timeless legacy of Indian cinematic music while pioneering a futuristic live concert experience.",
-      "Commencing with an exclusive First Look and official Announcement Date Gala at the legendary ITC Grand Chola in Chennai on Wednesday, 9th September 2026 from 7:00 PM onwards, the evening brings together revered composers, virtuoso instrumentalists, acclaimed playback singers, and film industry luminaries.",
+      "Commencing with an exclusive First Look and official Announcement Date Gala at the legendary ITC Grand Chola in Chennai on Monday, 28th September 2026 from 7:00 PM onwards, the evening brings together revered composers, virtuoso instrumentalists, acclaimed playback singers, and film industry luminaries.",
       "Under the positioning 'A Timeless Journey Through Music', this reinvention tour honors the unsung legends of the Cine Musicians Union, combining symphonic acoustic grandeur with next-generation spatial soundscapes and kinetic visual storytelling.",
       "Venue Address: ITC Grand Chola, 63 Mount Rd, Little Mount, Guindy, Chennai, Tamil Nadu 600032. Managed and produced with turnkey production excellence by Maayaa Bazaar Hub.",
     ],

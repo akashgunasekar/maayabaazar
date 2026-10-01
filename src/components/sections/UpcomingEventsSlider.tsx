@@ -46,7 +46,7 @@ const UPCOMING_SLIDES: UpcomingSlide[] = [
     subtitle: "A Reinvention Tour — First Look & Announcement Gala",
     presenters: "Cine Musicians Union • Maa Aai Production • Maayaa Bazaar Hub",
     tagline: "A Timeless Journey Through Music",
-    date: "Wednesday, 9th September 2026",
+    date: "Monday, 28th September 2026",
     time: "7:00 PM Onwards",
     location: "ITC Grand Chola, Guindy, Chennai",
     badge: "FLAGSHIP UPCOMING EVENT",

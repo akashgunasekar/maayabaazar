@@ -259,7 +259,7 @@ export const HeroSection: React.FC = () => {
               </h1>
 
               <p className="text-sm sm:text-base lg:text-lg text-[#C9C4B8] leading-relaxed max-w-3xl font-normal">
-                Cine Musicians Union, Maa Aai Production &amp; Maayaa Bazaar Hub present a timeless musical journey taking center stage on Wednesday, 9th September 2026 at the Grand Ballroom, ITC Grand Chola, Chennai.
+                Cine Musicians Union, Maa Aai Production &amp; Maayaa Bazaar Hub present a timeless musical journey taking center stage on Monday, 28th September 2026 at the Grand Ballroom, ITC Grand Chola, Chennai.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-4">
