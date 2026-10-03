@@ -49,10 +49,10 @@ const UPCOMING_SLIDES: UpcomingSlide[] = [
     date: "Monday, 28th September 2026",
     time: "7:00 PM Onwards",
     location: "ITC Grand Chola, Guindy, Chennai",
-    badge: "FLAGSHIP UPCOMING EVENT",
-    image: "/images/music-of-the-millennium.jpg",
-    alt: "Music of the Millennium — A Reinvention Tour Announcement Poster",
-    isPortrait: true,
+    badge: "FLAGSHIP EVENT",
+    image: "/images/reinvention-tour-stage.jpg",
+    alt: "Music of the Millennium — Reinvention Tour Stage Announcement at ITC Grand Chola",
+    isPortrait: false,
     description:
       "Epochal musical reinvention tour celebrating the timeless heritage of Indian cinema music with live orchestra, playback vocalists, and 360-degree spatial soundscapes.",
   },
@@ -187,8 +187,8 @@ export const UpcomingEventsSlider: React.FC = () => {
               <div className="lg:col-span-5 flex justify-center">
                 <div
                   className={cn(
-                    "relative w-full max-w-[340px] rounded-2xl overflow-hidden bg-[#020817] border border-[#C99A32]/40 shadow-[0_0_30px_rgba(201,154,50,0.2)] group",
-                    active.isPortrait ? "aspect-[10/16]" : "aspect-[16/10]"
+                    "relative w-full rounded-2xl overflow-hidden bg-[#020817] border border-[#C99A32]/40 shadow-[0_0_30px_rgba(201,154,50,0.2)] group",
+                    active.isPortrait ? "max-w-[340px] aspect-[10/16]" : "max-w-[460px] aspect-[16/10]"
                   )}
                 >
                   <Image
@@ -196,8 +196,8 @@ export const UpcomingEventsSlider: React.FC = () => {
                     alt={active.alt}
                     fill
                     priority
-                    sizes="(max-width: 640px) 300px, 340px"
-                    className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 460px, 460px"
+                    className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#020817] via-transparent to-transparent opacity-40" />
 

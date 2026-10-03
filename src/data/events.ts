@@ -296,10 +296,22 @@ export const sampleEvents: Event[] = [
       "Venue Address: ITC Grand Chola, 63 Mount Rd, Little Mount, Guindy, Chennai, Tamil Nadu 600032. Managed and produced with turnkey production excellence by Maayaa Bazaar Hub.",
     ],
     image: {
-      src: "/images/music-of-the-millennium.jpg",
-      alt: "Music of the Millennium — A Reinvention Tour Official Announcement Poster",
-      caption: "First Look & Announcement Date Gala • ITC Grand Chola, Chennai",
+      src: "/images/reinvention-tour-stage.jpg",
+      alt: "Music of the Millennium — Reinvention Tour Stage Announcement at ITC Grand Chola",
+      caption: "Reinvention Tour Launch Gala • ITC Grand Chola, Chennai",
     },
+    gallery: [
+      {
+        src: "/images/reinvention-tour-stage.jpg",
+        alt: "Cine Musicians Union, Maa Aai Production & Maayaa Bazaar Hub on Stage",
+        caption: "Reinvention Tour Stage Launch Ceremony",
+      },
+      {
+        src: "/images/music-of-the-millennium-poster.jpg",
+        alt: "Music of the Millennium — A Reinvention Tour Official Poster",
+        caption: "Official Announcement Poster",
+      },
+    ],
     capacity: "VIP & Industry Delegation (7 PM Onwards)",
     schedule: [
       { time: "07:00 PM", activity: "Red Carpet VIP Arrivals & Champagne Reception" },

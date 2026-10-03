@@ -17,6 +17,18 @@ export const galleryCategoriesList: GalleryCategoryMeta[] = [
 
 export const galleryData: GalleryItem[] = [
   {
+    id: "gal-reinvention-tour",
+    title: "Music of the Millennium — Reinvention Tour Launch Gala",
+    categoryKey: "events",
+    categoryLabel: "Events",
+    image: {
+      src: "/images/reinvention-tour-stage.jpg",
+      alt: "Cine Musicians Union, Maa Aai Production & Maayaa Bazaar Hub on Stage at ITC Grand Chola",
+      caption: "Reinvention Tour Launch & Announcement Gala • ITC Grand Chola, Chennai",
+    },
+    date: "September 28, 2026",
+  },
+  {
     id: "gal-concert-1",
     title: "Stadium Live Concert Stage",
     categoryKey: "concerts",

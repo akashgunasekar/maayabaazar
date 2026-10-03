@@ -175,16 +175,16 @@ export default async function EventsPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
               {/* Event Poster Visual */}
               <div className="lg:col-span-5 flex justify-center">
-                <div className="relative w-full max-w-[340px] aspect-[10/16] rounded-2xl sm:rounded-3xl overflow-hidden bg-[#020817] border-2 border-[#C99A32]/60 shadow-[0_0_35px_rgba(201,154,50,0.25),0_20px_50px_rgba(2,8,23,0.95)] group">
+                <div className="relative w-full max-w-[480px] aspect-[16/10] rounded-2xl sm:rounded-3xl overflow-hidden bg-[#020817] border-2 border-[#C99A32]/60 shadow-[0_0_35px_rgba(201,154,50,0.25),0_20px_50px_rgba(2,8,23,0.95)] group">
                   <Image
-                    src="/images/music-of-the-millennium.jpg"
-                    alt="Music of the Millennium — A Reinvention Tour First Look Announcement Poster"
+                    src="/images/reinvention-tour-stage.jpg"
+                    alt="Music of the Millennium — Reinvention Tour Stage Announcement at ITC Grand Chola"
                     fill
                     priority
-                    sizes="(max-width: 640px) 300px, 340px"
-                    className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, 480px"
+                    className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#020817] via-transparent to-transparent opacity-40" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#020817] via-transparent to-transparent opacity-30" />
                 </div>
               </div>
 
@@ -193,7 +193,7 @@ export default async function EventsPage() {
                 <div>
                   <div className="flex flex-wrap items-center gap-2 mb-3">
                     <span className="px-3 py-1 rounded-full bg-[#C99A32] text-[#020817] text-[10px] font-mono font-bold uppercase tracking-wider shadow-[0_0_12px_rgba(201,154,50,0.4)]">
-                      Upcoming Flagship Event
+                      Flagship Event
                     </span>
                     <span className="px-3 py-1 rounded-full bg-[#0B2145] text-[#F2D477] text-[10px] font-mono border border-[#C99A32]/30">
                       Cine Musicians Union • Maa Aai Production • Maayaa Bazaar Hub

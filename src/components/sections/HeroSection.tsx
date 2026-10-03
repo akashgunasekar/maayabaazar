@@ -38,11 +38,11 @@ const HERO_SLIDES: HeroSlide[] = [
   },
   {
     id: "music-of-the-millennium",
-    image: "/images/music-of-the-millennium.jpg",
-    alt: "Music of the Millennium — A Reinvention Tour First Look Announcement at ITC Grand Chola Chennai",
-    badge: "UPCOMING EVENT • 9TH SEPT 2026 • CHENNAI",
+    image: "/images/reinvention-tour-stage.jpg",
+    alt: "Music of the Millennium — Reinvention Tour Stage Announcement at ITC Grand Chola Chennai",
+    badge: "RECENT EVENT • 28TH SEPT 2026 • CHENNAI",
     category: "Music of the Millennium",
-    capability: "ITC Grand Chola • 9th Sept 2026",
+    capability: "ITC Grand Chola • 28th Sept 2026",
     icon: Music,
   },
   {
@@ -280,7 +280,7 @@ export const HeroSection: React.FC = () => {
                 </Button>
                 <div className="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-md bg-[#06152F]/90 backdrop-blur-md border border-[#C99A32]/25 text-xs font-mono text-[#F2D477] shadow-[0_2px_12px_rgba(2,8,23,0.5)]">
                   <Music className="w-3.5 h-3.5 text-[#C99A32]" />
-                  <span>ITC Grand Chola • 9th Sept 2026</span>
+                  <span>ITC Grand Chola • 28th Sept 2026</span>
                 </div>
               </div>
             </div>
