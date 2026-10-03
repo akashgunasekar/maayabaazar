@@ -4,6 +4,7 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
+  serverExternalPackages: ["sharp"],
 
   // Image optimization with modern AVIF and WebP delivery & 1-year immutable cache
   images: {
@@ -27,8 +28,8 @@ const nextConfig = {
         ],
       },
       {
-        // Global headers for all public routes: Security & Cloudflare Edge CDN Caching
-        source: "/:path*",
+        // Global headers for public routes (excluding internal _next assets)
+        source: "/((?!_next/static|_next/image|favicon.ico).*)",
         headers: [
           {
             key: "X-Content-Type-Options",
