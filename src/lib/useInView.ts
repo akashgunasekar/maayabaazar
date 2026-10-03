@@ -11,9 +11,9 @@ export interface UseInViewOptions {
 export function useInView<T extends HTMLElement = HTMLDivElement>(
   options: UseInViewOptions = {}
 ) {
-  const { threshold = 0.15, rootMargin = "0px", triggerOnce = true } = options;
+  const { threshold = 0, rootMargin = "100px", triggerOnce = true } = options;
   const ref = useRef<T | null>(null);
-  const [isInView, setIsInView] = useState(false);
+  const [isInView, setIsInView] = useState(true);
 
   useEffect(() => {
     const element = ref.current;

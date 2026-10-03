@@ -165,7 +165,7 @@ export const HeroSection: React.FC = () => {
                 src={slide.image}
                 alt={slide.alt}
                 fill
-                priority={idx === 0}
+                priority={idx <= 1}
                 sizes="100vw"
                 className={cn(
                   "object-cover object-center transition-transform duration-[7000ms] ease-out will-change-transform",

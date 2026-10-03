@@ -1,7 +1,6 @@
 "use client";
 
-import React from "react";
-import { useInView } from "@/lib/useInView";
+import React, { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
 export interface FadeInProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -19,35 +18,47 @@ export const FadeIn: React.FC<FadeInProps> = ({
   children,
   ...props
 }) => {
-  const { ref, isInView } = useInView<HTMLDivElement>({ threshold: 0.1 });
+  const ref = useRef<HTMLDivElement>(null);
+  // Default to visible so content is NEVER hidden if JS is loading or scroll observer delays
+  const [isVisible, setIsVisible] = useState(true);
 
-  const getTransform = () => {
-    switch (direction) {
-      case "up":
-        return "translate3d(0, 20px, 0)";
-      case "down":
-        return "translate3d(0, -20px, 0)";
-      case "left":
-        return "translate3d(20px, 0, 0)";
-      case "right":
-        return "translate3d(-20px, 0, 0)";
-      case "none":
-        return "translate3d(0, 0, 0)";
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || typeof window === "undefined") return;
+
+    if (!("IntersectionObserver" in window)) {
+      setIsVisible(true);
+      return;
     }
-  };
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(el);
+        }
+      },
+      { threshold: 0, rootMargin: "200px 0px 200px 0px" }
+    );
+
+    observer.observe(el);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <div
       ref={ref}
       style={{
-        opacity: isInView ? 1 : 0,
-        transform: isInView ? "translate3d(0, 0, 0)" : getTransform(),
-        transitionProperty: "opacity, transform",
         transitionDuration: `${duration}ms`,
         transitionDelay: `${delay}ms`,
-        transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)",
       }}
-      className={cn("will-change-transform", className)}
+      className={cn(
+        "transition-all ease-out will-change-transform opacity-100 translate-y-0",
+        className
+      )}
       {...props}
     >
       {children}
